@@ -1,13 +1,16 @@
 const Footer = () => {
   return (
-    <div className="w-full h-[643px] bg-[#005cb3]">
-      <div className=" flex justify-between p-2">
+    <div className="w-full bg-[#005cb3]">
+      <div className="flex justify-between p-20">
         <div className="w-1/3">
-          <h1>Ufuon</h1>
+          <h1 className="font-[Visby Round CF] text-[59.03px] font-bold leading-[70.84px] text-left text-[rgba(252,186,4,1)]">
+            Ufuon
+          </h1>
         </div>
+
         <div className="w-1/3">
-          <ul className="space-y-1">
-            <li>Quick Links</li>
+          <ul className="space-y-2 text-white">
+            <li className="font-medium">Quick Links</li>
             <li>Home</li>
             <li>Ufuon store</li>
             <li>About Us</li>
@@ -15,21 +18,26 @@ const Footer = () => {
             <li>Blog Page</li>
           </ul>
         </div>
+
         <div className="w-1/3">
-          <h3>Email</h3>
-          <p>hello.ufuon.com@gmail.com</p>
-          <h3>Phone</h3>
-          <p>+234 8139 582 152</p>
-          <h3>Address</h3>
-          <p>
-            59C Old Aba Road, Rumuobiakani, Port Harcourt, Rivers State,
-            Nigeria.
+          <h3 className="text-[rgba(252,186,4,1)] font-bold">Email</h3>
+          <p className="text-white mb-4">hello.ufuon.com@gmail.com</p>
+          <h3 className="text-[rgba(252,186,4,1)] font-bold">Phone</h3>
+          <p className="text-white mb-4">+234 8139 582 152</p>
+          <h3 className="text-[rgba(252,186,4,1)] font-bold">Address</h3>
+          <p className="text-white">
+            59C Old Aba Road, Rumuobiakani,<br></br> Port Harcourt, Rivers
+            State, Nigeria.
           </p>
         </div>
       </div>
-      <hr className="my-2" />
-      <div className=" flex justify-between p-2">
-        <div className="w-1/3 flex  gap-2">
+
+      <hr className="border-t border-white opacity-30 my-5" />
+
+      {/* Footer Bottom Section */}
+      <div className="flex justify-between p-5">
+        {/* Social Media Section */}
+        <div className="w-1/3 flex gap-4">
           {[...Array(3)].map((_, idx) => (
             <img
               key={idx}
@@ -39,7 +47,11 @@ const Footer = () => {
             />
           ))}
         </div>
-        <div className="w-1/3"></div>
+
+        {/* Footer Text Section */}
+        <div className="w-1/3 text-white text-center">
+          <p>codepally2024</p>
+        </div>
       </div>
     </div>
   );
