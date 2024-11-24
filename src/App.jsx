@@ -4,7 +4,7 @@ import About from "./components/About";
 import Hero from "./components/Hero";
 import Feature from "./components/Feature";
 import SectionStudy from "./components/SectionStudy";
-import LandingPage from "./components/landingPage";
+//import LandingPage from "./components/landingPage";
 import Layout from "./components/Layout";
 import BookLayout from "./components/BookLayout";
 import Skills from "./components/Skills";
@@ -27,7 +27,6 @@ const App = () => {
         <SectionStudy />
       </div>
       <div className="space-y-8">
-        <LandingPage />
         <Layout />
         <BookLayout />
         <Skills />

@@ -1,9 +1,8 @@
 import navIcon from "../assets/images/Vector (1).svg";
-import downloadIcon from "../assets/images/Component 2.svg";
 
 const SectionStudy = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-[#005cb3] text-white p-10 mt-16 text-center">
+    <div className="flex flex-col items-center justify-center w-full h-[634px] bg-[#005cb3] text-white p-10 mt-16 text-center">
       <h2 className="text-7xl mb-5">Study Smart! Play Hard!</h2>
       <p className="text-2xl mb-10 w-[820px] max-w-[90%]">
         Stop spending hours re-reading and re-copying your notes!
@@ -27,11 +26,9 @@ const SectionStudy = () => {
         </li>
       </ul>
 
-      <img
-        src={downloadIcon}
-        alt="Download Icon"
-        className="mt-10 w-[206px] h-[60px]"
-      />
+      <button className="flex items-center justify-center py-2 px-4 bg-[#fe0804] text-white w-[206px] h-[60px] rounded-lg cursor-pointer border-none text-[30px] hover:bg-[#e00703] hover:scale-105 transition-transform duration-300">
+        Download
+      </button>
     </div>
   );
 };

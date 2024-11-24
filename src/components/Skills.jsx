@@ -5,7 +5,6 @@ import image3 from "../assets/images/Frame 86.svg";
 const Skills = () => {
   return (
     <div className="flex flex-col items-center justify-between w-full h-[1652px] py-10 px-8 box-border overflow-y-auto">
-      {/* Block 1 */}
       <div className="flex justify-center items-center w-full max-w-[1000px] h-[400px] px-5 box-border gap-10 mb-10">
         <div className="flex flex-col justify-between w-1/2 pr-5 text-left">
           <h1 className="text-[54px] font-medium m-0">
@@ -28,7 +27,6 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* Block 2 */}
       <div className="flex justify-center items-center w-full max-w-[1000px] h-[400px] px-5 box-border gap-10 mb-10">
         <div className="w-1/2 flex justify-center items-center">
           <img
@@ -51,7 +49,6 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* Block 3 */}
       <div className="flex justify-center items-center w-full max-w-[1000px] h-[400px] px-5 box-border gap-10 mb-10">
         <div className="flex flex-col justify-between w-1/2 pr-5 text-left">
           <h1 className="text-[54px] font-medium m-0">
