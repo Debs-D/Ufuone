@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
 
         <div className="w-1/3 text-white text-center">
-          <p>codepally2024</p>
+          <p>codepally©️2024</p>
         </div>
       </div>
     </div>

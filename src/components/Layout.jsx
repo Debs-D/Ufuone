@@ -4,7 +4,7 @@ import img from "../assets/images/New_landing_page_sjb9df 1.svg";
 const Layout = () => {
   return (
     <div className="w-full h-auto">
-      <div className="flex flex-wrap items-center justify-evenly w-full h-auto p-10 bg-white gap-5">
+      <div className="flex flex-wrap items-center justify-evenly w-full h-auto  bg-white gap-5">
         <img src={img} alt="images" className="md:h-[701px]" />
 
         <div className="flex flex-col items-start gap-5 max-w-[600px]">
@@ -39,12 +39,6 @@ const Layout = () => {
             </li>
           </ul>
         </div>
-      </div>
-
-      <div className="flex items-center justify-end w-full mb-20 pr-16">
-        <button className="py-2 px-4 bg-[#fe0804] text-white w-[206px] h-[60px] rounded-lg cursor-pointer border-none text-[30px] hover:bg-[#e00703] hover:scale-105 transition-transform duration-300">
-          Download
-        </button>
       </div>
     </div>
   );

@@ -29,16 +29,22 @@ const About = () => {
   ];
 
   return (
-    <section className="flex flex-wrap justify-center items-center gap-6">
-      {boxData.map((box, index) => (
-        <Box
-          key={index}
-          title={box.title}
-          image={box.image}
-          description={box.description}
-          bgColor={box.bgColor}
-        />
-      ))}
+    <section className="w-full h-screen flex flex-col items-center justify-center p-10">
+      <h2 className="text-center text-4xl font-bold text-gray-700 mb-20">
+        Explore Ufuon Services
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {boxData.map((box, index) => (
+          <Box
+            key={index}
+            title={box.title}
+            image={box.image}
+            description={box.description}
+            bgColor={box.bgColor}
+          />
+        ))}
+      </div>
     </section>
   );
 };

@@ -35,7 +35,7 @@ const Box = ({ image, title, description, bgColor, style }) => {
 
   return (
     <div
-      className={` ${bgColor} rounded-[18px] flex flex-col items-start shadow-lg`}
+      className={`p-6 ${bgColor} rounded-[18px] flex flex-col items-start shadow-lg`}
       style={defaultStyles.container}
     >
       <div style={defaultStyles.imageWrapper}>

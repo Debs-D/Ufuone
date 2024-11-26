@@ -27,12 +27,6 @@ const BookLayout = () => {
 
         <img src={img} alt="Main Visual" className="md:h-[700px] max-w-full" />
       </div>
-
-      <div className="flex justify-start px-10 py-5 mb-20 ml-32 bg-[#005cb3]">
-        <button className="flex items-center justify-center py-3 px-6 bg-[#fe0804] text-white text-[30px] font-medium w-[220px] h-[65px] rounded-lg hover:bg-[#e00703] hover:scale-105 transition-transform duration-300">
-          Download
-        </button>
-      </div>
     </div>
   );
 };
