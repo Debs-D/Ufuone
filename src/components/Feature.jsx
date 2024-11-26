@@ -1,13 +1,13 @@
 import Slider from "react-slick";
-import Box from "./Boxes";
+import Boxes from "./Boxes";
 
 const settings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
-  arrows: true,
+  arrows: true, // Make sure arrows are enabled
   responsive: [
     {
       breakpoint: 1200, // For tablets
@@ -61,10 +61,10 @@ const Feature = () => {
   return (
     <section className="p-6 flex flex-col items-center justify-center">
       <div className="text-center mb-10">
-        <h3 className="text-[48px] leading-[59px] font-semibold text-black">
+        <h3 className="text-4xl font-semibold text-black mb-2">
           Included Features
         </h3>
-        <p className="text-[20px] leading-[30px] font-normal text-gray-700">
+        <p className="text-xl text-gray-700">
           Explore the key features and tools designed to enhance your
           experience.
         </p>
@@ -74,13 +74,12 @@ const Feature = () => {
       <div className="w-full max-w-6xl">
         <Slider {...settings}>
           {boxData.map((box, index) => (
-            <Box
+            <Boxes
               key={index}
               title={box.title}
               description={box.description}
               bgColor={box.bgColor}
-              className="flex flex-col items-center justify-center bg-blue-900 text-white p-6 rounded-2xl text-center"
-              style={{}}
+              className="flex flex-col items-center justify-center"
             />
           ))}
         </Slider>

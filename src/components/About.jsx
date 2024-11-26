@@ -37,9 +37,6 @@ const About = () => {
           image={box.image}
           description={box.description}
           bgColor={box.bgColor}
-          style={{
-            marginBottom: "",
-          }}
         />
       ))}
     </section>

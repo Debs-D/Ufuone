@@ -23,7 +23,7 @@ const App = () => {
         <Header />
         <Hero />
       </div>
-      <div className="space-y-8">
+      <div className="space-y-10">
         <About />
         <SectionStudy />
         <Feature />
