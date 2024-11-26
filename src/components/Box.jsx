@@ -1,48 +1,73 @@
 import PropTypes from "prop-types";
 import "../App.css";
 
-const Box = ({ title, description, bgColor, style }) => {
+const Box = ({ image, title, description, bgColor, style }) => {
+  const defaultStyles = {
+    container: {
+      width: "350px",
+      height: "auto",
+      gap: "px",
+      opacity: 1,
+      ...style,
+    },
+    imageWrapper: {
+      width: "100%",
+      height: "160px",
+      overflow: "hidden",
+      borderRadius: "12px",
+      marginBottom: "12px",
+    },
+    image: {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
+    title: {
+      fontSize: style?.fontSize || "24px",
+      fontWeight: style?.fontWeight || "500",
+      lineHeight: "1.2",
+      margin: "12px 0",
+    },
+    description: {
+      fontSize: style?.fontSize || "16px",
+      fontWeight: style?.fontWeight || "400",
+      lineHeight: "1.5",
+    },
+  };
+
   return (
     <div
-      className={`p-10 ${bgColor} rounded-[18px] flex  flex-col justify-center items-start`}
-      style={{
-        ...style,
-        width: "567px",
-        height: "396.15px",
-        gap: "0px",
-        opacity: 1,
-      }}
+      className={`p-6 ${bgColor} rounded-[18px] flex flex-col items-start shadow-lg`}
+      style={defaultStyles.container}
     >
+      <div style={defaultStyles.imageWrapper}>
+        <img
+          src={image}
+          alt={title}
+          className="object-cover rounded-lg"
+          style={defaultStyles.image}
+        />
+      </div>
+
       <h3
         className="text-left font-outfit font-medium"
-        style={{
-          fontSize: style?.fontSize || "48px",
-          fontWeight: style?.fontWeight || "500",
-          height: "160.46px",
-          gap: "0px",
-        }}
+        style={defaultStyles.title}
       >
-        {title.split(" ")[0]} <br />
-        {title.split(" ").slice(1).join(" ")}
+        {title}
       </h3>
 
       <p
-        className="text-left font-outfit font-normal mt-4"
-        style={{
-          fontSize: style?.fontSize || "30px",
-          fontWeight: style?.fontWeight || "400",
-          width: "402px",
-          height: "70.2px",
-          gap: "0px",
-        }}
+        className="text-left font-outfit font-normal"
+        style={defaultStyles.description}
       >
-        <p className="box-description">{description}</p>
+        {description}
       </p>
     </div>
   );
 };
 
 Box.propTypes = {
+  image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,

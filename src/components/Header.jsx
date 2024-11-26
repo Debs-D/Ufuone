@@ -15,7 +15,7 @@ const Header = () => {
           {menuItems.map((item, index) => (
             <li
               key={index}
-              className="py-2 text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
+              className="py-2 text-gray-800 font-semibold  hover:text-blue-600 cursor-pointer"
             >
               {item}
             </li>

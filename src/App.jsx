@@ -2,8 +2,8 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
 import Hero from "./components/Hero";
-import Feature from "./components/Feature";
 import SectionStudy from "./components/SectionStudy";
+import Feature from "./components/Feature";
 //import LandingPage from "./components/landingPage";
 import Layout from "./components/Layout";
 import BookLayout from "./components/BookLayout";
@@ -18,15 +18,15 @@ import "./App.css";
 const App = () => {
   return (
     <div>
-      <div className="space-y-8">
+      <div className="space-y-3">
         <Navbar />
         <Header />
         <Hero />
-        <About />
-        <Feature />
-        <SectionStudy />
       </div>
       <div className="space-y-8">
+        <About />
+        <SectionStudy />
+        <Feature />
         <Layout />
         <BookLayout />
         <Skills />

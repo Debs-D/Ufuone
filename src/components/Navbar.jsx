@@ -71,8 +71,6 @@ const Navbar = () => {
         </Slider>
       </div>
 
-      {/* </div> */}
-
       <div className="w-20">
         <img src={btn} alt="Sign Up" className="cursor-pointer" />
       </div>
