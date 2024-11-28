@@ -1,10 +1,18 @@
 import PropTypes from "prop-types";
 import "../App.css";
 
-const Box = ({ image, title, description, bgColor, style }) => {
+const Box = ({
+  image,
+  imgUrl,
+  title,
+  subtitle,
+  description,
+  bgColor,
+  style,
+}) => {
   const defaultStyles = {
     container: {
-      width: "350px",
+      width: style?.width || "350px",
       height: "auto",
       ...style,
     },
@@ -26,6 +34,12 @@ const Box = ({ image, title, description, bgColor, style }) => {
       lineHeight: "1.2",
       margin: "12px 0",
     },
+    subtitle: {
+      fontSize: style?.fontSize || "18px",
+      fontWeight: "400",
+      color: style?.subtitleColor || "gray",
+      margin: "4px 0",
+    },
     description: {
       fontSize: style?.fontSize || "16px",
       fontWeight: style?.fontWeight || "400",
@@ -40,7 +54,7 @@ const Box = ({ image, title, description, bgColor, style }) => {
     >
       <div style={defaultStyles.imageWrapper}>
         <img
-          src={image}
+          src={image || imgUrl}
           alt={title}
           className="object-cover rounded-lg"
           style={defaultStyles.image}
@@ -54,6 +68,12 @@ const Box = ({ image, title, description, bgColor, style }) => {
         {title}
       </h3>
 
+      {subtitle && (
+        <h4 className="text-left font-outfit" style={defaultStyles.subtitle}>
+          {subtitle}
+        </h4>
+      )}
+
       <p
         className="text-left font-outfit font-normal"
         style={defaultStyles.description}
@@ -65,8 +85,10 @@ const Box = ({ image, title, description, bgColor, style }) => {
 };
 
 Box.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  imgUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   description: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
   style: PropTypes.object,

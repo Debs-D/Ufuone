@@ -1,10 +1,10 @@
-import Box from "./Box";
+import Box from "./Boxer";
 
 const Review = () => {
   const boxData = [
     {
       imgUrl:
-        "https://s3-alpha-sig.figma.com/img/27cd/d3c3/f114cb2eaabf2ff817ffe896fa37eb36?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q8OqY6uBbEkntbW4Kxwe4P-tb7-O2-O7ctV3VpmOeEVOPF9SDrxutioIfkv7~qER8AdYzVbCOqyLPUcviBHSNxLD0M5Ef~4V4dJ0vOvLGhzYqt-XGm7qYB7hAiNl6Uk6orS65IZTm6ZLB0OKnSYrFnV-kEaroaTIIBWcWBwLPk5e0SYbsnlzyDQRuXptIdgkF9PNsJrZHVexO9aqt1g6UGUOAB2q47n4VsBq1r2gGQWaKgkvIiswsGoX7YwJVnu1Byxgl0xGg6jRJUGQ1N0AqWgOBr7XXhNuY4f9FvVhj0wqFTkV-Ho6dw586GzNCF3cBizCNgMeBnUYiDhNxcr7Ag__",
+        "https://s3-alpha-sig.figma.com/img/27cd/d3c3/f114cb2eaabf2ff817ffe896fa37eb36?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RdOhHp95MwpUntKjOW8pD6I3FaiXHQupHXBJ3mXgoPj1D4IDW6zuYfDXNCvojaOrClddL~nfB3wOmybjf5Z~RUMu6ee0ZWA54ptCgFddfUvaJoG6g-hzjZvZkjQ7tv-CVWzPPpdBESrhwzK4jfwD9~P3uHqp2t6MZf1zy8XMbp1dXIBQpQ3LUxSdMNWsZCYhhU5VofeA2gOeINec4lFvVIf0KPn-8xfpv6wd1NzvfIK8hS~cOL6IbdPD5R02OQo71bTtIic6Q52-woqo6~HGITlww8yaqec29ui2EfyflSMiL~zRJ-YVTUAwl6XcrsjosVJDX7Js4JkDIUZavbttLQ__",
       title: "Patience Amem",
       subtitle: "Parent",
       description:
@@ -13,7 +13,7 @@ const Review = () => {
     },
     {
       imgUrl:
-        "https://s3-alpha-sig.figma.com/img/27cd/d3c3/f114cb2eaabf2ff817ffe896fa37eb36?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q8OqY6uBbEkntbW4Kxwe4P-tb7-O2-O7ctV3VpmOeEVOPF9SDrxutioIfkv7~qER8AdYzVbCOqyLPUcviBHSNxLD0M5Ef~4V4dJ0vOvLGhzYqt-XGm7qYB7hAiNl6Uk6orS65IZTm6ZLB0OKnSYrFnV-kEaroaTIIBWcWBwLPk5e0SYbsnlzyDQRuXptIdgkF9PNsJrZHVexO9aqt1g6UGUOAB2q47n4VsBq1r2gGQWaKgkvIiswsGoX7YwJVnu1Byxgl0xGg6jRJUGQ1N0AqWgOBr7XXhNuY4f9FvVhj0wqFTkV-Ho6dw586GzNCF3cBizCNgMeBnUYiDhNxcr7Ag__",
+        "https://s3-alpha-sig.figma.com/img/6a6a/a706/b47e46ffcc525c0f7b1f62e0cf4e20d6?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JDyVgQU3PrKDU8YxSBKXoRnrh2Be6rJ9GLrKLyVGPp3nbrY9hPhgj3SVG7NerYp4sSL72q7BxGOLN0sFRvW6tbdJKEJ570TGB9slw834QUk5zST5DkMZC6sw6pdOfta6ak85-cp2Q74LhxTTBa4Ai1TQ5-Mm8eMDekgaahBma5nBS2RbxXehLuUp4qUhTYC1~FB2gXVx-H5kI6TukGxTdnoQEdxsWQkSs5XCZ3WT8ntr5oxVaRN5HPJWypMdopJuHKdi8EkalOyNIKkO7wsJis4gmH50TJr5HtMvPw8q4W8aY1sry5V-yJ2-79LBO87tsWaoHBJwBKTiWNqTxfT~IQ__",
       title: "Mark James",
       subtitle: "Teacher",
       description:
@@ -22,7 +22,7 @@ const Review = () => {
     },
     {
       imgUrl:
-        "https://s3-alpha-sig.figma.com/img/27cd/d3c3/f114cb2eaabf2ff817ffe896fa37eb36?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q8OqY6uBbEkntbW4Kxwe4P-tb7-O2-O7ctV3VpmOeEVOPF9SDrxutioIfkv7~qER8AdYzVbCOqyLPUcviBHSNxLD0M5Ef~4V4dJ0vOvLGhzYqt-XGm7qYB7hAiNl6Uk6orS65IZTm6ZLB0OKnSYrFnV-kEaroaTIIBWcWBwLPk5e0SYbsnlzyDQRuXptIdgkF9PNsJrZHVexO9aqt1g6UGUOAB2q47n4VsBq1r2gGQWaKgkvIiswsGoX7YwJVnu1Byxgl0xGg6jRJUGQ1N0AqWgOBr7XXhNuY4f9FvVhj0wqFTkV-Ho6dw586GzNCF3cBizCNgMeBnUYiDhNxcr7Ag__",
+        "https://s3-alpha-sig.figma.com/img/d817/537c/7703570ef684b18c65535188d9169288?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Li7Ikx~XpJo2eq697tGhNamwqVhncixLCjRkys5yuw~F4t2RJ55QH6zSLcqCij7~k0cMF8sHLDBecmfx5ufHc5PT-mRMakrlTQaU197UmyFL9Iv-VB3dq5ncnAnm8cvoHiUB7cPDdSeDibgd1ITsVodH-ENvujDg8YTVcwH2T8zjsQYGBq8O0fWnHUQa0S~6D3TpGIyteJRkj8HxFkO6xZRiM3rehGLiLsl0adOoGcK5unZ2HCDtcQERHIpIQJe-3c1BBaxtuwkYDuLiQWQVsXoWuAMc8d2CN4Ez3Wf2KKlNIEhZKs7n6fcdOLKyQjFT1ldK4YjfapOQcCQsZt~26A__",
       title: "John Igwe",
       subtitle: "Worker",
       description:

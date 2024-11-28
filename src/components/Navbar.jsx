@@ -1,5 +1,6 @@
 import btn from "../assets/images/Sign Up button@2x.svg";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const settings = {
   dots: false,
@@ -70,9 +71,10 @@ const Navbar = () => {
           ))}
         </Slider>
       </div>
-
       <div className="w-20">
-        <img src={btn} alt="Sign Up" className="cursor-pointer" />
+        <Link to="/signup">
+          <img src={btn} alt="Sign Up" className="cursor-pointer" />
+        </Link>
       </div>
     </nav>
   );

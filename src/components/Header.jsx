@@ -1,8 +1,19 @@
 import logo from "../assets/images/Logo (1).svg";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const menuItems = ["News", "Work", "School", "Home", "Study", "Discover"];
   const menuBars = ["Contact Sales", "Play", "Login"];
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    const currentPath = window.location.pathname;
+
+    if (currentPath === "/") {
+      navigate("/branch");
+    } else {
+      navigate("/");
+    }
+  };
 
   return (
     <div
@@ -35,6 +46,12 @@ const Header = () => {
           ))}
         </ul>
       </div>
+      <button
+        onClick={handleButtonClick}
+        className="py-3 px-8 bg-[#fe0804] text-white rounded-lg text-xl font-medium hover:bg-[#e00703] hover:scale-105 transition-transform duration-300"
+      >
+        Sign up FREE
+      </button>
     </div>
   );
 };
