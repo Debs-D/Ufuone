@@ -1,3 +1,4 @@
+import Slider from "react-slick";
 import Box from "./Boxer";
 
 const Review = () => {
@@ -9,7 +10,6 @@ const Review = () => {
       subtitle: "Parent",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
-      bgColor: "bg-blue-500",
     },
     {
       imgUrl:
@@ -18,7 +18,6 @@ const Review = () => {
       subtitle: "Teacher",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
-      bgColor: "bg-green-500",
     },
     {
       imgUrl:
@@ -27,9 +26,32 @@ const Review = () => {
       subtitle: "Worker",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
-      bgColor: "bg-purple-500",
     },
   ];
+
+  // Settings for the responsive slider
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="bg-white py-24 sm:py-32">
@@ -44,7 +66,8 @@ const Review = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        {/* Desktop Grid View */}
+        <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8 mt-10 sm:mt-16 sm:pt-16">
           {boxData.map((box, index) => (
             <Box
               key={index}
@@ -52,9 +75,22 @@ const Review = () => {
               title={box.title}
               subtitle={box.subtitle}
               description={box.description}
-              bgColor={box.bgColor}
             />
           ))}
+        </div>
+
+        <div className="lg:hidden mx-auto mt-10 max-w-2xl">
+          <Slider {...sliderSettings}>
+            {boxData.map((box, index) => (
+              <Box
+                key={index}
+                imgUrl={box.imgUrl}
+                title={box.title}
+                subtitle={box.subtitle}
+                description={box.description}
+              />
+            ))}
+          </Slider>
         </div>
       </div>
     </div>

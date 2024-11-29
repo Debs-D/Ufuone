@@ -4,36 +4,42 @@ import img from "../assets/images/New_landing_page_sjb9df 1.svg";
 const Layout = () => {
   return (
     <div className="w-full h-auto">
-      <div className="flex flex-wrap items-center justify-evenly w-full h-auto  bg-white gap-5">
-        <img src={img} alt="images" className="md:h-[701px]" />
+      <div className="flex flex-wrap items-center justify-center w-full h-auto bg-white gap-5">
+        {/* Image Section */}
+        <img
+          src={img}
+          alt="image"
+          className="w-[80%] sm:w-[60%] md:w-[50%] lg:h-[701px] object-contain"
+        />
 
-        <div className="flex flex-col items-start gap-5 max-w-[600px]">
-          <h1 className="w-[559px] text-6xl font-medium leading-[87.53px] font-sans text-red-600 text-left">
+        {/* Text Section */}
+        <div className="flex flex-col items-center gap-5 max-w-[600px] w-full text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-[50px] sm:leading-[60px] text-red-600">
             Get a qualified teacher for your Child
           </h1>
 
           <ul className="flex flex-col gap-4 p-0 list-none">
-            <li className="flex items-center font-sans text-3xl font-medium leading-[53.2px] text-left">
+            <li className="flex items-center text-xl sm:text-2xl md:text-3xl font-medium text-left">
               <img
                 src={navIcon}
                 alt="icon"
-                className="w-10 h-10 filter brightness-0 saturate-100 mr-2.5"
+                className="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 saturate-100 mr-2.5"
               />
               Teaching and learning made easy.
             </li>
-            <li className="flex items-center font-sans text-3xl font-medium leading-[53.2px] text-left">
+            <li className="flex items-center text-xl sm:text-2xl md:text-3xl font-medium text-left">
               <img
                 src={navIcon}
                 alt="icon"
-                className="w-10 h-10 filter brightness-0 saturate-100 mr-2.5"
+                className="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 saturate-100 mr-2.5"
               />
               Socialize your study
             </li>
-            <li className="flex items-center font-sans text-3xl font-medium leading-[53.2px] text-left">
+            <li className="flex items-center text-xl sm:text-2xl md:text-3xl font-medium text-left">
               <img
                 src={navIcon}
                 alt="icon"
-                className="w-10 h-10 filter brightness-0 saturate-100 mr-2.5"
+                className="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 saturate-100 mr-2.5"
               />
               Quiz Presentation
             </li>

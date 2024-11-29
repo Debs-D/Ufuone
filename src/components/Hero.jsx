@@ -37,33 +37,31 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  const handleNextImage = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
   return (
     <div className="relative w-full h-screen flex flex-col items-center justify-center bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(0,_92,_179,_0.15)_0%,_rgba(0,_40,_77,_0)_100%)]">
-      <div className=" flex flex-col md:flex-row items-center justify-center w-full max-w-[1440px] px-6 space-y-6 md:space-y-0">
-        <div className=" flex flex-col items-center md:items-start w-full md:w-[594px] space-y-4">
-          <h3 className="font-outfit text-[64px] font-medium text-black leading-[79.9px] text-center md:text-left">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center w-full max-w-[1440px] px-6 space-y-6 md:space-y-0">
+        <div className="flex flex-col items-center md:items-start w-full md:w-[594px] space-y-4">
+          <h3 className="font-sans text-[32px] md:text-[64px] font-medium text-black leading-[1.2] text-center md:text-left">
             {slides[currentSlide].title}
           </h3>
-          <p className="font-outfit text-[30px] font-normal text-black leading-[37.8px] text-center md:text-left">
+          <p className="font-sans text-[16px] md:text-[30px] font-normal text-black leading-[1.5] text-center md:text-left">
             {slides[currentSlide].description}
           </p>
         </div>
 
-        <div className="w-full md:w-[662.5px] h-[594px] flex  justify-center">
+        {/* Image Section */}
+        <div className="w-full md:w-[662.5px] h-[50vh] md:h-[594px] flex justify-center">
           <img
             src={slides[currentSlide].image}
             alt="Illustration"
-            className="w-full h-full"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>
 
+      {/* Navigation Dots */}
       <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center space-y-4">
-        <div className=" flex justify-center space-x-2">
+        <div className="flex justify-center space-x-2">
           {slides.map((_, index) => (
             <div
               key={index}
@@ -75,7 +73,7 @@ const Hero = () => {
           ))}
         </div>
 
-        <button onClick={handleNextImage}></button>
+        {/* Button to go to next image */}
       </div>
     </div>
   );

@@ -18,8 +18,8 @@ const Box = ({ image, imgUrl, title, subtitle, description, style }) => {
     },
     contentWrapper: {
       display: "flex",
-      alignItems: "center",
-      gap: "16px", // Add space between the image and text
+      alignItems: "center", // Align image and text horizontally
+      gap: "16px", // Space between the image and text
       marginBottom: "12px",
     },
     imageWrapper: {
@@ -27,13 +27,12 @@ const Box = ({ image, imgUrl, title, subtitle, description, style }) => {
       width: "80px",
       height: "80px",
       overflow: "hidden",
-      borderRadius: "8px", // Add a slight border-radius
+      borderRadius: "50%", // Make the image circular
     },
     image: {
       width: "100%",
       height: "100%",
       objectFit: "cover",
-      borderRadius: "8px", // Slight border-radius for the image
     },
     textWrapper: {
       flex: 1, // Allow the text to take up remaining space

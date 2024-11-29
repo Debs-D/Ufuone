@@ -1,6 +1,5 @@
 import btn from "../assets/images/Sign Up button@2x.svg";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
 
 const settings = {
   dots: false,
@@ -8,6 +7,21 @@ const settings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
+
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 640, // Mobile
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 };
 
 const Navbar = () => {
@@ -44,14 +58,7 @@ const Navbar = () => {
       <h3 className="text-white text-[49.04px] font-bold leading-[46.71px] text-left font-visby">
         Ufuon <br /> is fun!
       </h3>
-      {/* <div className="slider-container"> */}
-      {/* Image Container */}
-      {/* <div
-          id="image-container"
-          className=" flex overflow-x-auto space-x-4 px-2 max-w-full w-full"
-        >
-          
-        </div> */}
+
       <div className="w-full h-28 [&_.slick-slider]:h-28 max-w-6xl">
         <Slider {...settings}>
           {data.map((ele, index) => (
@@ -72,9 +79,7 @@ const Navbar = () => {
         </Slider>
       </div>
       <div className="w-20">
-        <Link to="/signup">
-          <img src={btn} alt="Sign Up" className="cursor-pointer" />
-        </Link>
+        <img src={btn} alt="join" className="cursor-pointer" />
       </div>
     </nav>
   );

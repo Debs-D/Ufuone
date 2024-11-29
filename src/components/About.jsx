@@ -29,11 +29,12 @@ const About = () => {
   ];
 
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center p-10">
-      <h2 className="text-center text-4xl font-bold text-gray-700 mb-20">
+    <section className="w-full h-auto min-h-screen flex flex-col items-center justify-center p-6 md:p-10">
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-700 mb-12 md:mb-20">
         Explore Ufuon Services
       </h2>
 
+      {/* Grid of boxes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {boxData.map((box, index) => (
           <Box
