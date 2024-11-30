@@ -29,13 +29,20 @@ const About = () => {
   ];
 
   return (
-    <section className="w-full h-auto min-h-screen flex flex-col items-center justify-center p-6 md:p-10">
-      <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-700 mb-12 md:mb-20">
-        Explore Ufuon Services
-      </h2>
+    <section className="w-full h-auto min-h-screen flex flex-col items-center justify-center p-6 md:p-10 pb-16">
+      <div
+        style={{
+          backgroundColor: "rgba(254, 226, 226, 164)",
+        }}
+        className="flex items-center justify-center text-center shadow-md w-full md:w-[95%] lg:w-[1213px] h-[308px] mx-auto rounded-[69px]"
+      >
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[36px] md:leading-[42px] lg:leading-[51px]">
+          Explore Ufuon Services
+        </h2>
+      </div>
 
       {/* Grid of boxes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {boxData.map((box, index) => (
           <Box
             key={index}

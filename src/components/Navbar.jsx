@@ -16,7 +16,7 @@ const settings = {
       },
     },
     {
-      breakpoint: 640, // Mobile
+      breakpoint: 640,
       settings: {
         slidesToShow: 1,
       },
@@ -56,7 +56,7 @@ const Navbar = () => {
   return (
     <nav className="bg-custom-gradient flex items-center w-full overflow-hidden justify-between p-6">
       <h3 className="text-white text-[49.04px] font-bold leading-[46.71px] text-left font-visby">
-        Ufuon <br /> is fun!
+        Ufuon <br /> school
       </h3>
 
       <div className="w-full h-28 [&_.slick-slider]:h-28 max-w-6xl">

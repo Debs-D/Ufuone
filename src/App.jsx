@@ -12,7 +12,7 @@ import Review from "./components/Review";
 import Footer from "./components/Footer";
 import Management from "./components/Management";
 import ManagementHero from "./components/ManagementHero";
-import Package from "./components/Package";
+//import Package from "./components/Package";
 import Key from "./components/Key";
 import Gain from "./components/Gain";
 
@@ -35,7 +35,7 @@ const App = () => {
                 <Header />
                 <Hero />
               </div>
-              <div className="space-y-10">
+              <div className="">
                 <About />
                 <SectionStudy />
                 <Feature />
@@ -56,7 +56,9 @@ const App = () => {
             <div>
               <Management />
               <ManagementHero />
-              <Package />
+              <About />
+
+              {/*<Package />*/}
               <Key />
               <Gain />
               <Footer />

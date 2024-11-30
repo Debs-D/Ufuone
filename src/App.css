@@ -1,3 +1,10 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .text-name h3 {
   font-size: 60px !important;
   line-height: 49.04px;
@@ -21,4 +28,9 @@
 
 .slick-slide {
   margin-inline: 10px;
+}
+
+.slick-prev,
+.slick-next {
+  display: none !important;
 }

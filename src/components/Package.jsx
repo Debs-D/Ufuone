@@ -1,4 +1,4 @@
-const Package = () => {
+/*const Package = () => {
   const boxData = [
     {
       title: "Comprehensive",
@@ -29,14 +29,13 @@ const Package = () => {
           Package Highlights
         </h2>
         <p className="mt-4 text-[24px] font-normal text-gray-900">
-          Explore the key features and tools designed to enhance your
-          experience.
+          Explore the key features and tools designed to enhance your experience.
         </p>
       </div>
 
       <div className="mx-auto mt-12 max-w-5xl space-y-6">
-        {/* Flex container for boxes */}
-        <div className="flex flex-col md:flex-row justify-between gap-6">
+        {/* Flex container for boxes */
+/* <div className="flex flex-col md:flex-row justify-between gap-6">
           {boxData.slice(0, 2).map((box, index) => (
             <div
               key={index}
@@ -54,15 +53,13 @@ const Package = () => {
                   {box.subTitle}
                 </h4>
               )}
-              <p className="mt-4 text-[16px] lg:text-[20px]">
-                {box.description}
-              </p>
+              <p className="mt-4 text-[16px] lg:text-[20px]">{box.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Third box */}
-        <div className="flex justify-center">
+        {/* Third box */
+/*  <div className="flex justify-center">
           <div
             style={{
               backgroundColor: "rgba(0, 92, 179, 1)",
@@ -86,3 +83,4 @@ const Package = () => {
 };
 
 export default Package;
+*/
