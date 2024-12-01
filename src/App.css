@@ -34,3 +34,16 @@ html {
 .slick-next {
   display: none !important;
 }
+
+/* Default text size for larger screens */
+.nav-font {
+  font-size: 49.04px;
+}
+
+/* Reduce font size on mobile */
+@media (max-width: 640px) {
+  .nav-font {
+    font-size: 30px !important;
+    margin-right: 20px !important;
+  }
+}

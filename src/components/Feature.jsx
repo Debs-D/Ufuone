@@ -7,7 +7,7 @@ const settings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
-  arrows: true, // Make sure arrows are enabled
+  arrows: true, // Ensure arrows are enabled
   responsive: [
     {
       breakpoint: 1200, // For tablets
@@ -71,7 +71,7 @@ const Feature = () => {
       </div>
 
       {/* Slider Section */}
-      <div className="w-full max-w-6xl">
+      <div className="w-full max-w-6xl h-28">
         <Slider {...settings}>
           {boxData.map((box, index) => (
             <Boxes

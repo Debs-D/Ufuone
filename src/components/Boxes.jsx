@@ -11,8 +11,7 @@ const Box = ({ title, description, bgColor, style }) => {
       className={`flex flex-col items-center justify-between ${bgColor} text-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105`}
       style={{
         ...style,
-        width: "300px", // Ensure boxes are of equal width
-        maxWidth: "100%", // Responsive width on smaller screens
+        maxWidth: "100%", // Ensure responsiveness
         margin: "0 10px", // Add spacing between boxes
       }}
     >

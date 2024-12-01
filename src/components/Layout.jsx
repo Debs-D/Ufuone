@@ -3,13 +3,15 @@ import img from "../assets/images/New_landing_page_sjb9df 1.svg";
 
 const Layout = () => {
   return (
-    <div className="w-full h-auto">
-      <div className="flex flex-wrap items-center justify-center w-full h-auto bg-white gap-5">
+    <div className="w-full h-auto bg-white pt-32 pb-10 sm:pt-40 sm:pb-16">
+      {" "}
+      {/* Increased padding at the top */}
+      <div className="flex flex-wrap items-center justify-center w-full h-auto gap-5">
         {/* Image Section */}
         <img
           src={img}
           alt="image"
-          className="w-[80%] sm:w-[60%] md:w-[50%] lg:h-[701px] object-contain"
+          className="w-[90%] sm:w-[60%] md:w-[50%] lg:h-[701px] object-contain" // Adjusted width for mobile view
         />
 
         {/* Text Section */}

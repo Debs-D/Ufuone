@@ -41,7 +41,7 @@ const Header = () => {
     >
       {/* Logo */}
       <div className="flex items-center">
-        <img src={logo} alt="Logo" className="w-12 h-12 md:w-auto md:h-full" />
+        <img src={logo} alt="Logo" className="w-20 h-20 md:w-auto md:h-full" />
       </div>
 
       {/* Mobile Buttons and Hamburger */}
@@ -60,7 +60,7 @@ const Header = () => {
         </button>
         <button
           onClick={toggleMenu}
-          className="text-gray-800 focus:outline-none"
+          className="text-orange-500 focus:outline-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

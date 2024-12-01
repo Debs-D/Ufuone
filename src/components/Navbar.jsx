@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-custom-gradient flex items-center w-full overflow-hidden justify-between p-6">
-      <h3 className="text-white text-[49.04px] font-bold leading-[46.71px] text-left font-visby">
+      <h3 className="text-white text-[49.04px] sm:text-[24px] nav-font font-bold leading-[46.71px] text-left font-visby">
         Ufuon <br /> school
       </h3>
 
