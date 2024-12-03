@@ -35,6 +35,15 @@ html {
   display: none !important;
 }
 
+.slick-list {
+  overflow: hidden !important; /* Ensures hidden slides don't peek */
+}
+
+.slick-track {
+  display: flex !important;
+  gap: 0 !important; /* Remove extra gaps */
+}
+
 /* Default text size for larger screens */
 .nav-font {
   font-size: 49.04px;

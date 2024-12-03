@@ -1,5 +1,6 @@
-import btn from "../assets/images/Sign Up button@2x.svg";
 import Slider from "react-slick";
+import click from "../assets/images/Vector (2).svg";
+import { Link } from "react-router-dom";
 
 const settings = {
   dots: false,
@@ -78,8 +79,11 @@ const Navbar = () => {
           ))}
         </Slider>
       </div>
-      <div className="w-20">
-        <img src={btn} alt="join" className="cursor-pointer" />
+      <div className="w-auto py-2 px-4 bg-[#fe0804] flex items-center gap-3 text-white rounded-lg text-[18px] font-semibold hover:bg-[#e00703] hover:scale-105 transition-transform duration-300">
+        <img src={click} alt="img" className="w-6 h-6 object-contain" />
+        <Link to="/build" className="text-lg">
+          Build
+        </Link>
       </div>
     </nav>
   );

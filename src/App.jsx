@@ -12,30 +12,31 @@ import Review from "./components/Review";
 import Footer from "./components/Footer";
 import Management from "./components/Management";
 import ManagementHero from "./components/ManagementHero";
-//import Package from "./components/Package";
+// import Package from "./components/Package";
 import Key from "./components/Key";
 import Gain from "./components/Gain";
+import Build from "./components/Build";
 
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
+import ModalExample from "./components/ModalExample";
 
 const App = () => {
   return (
     <Router>
-      <Routes>
-        {/* Main Project */}
-        <Route
-          path="/"
-          element={
-            <div>
-              <div className="space-y-3">
+      <div>
+        {/* Routes */}
+        <Routes>
+          {/* Main Project */}
+          <Route
+            path="/"
+            element={
+              <>
                 <Navbar />
                 <Header />
                 <Hero />
-              </div>
-              <div className="">
                 <About />
                 <SectionStudy />
                 <Feature />
@@ -43,29 +44,34 @@ const App = () => {
                 <BookLayout />
                 <Skills />
                 <Review />
-              </div>
-              <Footer />
-            </div>
-          }
-        />
+              </>
+            }
+          />
 
-        {/* Branch Project */}
-        <Route
-          path="/branch"
-          element={
-            <div>
-              <Management />
-              <ManagementHero />
-              <About />
+          {/* Branch Project */}
+          <Route
+            path="/branch"
+            element={
+              <>
+                <Management />
+                <ManagementHero />
+                <About />
+                {/* <Package /> */}
+                <Key />
+                <Gain />
+              </>
+            }
+          />
 
-              {/*<Package />*/}
-              <Key />
-              <Gain />
-              <Footer />
-            </div>
-          }
-        />
-      </Routes>
+          {/* Build Page */}
+          <Route path="/build" element={<Build />} />
+
+          {/* Modal Example Page */}
+          <Route path="/modal-example" element={<ModalExample />} />
+        </Routes>
+
+        <Footer />
+      </div>
     </Router>
   );
 };
