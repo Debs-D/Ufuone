@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // Import Link from react-router-dom
 import logo from "../assets/images/Logo (1).svg";
 
 const Header = () => {
@@ -30,7 +30,7 @@ const Header = () => {
       document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = "auto"; // Cleanup on component unmount
+      document.body.style.overflow = "auto";
     };
   }, [isMenuOpen]);
 
@@ -39,9 +39,17 @@ const Header = () => {
       className="flex items-center justify-between px-4 py-4 h-[78px]"
       style={{ backgroundColor: "rgba(243, 243, 243, 1)" }}
     >
-      {/* Logo */}
+      {/* Logo - Wrapped with Link */}
       <div className="flex items-center">
-        <img src={logo} alt="Logo" className="w-20 h-20 md:w-auto md:h-full" />
+        <Link to="/workplace">
+          {" "}
+          {/* Link to /workplace */}
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-20 h-20 md:w-auto md:h-full"
+          />
+        </Link>
       </div>
 
       {/* Mobile Buttons and Hamburger */}

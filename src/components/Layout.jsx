@@ -11,7 +11,7 @@ const Layout = () => {
         <img
           src={img}
           alt="image"
-          className="w-[90%] sm:w-[60%] md:w-[50%] lg:h-[701px] object-contain" // Adjusted width for mobile view
+          className="w-[90%] sm:w-[60%] md:w-[50%] lg:h-[701px] object-contain"
         />
 
         {/* Text Section */}

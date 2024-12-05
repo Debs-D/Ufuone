@@ -143,9 +143,9 @@ HighLevelModal.propTypes = {
 };
 
 const Build = () => {
-  const [openHigh, setOpenHigh] = useState(false); // High-level modal state
-  const [openFirst, setOpenFirst] = useState(false); // First modal in low-level sequence
-  const [openSecond, setOpenSecond] = useState(false); // Second modal in low-level sequence
+  const [openHigh, setOpenHigh] = useState(false);
+  const [openFirst, setOpenFirst] = useState(false);
+  const [openSecond, setOpenSecond] = useState(false);
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-r from-gray-100 via-blue-200 to-gray-100 p-8 flex flex-col items-center">
@@ -170,13 +170,13 @@ const Build = () => {
         {/* Buttons */}
         <div className="flex flex-col gap-6">
           <button
-            onClick={() => setOpenFirst(true)} // For Low-level project
+            onClick={() => setOpenFirst(true)}
             className="w-48 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-500 hover:scale-105 transition-transform duration-300"
           >
             Low Level Project
           </button>
           <button
-            onClick={() => setOpenHigh(true)} // For High-level project
+            onClick={() => setOpenHigh(true)}
             className="w-48 py-3 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-500 hover:scale-105 transition-transform duration-300"
           >
             High Level Project

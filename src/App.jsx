@@ -12,18 +12,17 @@ import Review from "./components/Review";
 import Footer from "./components/Footer";
 import Management from "./components/Management";
 import ManagementHero from "./components/ManagementHero";
-// import Package from "./components/Package";
 import Key from "./components/Key";
 import Gain from "./components/Gain";
 import Build from "./components/Build";
+import WorkPlace from "./components/WorkPlace";
+import WorkPlaceHero from "./components/WorkPlaceHero";
 
-// Import css files
+// Importing CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import "flowbite";
-
-import ModalExample from "./components/ModalExample";
 
 const App = () => {
   return (
@@ -31,7 +30,7 @@ const App = () => {
       <div>
         {/* Routes */}
         <Routes>
-          {/* Main Project */}
+          {/* Main Project Route */}
           <Route
             path="/"
             element={
@@ -50,7 +49,7 @@ const App = () => {
             }
           />
 
-          {/* Branch Project */}
+          {/* Branch Project Route */}
           <Route
             path="/branch"
             element={
@@ -58,21 +57,32 @@ const App = () => {
                 <Management />
                 <ManagementHero />
                 <About />
-                {/* <Package /> */}
                 <Key />
                 <Gain />
               </>
             }
           />
 
-          {/* Build Page */}
+          {/* Workplace Route */}
+          <Route
+            path="/workplace"
+            element={
+              <>
+                <Header />
+                <WorkPlace />
+                <WorkPlaceHero />
+                <About />
+                <Key />
+                <Gain />
+              </>
+            }
+          />
+
+          {/* Build Page Route */}
           <Route path="/build" element={<Build />} />
-
-          {/* Modal Example Page */}
-
-          <Route path="/modal-example" element={<ModalExample />} />
         </Routes>
 
+        {/* Footer always present at the bottom */}
         <Footer />
       </div>
     </Router>
