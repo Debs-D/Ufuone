@@ -21,6 +21,8 @@ import Build from "./components/Build";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
+import "flowbite";
+
 import ModalExample from "./components/ModalExample";
 
 const App = () => {
@@ -67,6 +69,7 @@ const App = () => {
           <Route path="/build" element={<Build />} />
 
           {/* Modal Example Page */}
+
           <Route path="/modal-example" element={<ModalExample />} />
         </Routes>
 
