@@ -17,6 +17,7 @@ import Gain from "./components/Gain";
 import Build from "./components/Build";
 import WorkPlace from "./components/WorkPlace";
 import WorkPlaceHero from "./components/WorkPlaceHero";
+import UfuonFun from "./components/UfuonFun"; // Remove this line if you're not using UfuonFun anywhere
 
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
@@ -71,6 +72,21 @@ const App = () => {
                 <Header />
                 <WorkPlace />
                 <WorkPlaceHero />
+                <About />
+                <Key />
+                <Gain />
+              </>
+            }
+          />
+
+          {/* UfuonFun Route */}
+          <Route
+            path="/UfuonFun"
+            element={
+              <>
+                <Header />
+                <WorkPlace />
+                <UfuonFun />
                 <About />
                 <Key />
                 <Gain />
