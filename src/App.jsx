@@ -17,7 +17,9 @@ import Gain from "./components/Gain";
 import Build from "./components/Build";
 import WorkPlace from "./components/WorkPlace";
 import WorkPlaceHero from "./components/WorkPlaceHero";
-import UfuonFun from "./components/UfuonFun"; // Remove this line if you're not using UfuonFun anywhere
+import UfuonFun from "./components/UfuonFun";
+import Register from "./components/Register";
+import Success from "./components/Success";
 
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
@@ -96,6 +98,8 @@ const App = () => {
 
           {/* Build Page Route */}
           <Route path="/build" element={<Build />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
 
         {/* Footer always present at the bottom */}
