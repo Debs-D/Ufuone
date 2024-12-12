@@ -98,6 +98,7 @@ const App = () => {
 
           {/* Build Page Route */}
           <Route path="/build" element={<Build />} />
+
           <Route path="/register" element={<Register />} />
           <Route path="/success" element={<Success />} />
         </Routes>
