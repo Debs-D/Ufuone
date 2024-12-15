@@ -20,6 +20,7 @@ import WorkPlaceHero from "./components/WorkPlaceHero";
 import UfuonFun from "./components/UfuonFun";
 import Register from "./components/Register";
 import Success from "./components/Success";
+import LowProjectBox from "./components/LowProjectBox";
 
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
@@ -98,6 +99,7 @@ const App = () => {
 
           {/* Build Page Route */}
           <Route path="/build" element={<Build />} />
+          <Route path="/low-projects" element={<LowProjectBox />} />
 
           <Route path="/register" element={<Register />} />
           <Route path="/success" element={<Success />} />
