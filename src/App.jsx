@@ -27,6 +27,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import "flowbite";
+import ProjectLevel from "./components/ProjectLevel";
 
 const App = () => {
   return (
@@ -99,7 +100,8 @@ const App = () => {
 
           {/* Build Page Route */}
           <Route path="/build" element={<Build />} />
-          <Route path="/low-projects" element={<LowProjectBox />} />
+          <Route path="/low-project" element={<LowProjectBox />} />
+          <Route path="/project/:projectName" element={<ProjectLevel />} />
 
           <Route path="/register" element={<Register />} />
           <Route path="/success" element={<Success />} />
