@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 const LowProjectBox = () => {
+  const navigate = useNavigate();
   const courses = [
     {
+      id: 1,
       name: "Robotics Online Courses",
       Including: "Including Robotics Kit",
       dis: "Learn Robotics in a hands-on manner by building projects...",
@@ -13,6 +17,7 @@ const LowProjectBox = () => {
       ],
     },
     {
+      id: 2,
       name: "Electronic Online Courses",
       Including: "Including Electronic Kit",
       dis: "Learn Electronics in a hands-on manner by building projects...",
@@ -25,6 +30,7 @@ const LowProjectBox = () => {
       ],
     },
     {
+      id: 3,
       name: "Raspberry Pi Online Courses",
       Including: "Including Raspberry Pi Kit",
       dis: "Learn Raspberry Pi in a hands-on manner by building projects...",
@@ -37,6 +43,7 @@ const LowProjectBox = () => {
       ],
     },
     {
+      id: 4,
       name: "Career Building Online Courses",
       Including: "Including Career Building Kit",
       dis: "Learn Career Building in a hands-on manner by building projects...",
@@ -49,6 +56,7 @@ const LowProjectBox = () => {
       ],
     },
     {
+      id: 5,
       name: "IoT (Internet of Things) Online Courses",
       Including: "Including Internet of Things Kit",
       dis: "Learn IoT with practical, hands-on projects...",
@@ -61,6 +69,7 @@ const LowProjectBox = () => {
       ],
     },
     {
+      id: 6,
       name: "Machine Learning Online Courses",
       Including: "Including Machine Learning Kit",
       dis: "Learn Machine Learning in a hands-on manner by building projects...",
@@ -76,10 +85,11 @@ const LowProjectBox = () => {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 p-6 flex flex-wrap gap-6 justify-center items-center">
-      {courses.map((course, index) => (
+      {courses.map((course) => (
         <div
-          key={index}
-          className="p-6 bg-white rounded-lg shadow-lg w-full max-w-sm transform transition-transform hover:scale-105 hover:shadow-2xl"
+          key={course.id}
+          onClick={() => navigate(`/course/${course.id}`)} // Navigate to the course details page
+          className="p-6 bg-white rounded-lg shadow-lg w-full max-w-sm transform transition-transform hover:scale-105 hover:shadow-2xl cursor-pointer"
         >
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
             {course.name}
@@ -88,19 +98,14 @@ const LowProjectBox = () => {
             {course.Including}
           </p>
           <p className="text-gray-600 mb-4">{course.dis}</p>
-          <ul>
-            {course.data.map((item, idx) => (
-              <li
-                key={idx}
-                className="flex justify-between items-center bg-gray-100 rounded-lg p-2 mb-2"
-              >
-                <span className="font-medium text-gray-800">{item.name}</span>
-                <span className="text-blue-600 font-bold">
-                  ₦{item.amount.toLocaleString()}
-                </span>
-              </li>
+          <div className="mt-4">
+            {course.data.map((detail, index) => (
+              <div key={index} className="text-gray-800 text-sm">
+                <span className="font-bold">{detail.name}: </span>
+                <span>₦{detail.amount}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       ))}
     </div>

@@ -21,7 +21,7 @@ import UfuonFun from "./components/UfuonFun";
 import Register from "./components/Register";
 import Success from "./components/Success";
 import LowProjectBox from "./components/LowProjectBox";
-
+import CourseDetails from "./components/CourseDetails";
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -102,6 +102,7 @@ const App = () => {
           <Route path="/build" element={<Build />} />
           <Route path="/low-project" element={<LowProjectBox />} />
           <Route path="/project/:projectName" element={<ProjectLevel />} />
+          <Route path="/course/:id" element={<CourseDetails />} />
 
           <Route path="/register" element={<Register />} />
           <Route path="/success" element={<Success />} />
