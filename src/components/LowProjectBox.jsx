@@ -84,7 +84,7 @@ const LowProjectBox = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 p-6 flex flex-wrap gap-6 justify-center items-center">
+    <div className=" w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 p-6 flex flex-wrap gap-6 justify-center items-center">
       {courses.map((course) => (
         <div
           key={course.id}

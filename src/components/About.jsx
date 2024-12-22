@@ -39,13 +39,6 @@ const About = () => {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[36px] md:leading-[42px] lg:leading-[51px]">
           Explore Ufuon Services
         </h2>
-        <div className="w-full md:w-[60%] h-auto">
-          <img
-            src="https://edukoya.com/images/interactive.png"
-            alt="img"
-            className="w-full h-auto object-contain"
-          />
-        </div>
       </div>
 
       {/* Grid of boxes */}

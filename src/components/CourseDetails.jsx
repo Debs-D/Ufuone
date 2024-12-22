@@ -166,10 +166,10 @@ const CourseDetails = () => {
   const course = courses.find((course) => course.id === parseInt(id));
 
   const paystackConfig = {
-    reference: `txn_${new Date().getTime()}`, // Unique reference for the payment
-    email: "useremail@example.com", // User's email
-    amount: course.data[0].amount * 100, // Amount in kobo (1 Naira = 100 kobo)
-    publicKey: "your-public-key-here", // Paystack public key
+    reference: `txn_${new Date().getTime()}`,
+    email: "useremail@example.com",
+    amount: course.data[0].amount * 100,
+    publicKey: "your-public-key-here",
   };
 
   const handlePaymentSuccess = (reference) => {
@@ -179,6 +179,7 @@ const CourseDetails = () => {
   const handlePaymentClose = () => {
     alert("Payment closed.");
   };
+
   const [formData, setFormData] = useState({
     name: "",
     age: "",
@@ -200,10 +201,10 @@ const CourseDetails = () => {
   }
 
   return (
-    <div className="min-h-screen w-full bg-gray-100 p-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div className="min-h-screen w-full bg-gray-100 p-0">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-5xl mx-auto">
         {/* Left Column */}
-        <div className="col-span-2 bg-white p-6 rounded-lg shadow-lg">
+        <div className="col-span-2 bg-white p-6 rounded-l-lg shadow-lg">
           <img
             src={course.image}
             alt={course.name}
@@ -216,7 +217,7 @@ const CourseDetails = () => {
           <p className="text-gray-600 mb-4">{course.dis}</p>
 
           <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
-            What Youll Learn
+            What You will Learn
           </h2>
           <ul className="list-disc list-inside text-gray-600 mb-6">
             {course.whatYouLearn.map((item, index) => (
@@ -247,7 +248,7 @@ const CourseDetails = () => {
         </div>
 
         {/* Right Column - Enrollment Form */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
+        <div className="bg-white p-6 rounded-r-lg shadow-lg">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Enrollment Form
           </h2>
@@ -282,6 +283,49 @@ const CourseDetails = () => {
             </div>
             <div className="mb-4">
               <label className="block text-gray-700 font-medium mb-2">
+                Email{" "}
+              </label>
+              <input
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Email"
+                className="w-full px-3 py-2 border rounded-lg"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 font-medium mb-2">
+                Phone Number{" "}
+              </label>
+              <input
+                type="phonenumber"
+                name="phone number"
+                value={formData.number}
+                onChange={handleInputChange}
+                placeholder="Enter your phone number"
+                className="w-full px-3 py-2 border rounded-lg"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 font-medium mb-2">
+                city of residence{" "}
+              </label>
+              <input
+                type="text"
+                name="city"
+                value={formData.cityofresidence}
+                onChange={handleInputChange}
+                placeholder="Enter your city"
+                className="w-full px-3 py-2 border rounded-lg"
+                required
+              />
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-gray-700 font-medium mb-2">
                 Project Description
               </label>
               <textarea
@@ -303,6 +347,7 @@ const CourseDetails = () => {
               {...paystackConfig}
               onSuccess={handlePaymentSuccess}
               onClose={handlePaymentClose}
+              className="mt-4 w-full"
             />
           </form>
         </div>

@@ -88,7 +88,7 @@ const Build = () => {
                 Beginner Project
               </button>
               <button
-                onClick={() => navigate("/register")}
+                onClick={() => navigate("/https://www.store.ufuon.com/")}
                 className="py-3 px-5 bg-yellow-600 text-white rounded-lg font-medium hover:bg-yellow-700 transition-transform hover:scale-105"
                 aria-label="Navigate to Intermediate Project"
               >
