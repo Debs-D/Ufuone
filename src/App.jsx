@@ -22,6 +22,7 @@ import Register from "./components/Register";
 import Success from "./components/Success";
 import LowProjectBox from "./components/LowProjectBox";
 import CourseDetails from "./components/CourseDetails";
+//import ButtonNavbar from "./components/ButtonNavbar";
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -50,6 +51,7 @@ const App = () => {
                 <BookLayout />
                 <Skills />
                 <Review />
+                <Footer />
               </>
             }
           />
@@ -64,6 +66,7 @@ const App = () => {
                 <About />
                 <Key />
                 <Gain />
+                <Footer />
               </>
             }
           />
@@ -79,6 +82,7 @@ const App = () => {
                 <About />
                 <Key />
                 <Gain />
+                <Footer />
               </>
             }
           />
@@ -94,6 +98,7 @@ const App = () => {
                 <About />
                 <Key />
                 <Gain />
+                <Footer />
               </>
             }
           />
@@ -107,9 +112,6 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/success" element={<Success />} />
         </Routes>
-
-        {/* Footer always present at the bottom */}
-        <Footer />
       </div>
     </Router>
   );
