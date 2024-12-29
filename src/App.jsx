@@ -22,14 +22,13 @@ import Register from "./components/Register";
 import Success from "./components/Success";
 import LowProjectBox from "./components/LowProjectBox";
 import CourseDetails from "./components/CourseDetails";
-//import ButtonNavbar from "./components/ButtonNavbar";
+import ButtonNavbar from "./components/ButtonNavbar"; // Importing the ButtonNavbar component
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import "flowbite";
 import ProjectLevel from "./components/ProjectLevel";
-
 const App = () => {
   return (
     <Router>
@@ -104,11 +103,20 @@ const App = () => {
           />
 
           {/* Build Page Route */}
-          <Route path="/build" element={<Build />} />
+          <Route
+            path="/build"
+            element={
+              <>
+                <ButtonNavbar />
+                <Build />
+              </>
+            }
+          />
+
+          {/* Other Routes */}
           <Route path="/low-project" element={<LowProjectBox />} />
           <Route path="/project/:projectName" element={<ProjectLevel />} />
           <Route path="/course/:id" element={<CourseDetails />} />
-
           <Route path="/register" element={<Register />} />
           <Route path="/success" element={<Success />} />
         </Routes>
