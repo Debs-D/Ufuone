@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import ButtonNavbar from "../components/ButtonNavbar";
 
 const LowProjectBox = () => {
   const navigate = useNavigate();
+
   const courses = [
     {
       id: 1,
@@ -84,30 +86,40 @@ const LowProjectBox = () => {
   ];
 
   return (
-    <div className=" w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 p-6 flex flex-wrap gap-6 justify-center items-center">
-      {courses.map((course) => (
-        <div
-          key={course.id}
-          onClick={() => navigate(`/course/${course.id}`)} // Navigate to the course details page
-          className="p-6 bg-white rounded-lg shadow-lg w-full max-w-sm transform transition-transform hover:scale-105 hover:shadow-2xl cursor-pointer"
-        >
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            {course.name}
-          </h2>
-          <p className="text-sm text-gray-700 font-semibold mb-4">
-            {course.Including}
-          </p>
-          <p className="text-gray-600 mb-4">{course.dis}</p>
-          <div className="mt-4">
-            {course.data.map((detail, index) => (
-              <div key={index} className="text-gray-800 text-sm">
-                <span className="font-bold">{detail.name}: </span>
-                <span>₦{detail.amount}</span>
-              </div>
-            ))}
+    <div>
+      {/* Render ButtonNavbar */}
+      <ButtonNavbar />
+
+      {/* Courses Section */}
+      <div className="w-full bg-gradient-to-r p-6 flex flex-wrap gap-6 justify-center items-center">
+        {courses.map((course) => (
+          <div
+            key={course.id}
+            onClick={() => navigate(`/course/${course.id}`)}
+            className="p-6 rounded-lg shadow-lg w-full max-w-sm transition-transform hover:scale-105 hover:shadow-2xl cursor-pointer"
+            style={{
+              background: "rgba(244, 244, 244, 1)",
+              border: "1px solid rgba(0, 0, 0, 1)",
+            }}
+          >
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              {course.name}
+            </h2>
+            <p className="text-sm text-gray-700 font-semibold mb-4">
+              {course.Including}
+            </p>
+            <p className="text-gray-600 mb-4">{course.dis}</p>
+            <div className="mt-4">
+              {course.data.map((detail, index) => (
+                <div key={index} className="text-gray-800 text-sm mb-2">
+                  <span className="font-bold">{detail.name}: </span>
+                  <div className="text-red-600 font-bold">₦{detail.amount}</div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

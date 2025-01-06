@@ -1,3 +1,5 @@
+import schImg from "../assets/images/pexels-katerina-holmes-5905957 1.svg";
+
 const Hero = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(0,_92,_179,_0.15)_0%,_rgba(0,_40,_77,_0)_100%)]">
@@ -6,7 +8,7 @@ const Hero = () => {
         {/* Image Section */}
         <div className="w-full h-[400px] md:w-[662.5px] md:h-[794px] flex justify-center">
           <img
-            src="https://s3-alpha-sig.figma.com/img/1dab/4b11/c1ed7785121b6aa885d763c0940f7bbf?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QtRVc7F9xqX3x5HowlAZWRXnELBW1GzExYLqM3r7wrtrbIJVH~puIKJLfxF~nHRq2IdUqAgJ5OOBCg8tFIwQomZfhn~qhfix7FfsaIfEEQp7Lu0hMie7ainOO-8JliMaq8auUObVY0ajojtnnyjTvW7tDKJkKUi76YGVvNDBgKFUSDqiCHavK9MSjLHr41y5Qw2sVRLYPYfLzYP78hJB7G49sIaR0YAfOLBdepWyxgjhZ7yTe~1fn4dOOU9eoBSef3DVVtSuTbDnU0LjocDsWLbEiPrleB~GWrOsrcbp10MSIvdOLRGCoI7ofIdNC0SK36UHFOJEYG~PEMVFbDOrwg__"
+            src={schImg}
             alt="Illustration"
             className="w-full h-full object-contain"
           />

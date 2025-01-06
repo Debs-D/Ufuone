@@ -22,7 +22,8 @@ import Register from "./components/Register";
 import Success from "./components/Success";
 import LowProjectBox from "./components/LowProjectBox";
 import CourseDetails from "./components/CourseDetails";
-import ButtonNavbar from "./components/ButtonNavbar"; // Importing the ButtonNavbar component
+import ButtonNavbar from "./components/ButtonNavbar";
+import HighLevelPage from "./components/HighLevelPage";
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -119,6 +120,7 @@ const App = () => {
           <Route path="/course/:id" element={<CourseDetails />} />
           <Route path="/register" element={<Register />} />
           <Route path="/success" element={<Success />} />
+          <Route path="/high-level" element={<HighLevelPage />} />
         </Routes>
       </div>
     </Router>
