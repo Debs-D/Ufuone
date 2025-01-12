@@ -138,7 +138,9 @@ const Build = () => {
                 us?
               </p>
               <button
-                onClick={() => navigate("https://www.store.ufuon.com/")}
+                onClick={() =>
+                  window.open("https://www.store.ufuon.com/project", "_blank")
+                }
                 className="py-2 px-4 bg-red-600 text-white rounded-lg font-medium text-sm hover:bg-green-700 transition-transform hover:scale-105 "
               >
                 Intermediate Project
@@ -205,10 +207,7 @@ const Build = () => {
               <p className="text-xl font-medium leading-8 text-left ">
                 Will you like to build your first project and do not know how?
               </p>
-              <button
-                onClick={() => navigate("/register")}
-                className="py-2 px-4 bg-red-600 text-white rounded-lg font-medium text-sm hover:bg-green-700 transition-transform hover:scale-105 "
-              >
+              <button className="py-2 px-4 bg-red-600 text-white rounded-lg font-medium text-sm hover:bg-green-700 transition-transform hover:scale-105 ">
                 Advanced Project
               </button>
             </div>

@@ -1,16 +1,14 @@
+import { Link } from "react-router-dom"; // Import if using React Router
+
 const Footer = () => {
   const images = [
     {
       image:
-        "https://s3-alpha-sig.figma.com/img/d3f3/fa4a/81a3fa7616efe791c18b5631ad9c5181?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cfqPmafaz0FWGkGcuMjjkJuTNxewqIwTFg5D-Fk7YCxKsh6CYExGHqHZw0A0gttQ1DYTLS2WWSCiNQshcAS26Lk1dx~Vz8af18uOakj8or88JrG0gDxuoYCLvc6fpB-14dCkk6KqvUbBsYQZftClUolc7jmgQVGRrOI4fR2bor6FdBg9I-dwu-9D2dR6hW6uDdwMXA8ziabMeQy5HoLhOnC3ueiIUdifx25icNp50e9~gA1NsWSo6Tq83zFUynSIoAw4H2ZXIep-pWN1DntKxlNgvocLUTFynIvFE-cFF3k4y7nri7e6oXGCY1hiBcCvqtP8kIISAvjsYKSa5RD2Tg__",
+        "https://s3-alpha-sig.figma.com/img/d3f3/fa4a/81a3fa7616efe791c18b5631ad9c5181?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TPtcrrNtKtVx9M0dME9H8nYycdVIFfULy3y457kVDbmrr56-GRAq7YExrcvPmKVShIlxuQbrqRlHa0uEdp40n7nP1wLTAkFY2I1MaD5CDWH~KJIMg7w~3CffOKlIOecIZU1CtdyvuG4w4DPmUh9wBpAIcMKuXt-DorNCPiTVwqYLWHMBWpfp~za-DtLENzVwvp~~IAct9PNfwMt9ZGRzNv3u6~7dDMxuKck9muOK10AIzNfnq8fXN6p1ezSFjbewfXo7Xn9L6m1ZsukPRW8jSTWl8Yy6~02TA-bPEeirn5NtCb0ZYwQ3vVZ2dwMZeHTKyWl1lEI7H~rD4iQnGVVKqQ__",
     },
     {
       image:
-        "https://s3-alpha-sig.figma.com/img/b609/07ee/817c63d263240d9e15ad0da0e822edb8?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NkrRELpILin6bHRBYWLxMvkYHpj83tVeygcA0365a1ZRGNl~vnu97uGQ5VhUvvmwt~aVSqWkz7V-KcrW-j8Ue7vf8CWxKRCs~S2FBr-4KmXnP7cNwR4U~ZRHT23RMJNJhFFkbc1oZjufqA~8M-vYoPcCEJm6G1Y6svrtn2l6MfVjJ1vMgXBvzaH1kOoapU1x9zkxiFa~DCWBqSV3v89q1R0iZvn7dD46cHIUnOILRAWapnpe2zFGL-11X-icvsh6oPdS4GPPWsFPYdIi0HwLVvPSNTkn38LdNbaxfRKwy~keJ5UTbXqEBQQzSWpuZI33oMtZsSIb~McqaYms7Ecteg__",
-    },
-    {
-      image:
-        "https://s3-alpha-sig.figma.com/img/e54c/d6ce/8f1e5b93d5a18c05026b42aedcd06e2c?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=N9-vXbZmaC47Tnd37fAiFyVuntkR8ZonMUVdJSQhgW7nnGge9bGPSQwFp737pXVEk0LCdYM6jVBub9VFEtUt~Yr3VLtFFLTynSX3zVRMmnGJHkyLK31fiImfKssVa3qeFQalfwY8Ok9KEdjJUVrnJ7UdQNOr3Lu0qSNoXlb6AbZtVO5OTGOA4VT0-Vcz0DxsaIWd6eY4K8YMZkUSzyGb0no5c-jO7y4TNwHxUPjhNdR1-vmMuDA6he~Xvs2y~80ndHn-e5ZS4YDHur-q5qdSi4aXnRbdNj7-ro45hbSvhnTKFc0k9PI4vgUet3nNj~t0WReN3q4izqu16wHBSvUIfw__",
+        "https://s3-alpha-sig.figma.com/img/e54c/d6ce/8f1e5b93d5a18c05026b42aedcd06e2c?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LVnkyfHUjnnUtyNrhTWAVgEJihMhRrg7Qr-rcOfLSzrm4CckfgBNs2kYgoYkOPjfcWNo7gn3P7XDL~JXbFMmC8x1kMD~TFYUm4WIzGyuUBl9CykrrQ8LGS4O~1OUUQPmOUfocL8T-Sro0UjGSyt8kOX5OMeEgbZbCwyNDU2DOaJydgCnl6Mozsdj03aB2hp0NgqW67qqqWhlsCpP6SmwMy0OJJhhsXvnwA1ygSfSliRKhCokWVQ~Jt-oofV3sLOdyfhSPDhvUG69cYIjqa3QXM4mgK87hswct~x7nOWVWayt-diUTDLaTxQc3e2-6hzwW5LkPu~ik6VOm0smzKR3NA__",
     },
   ];
 
@@ -28,11 +26,31 @@ const Footer = () => {
             <li className="font-medium text-[16px] md:text-[18px]">
               Quick Links
             </li>
-            <li>Home</li>
-            <li>Ufuon store</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Blog Page</li>
+            <li>
+              <Link to="/" className="hover:underline">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/store" className="hover:underline">
+                Ufuon store
+              </Link>
+            </li>
+            <li>
+              <Link to="/ufoneAbout" className="hover:underline">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:underline">
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/blog" className="hover:underline">
+                Blog Page
+              </Link>
+            </li>
           </ul>
         </div>
 

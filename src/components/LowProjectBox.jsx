@@ -90,6 +90,14 @@ const LowProjectBox = () => {
       {/* Render ButtonNavbar */}
       <ButtonNavbar />
 
+      {/* Back Button */}
+      <button
+        onClick={() => navigate(-1)} // This will take the user to the previous page
+        className="p-4 bg-gray-800 text-white rounded-full ml-5 mt-3  left-4 flex items-center justify-center"
+      >
+        <span className="text-xl">&larr;</span> {/* Left Arrow */}
+      </button>
+
       {/* Courses Section */}
       <div className="w-full bg-gradient-to-r p-6 flex flex-wrap gap-6 justify-center items-center">
         {courses.map((course) => (

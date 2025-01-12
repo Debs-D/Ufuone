@@ -4,12 +4,17 @@ import logo from "../assets/images/Logo (1).svg";
 const ButtonNavbar = () => {
   const navigate = useNavigate();
 
-  // Menu Items for top section
-  const menuItems = ["Home", "Work", "News", "School"];
+  // Menu Items for top section with paths
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Work", path: "/workplace" },
+    { name: "News", path: "/UfuonFun" },
+    { name: "School", path: "/branch" },
+  ];
 
   // Levels for links
   const levels = [
-    { name: "Low Level", path: "/low-level" },
+    { name: "Low Level", path: "/low-project" },
     { name: "High Level", path: "/high-level" },
     { name: "Advanced", path: "/advanced" },
   ];
@@ -26,9 +31,9 @@ const ButtonNavbar = () => {
               <li
                 key={index}
                 className="text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
-                onClick={() => (item === "Home" ? navigate("/") : null)}
+                onClick={() => navigate(item.path)} // Navigate to the item's path
               >
-                {item}
+                {item.name}
               </li>
             ))}
           </ul>
@@ -52,7 +57,7 @@ const ButtonNavbar = () => {
           {/* Enroll Button */}
           <button
             onClick={() => navigate("/enroll")}
-            className="py-3  px-6 bg-red-600 text-white rounded-lg font-medium hover:bg-orange-600 transition-transform duration-300"
+            className="py-3 px-6 bg-red-600 text-white rounded-lg font-medium hover:bg-orange-600 transition-transform duration-300"
           >
             Enroll
           </button>

@@ -1,12 +1,21 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom"; // Import Link from react-router-dom
+import { useNavigate, Link } from "react-router-dom";
 import logo from "../assets/images/Logo (1).svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuItems = ["News", "Work", "School", "Home", "Study", "Discover"];
-  const menuBars = ["Contact Sales", "Play", "Login"];
   const navigate = useNavigate();
+
+  // Update menu items to include paths
+  const menuItems = [
+    { label: "News", path: "/UfuonFun" },
+    { label: "Work", path: "/workplace" },
+    { label: "School", path: "/branch" },
+    { label: "Home" },
+    { label: "Study", path: "CourseDetails " },
+    { label: "Discover", path: "/build" },
+  ];
+  const menuBars = ["Contact Sales", "Login"];
 
   const handleButtonClick = () => {
     const currentPath = window.location.pathname;
@@ -42,8 +51,6 @@ const Header = () => {
       {/* Logo - Wrapped with Link */}
       <div className="flex items-center">
         <Link to="/workplace">
-          {" "}
-          {/* Link to /workplace */}
           <img
             src={logo}
             alt="Logo"
@@ -93,9 +100,11 @@ const Header = () => {
           {menuItems.map((item, index) => (
             <li
               key={index}
-              className="py-2 text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
+              className="py-2 text-gray-800 font-semibold hover:text-blue-600"
             >
-              {item}
+              <Link to={item.path} className="cursor-pointer">
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -124,9 +133,11 @@ const Header = () => {
             {menuItems.map((item, index) => (
               <li
                 key={index}
-                className="py-2 text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
+                className="py-2 text-gray-800 font-semibold hover:text-blue-600"
               >
-                {item}
+                <Link to={item.path} className="cursor-pointer">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

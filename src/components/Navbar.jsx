@@ -88,20 +88,18 @@ const Navbar = () => {
       </div>
 
       {/* Button Section */}
-      <div
-        className="flex items-center justify-center gap-3 bg-[#fe0804] text-white rounded-lg text-[18px] font-semibold 
-          hover:bg-[#e00703] hover:scale-105 transition-transform duration-300 
-          w-auto py-2 px-4 sm:py-1 sm:px-3 md:py-2 md:px-4"
-      >
-        <img
-          src={click}
-          alt="icon"
-          className="w-6 h-6 object-contain sm:w-5 sm:h-5 md:w-6 md:h-6"
-        />
+      <div>
         <Link
           to="/build"
-          className="text-lg sm:text-sm md:text-lg font-medium whitespace-nowrap"
+          className="text-lg sm:text-sm md:text-lg font-medium whitespace-nowrap  flex items-center justify-center gap-3 bg-[#fe0804] text-white rounded-lg text-[18px] font-semibold 
+          hover:bg-[#e00703] hover:scale-105 transition-transform duration-300 
+          w-auto py-2 px-4 sm:py-1 sm:px-3 md:py-2 md:px-4"
         >
+          <img
+            src={click}
+            alt="icon"
+            className="w-6 h-6 object-contain sm:w-5 sm:h-5 md:w-6 md:h-6"
+          />
           Build
         </Link>
       </div>

@@ -24,6 +24,9 @@ import LowProjectBox from "./components/LowProjectBox";
 import CourseDetails from "./components/CourseDetails";
 import ButtonNavbar from "./components/ButtonNavbar";
 import HighLevelPage from "./components/HighLevelPage";
+import UfoneAbout from "./components/ufoneAbout";
+import AdvancedProject from "./components/AdvancedProject";
+
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -121,6 +124,8 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/success" element={<Success />} />
           <Route path="/high-level" element={<HighLevelPage />} />
+          <Route path="/ufoneAbout" element={<UfoneAbout />} />
+          <Route path="/advanced-project" element={<AdvancedProject />} />
         </Routes>
       </div>
     </Router>
