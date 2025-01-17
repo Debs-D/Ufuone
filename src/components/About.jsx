@@ -1,44 +1,53 @@
 import Box from "./Box";
 import "../App.css";
+import img1 from "../assets/images/pexels-vanessa-loring-7869049 1.svg";
+import img2 from "../assets/images/pexels-pavel-danilyuk-8294681 2.svg";
+import img3 from "../assets/images/pexels-thisisengineering-19895722 1.svg";
+import img4 from "../assets/images/pngwing.com (45) 1.svg";
 
 const About = () => {
   const boxData = [
     {
-      image:
-        "https://www.shutterstock.com/image-vector/back-school-cartoon-vector-kids-260nw-2493305457.jpg",
+      image: img1,
       title: "Ufuon at School",
       description:
         "Engage with clients and team members seamlessly in group learning and distance learning.",
-      bgColor: "bg-yellow-100",
-    },
-    {
-      image: "https://watermark.lovepik.com/photo/50088/5838.jpg_wh1200.jpg",
-      title: "Ufuon at Home",
-      description:
-        "Learning apps for book reading, games, and fun for family at home.",
       bgColor: "bg-red-100",
     },
     {
-      image:
-        "https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-image_133225.jpg",
+      image: img2,
+      title: "Ufuon at Home",
+      description:
+        "Learning apps for book reading, games, and fun for family at home.",
+      bgColor: "bg-blue-100",
+    },
+    {
+      image: img3,
       title: "Ufuon Store",
       description:
         "Access curated STEM content. Shop our extensive collection of STEM products.",
-      bgColor: "bg-blue-200",
+      bgColor: "bg-yellow-100",
     },
   ];
 
   return (
     <section className="w-full h-auto min-h-screen flex flex-col items-center justify-center p-6 md:p-10 pb-16">
-      <div
-        style={{
-          backgroundColor: "rgba(254, 226, 226, 164)",
-        }}
-        className="flex items-center justify-center text-center shadow-md w-full md:w-[95%] lg:w-[1213px] h-[308px] mx-auto rounded-[69px]"
-      >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[36px] md:leading-[42px] lg:leading-[51px]">
-          Explore Ufuon Services
-        </h2>
+      <div className="bg-blue-100 flex items-center justify-around text-center shadow-md w-full md:w-[95%] lg:w-[1213px] h-[308px] rounded-[29px] px-6 md:px-8">
+        <div className="flex-1 text-left mx-9">
+          <h2 className="text-4xl md:text-4xl lg:text-6xl font-medium leading-[36px] md:leading-[42px] lg:leading-[71px] text-gray-800">
+            Explore Ufuon <br /> Services
+          </h2>
+          <button className="mt-4 py-2 px-4 bg-[#fe0804] text-white rounded-lg text-base font-medium hover:bg-[#e00703] transition-transform duration-300">
+            Learn More
+          </button>
+        </div>
+        <div className="flex-shrink-0 ml-4 md:ml-6 mx-5">
+          <img
+            src={img4}
+            alt="Ufuon Services"
+            className="w-[150px] md:w-[200px] lg:w-[350px] h-auto rounded-lg"
+          />
+        </div>
       </div>
 
       {/* Grid of boxes */}

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { PaystackButton } from "react-paystack";
 import ButtonNavbar from "../components/ButtonNavbar";
+import { useNavigate } from "react-router-dom";
 
 import robImg from "../assets/images/image_fx_ (33) 1.svg";
 
@@ -160,6 +161,8 @@ const courses = [
 ];
 
 const CourseDetails = () => {
+  const navigate = useNavigate();
+
   const { id } = useParams(); // Get course ID from URL params
   const course = courses.find((course) => course.id === parseInt(id));
 
@@ -208,6 +211,14 @@ const CourseDetails = () => {
     <>
       {/* Render ButtonNavbar */}
       <ButtonNavbar />
+
+      {/* Back Button */}
+      <button
+        onClick={() => navigate(-1)} // This will take the user to the previous page
+        className="p-4 bg-gray-800 text-white rounded-full ml-5 mt-3  left-4 flex items-center justify-center"
+      >
+        <span className="text-xl">&larr;</span> {/* Left Arrow */}
+      </button>
 
       <div className="min-h-screen w-full bg-gray-100 p-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
