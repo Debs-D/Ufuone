@@ -24,7 +24,7 @@ import LowProjectBox from "./components/LowProjectBox";
 import CourseDetails from "./components/CourseDetails";
 import ButtonNavbar from "./components/ButtonNavbar";
 import HighLevelPage from "./components/HighLevelPage";
-import UfoneAbout from "./components/ufoneAbout";
+import UfoneAbout from "./components/UfoneAbout";
 import AdvancedProject from "./components/AdvancedProject";
 
 // Importing CSS files
