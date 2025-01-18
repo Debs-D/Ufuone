@@ -1,0 +1,83 @@
+import ButtonNavbar from "../components/ButtonNavbar";
+import img1 from "../assets/images/Frame 115 (1).svg";
+import img2 from "../assets/images/Frame 115.svg";
+import img3 from "../assets/images/Frame 116.svg";
+import img4 from "../assets/images/Frame 117.svg";
+import ContactQuestion from "../components/ContactQuestion";
+import Footer from "../components/Footer";
+
+const ContactUfone = () => {
+  const contactData = [
+    {
+      imgUrl: img4,
+      title: "Chat to Support",
+      description: "wa.me//+234 907 456",
+    },
+    {
+      imgUrl: img3,
+      title: "Call Us",
+      description: "+234 907 456",
+    },
+    {
+      imgUrl: img2,
+      title: "Email",
+      description: "Visit our office @",
+    },
+    {
+      imgUrl: img1,
+      title: "Visit us",
+      description: "Visit our office @",
+    },
+  ];
+
+  return (
+    <>
+      {/* Render ButtonNavbar */}
+      <ButtonNavbar />
+
+      <div>
+        <h1 className="p-10 text-[75px] font-semibold leading-[79.32px] text-center">
+          Contact our friendly team
+        </h1>
+        <p className="text-[30px] font-normal leading-[37.8px] text-center">
+          Let us know how we can help
+        </p>
+        <div className="flex items-center justify-center mt-5">
+          <button
+            className="py-2 px-4 bg-[#fe0804] w-[220.52px] h-[46px] text-white 
+                         rounded-lg text-[20px] font-medium 
+                         hover:bg-[#e00703] transition-transform duration-300"
+          >
+            Send an email
+          </button>
+        </div>
+        <div className="flex items-center justify-center gap-5 mt-10 p-6">
+          {contactData.map((box, index) => (
+            <div
+              key={index}
+              className="w-[301.48px] h-[340.93px] bg-gray-100 shadow-lg rounded-[17.55px] 
+                           flex flex-col items-center justify-center p-5 text-center"
+            >
+              <img
+                src={box.imgUrl}
+                alt={box.title}
+                className="w-20 h-20 mb-4"
+              />
+              <h2 className="text-[24px] font-semibold mb-2">{box.title}</h2>
+              <p className="text-[18px] font-semibold">{box.description}</p>
+            </div>
+          ))}
+        </div>
+        {/* Render ContactQuestion component below the contact section */}
+        <div className="mt-16">
+          <ContactQuestion />
+        </div>
+        <div className="mt-16">
+          <Footer />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ContactUfone;

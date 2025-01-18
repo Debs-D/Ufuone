@@ -8,14 +8,15 @@ const Header = () => {
 
   // Update menu items to include paths
   const menuItems = [
+    { label: "Home", path: "/x" },
     { label: "News", path: "/UfuonFun" },
     { label: "Work", path: "/workplace" },
     { label: "School", path: "/branch" },
-    { label: "Home" },
     { label: "Study", path: "CourseDetails " },
     { label: "Discover", path: "/build" },
+    { label: "Contact Sales", path: "/contactUfone" },
   ];
-  const menuBars = ["Contact Sales", "Login"];
+  const menuBars = ["Login"];
 
   const handleButtonClick = () => {
     const currentPath = window.location.pathname;

@@ -8,23 +8,23 @@ const Hero = () => {
 
   const slides = [
     {
-      title: "Learn, Play, Grow: Discover a New Way to Learn",
+      title: "Learn, Explore, Connect, Unlock Potentials: Impact Your World ",
       description:
-        "Explore engaging games, connect with classmates, and unlock your full potential.",
+        "Your community for edu-gaming, connecting, personalized learning, and fun",
       image: img1,
     },
     {
       title:
-        "Engage, Educate, Empower with Ufuon's Classroom Management Solution",
+        "Discover the Future of Classroom Management with Ufuon's Classroom Management Solution:",
       description:
-        "Explore engaging games, connect with classmates, and unlock your full potential.",
+        "Empower Your Students, Elevate Your Teaching, Simplify Your Life....",
       image: img2,
     },
     {
       title:
-        "Fuel Your Child's Passion: Explore STEM with Ufuon and our Online Store",
+        "Fuel Your Passion: Explore ELECTRONICS &  STEM with Ufuon, and get all you need from our Online Store.",
       description:
-        "Access curated STEM content, engage in hands-on projects. Shop our extensive collection of STEM resources.",
+        "Build ELECTRONIC projects, access curated STEM contents and training, engage in hands-on projects.",
       image: img3,
     },
   ];

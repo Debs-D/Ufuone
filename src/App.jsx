@@ -26,6 +26,8 @@ import ButtonNavbar from "./components/ButtonNavbar";
 import HighLevelPage from "./components/HighLevelPage";
 import UfoneAbout from "./components/UfoneAbout";
 import AdvancedProject from "./components/AdvancedProject";
+import ContactUfone from "./components/ContactUfone";
+import ContactQuestion from "../src/components/ContactQuestion";
 
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
@@ -126,6 +128,8 @@ const App = () => {
           <Route path="/high-level" element={<HighLevelPage />} />
           <Route path="/ufoneAbout" element={<UfoneAbout />} />
           <Route path="/advanced-project" element={<AdvancedProject />} />
+          <Route path="/contactUfone" element={<ContactUfone />} />
+          <Route path="/contactQuestion" element={<ContactQuestion />} />
         </Routes>
       </div>
     </Router>
