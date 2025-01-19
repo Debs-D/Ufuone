@@ -3,16 +3,19 @@ import navIcon from "../assets/images/Vector (1).svg";
 const SectionStudy = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-auto bg-[#005cb3] text-white py-16 px-10 text-center">
-      <h2 className="text-7xl mb-6 font-500">Study Smart! Play Hard!</h2>
+      <h2 className="text-7xl mb-6 font-500">
+        Revolutionize Your Learning Experience: Study Smarter, Faster, Funner,
+        NOT HARDER.
+      </h2>
 
       <p className="text-2xl mb-12 w-[820px] max-w-[90%] leading-relaxed">
-        Stop spending hours re-reading and re-copying your notes!
+        Anywhere, Anytime: Learn More, Retain More, Do More.{" "}
       </p>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-[820px] max-w-[90%]">
         <li className="flex items-center text-2xl">
           <img src={navIcon} alt="icon" className="w-9 h-9 mr-4" />
-          Study Smart on the go
+          Maximize Your Study Time{" "}
         </li>
         <li className="flex items-center text-2xl">
           <img src={navIcon} alt="icon" className="w-9 h-9 mr-4" />

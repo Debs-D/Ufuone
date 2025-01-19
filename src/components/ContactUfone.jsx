@@ -5,6 +5,7 @@ import img3 from "../assets/images/Frame 116.svg";
 import img4 from "../assets/images/Frame 117.svg";
 import ContactQuestion from "../components/ContactQuestion";
 import Footer from "../components/Footer";
+import Slider from "react-slick"; // Import Slider from react-slick
 
 const ContactUfone = () => {
   const contactData = [
@@ -30,33 +31,79 @@ const ContactUfone = () => {
     },
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false, // Disable arrows on mobile view
+    autoplay: true, // Autoplay the slider
+    autoplaySpeed: 3000, // Autoplay speed in milliseconds
+  };
+
   return (
     <>
       {/* Render ButtonNavbar */}
       <ButtonNavbar />
 
       <div>
-        <h1 className="p-10 text-[75px] font-semibold leading-[79.32px] text-center">
+        {/* Heading */}
+        <h1 className="p-10 text-[75px] font-semibold leading-[79.32px] text-center sm:text-[40px] sm:leading-[48px]">
           Contact our friendly team
         </h1>
-        <p className="text-[30px] font-normal leading-[37.8px] text-center">
+
+        {/* Subheading */}
+        <p className="text-[30px] font-normal leading-[37.8px] text-center sm:text-[18px] sm:leading-[24px]">
           Let us know how we can help
         </p>
+
+        {/* Button */}
         <div className="flex items-center justify-center mt-5">
           <button
             className="py-2 px-4 bg-[#fe0804] w-[220.52px] h-[46px] text-white 
                          rounded-lg text-[20px] font-medium 
-                         hover:bg-[#e00703] transition-transform duration-300"
+                         hover:bg-[#e00703] transition-transform duration-300
+                         sm:w-[200px] sm:h-[40px] sm:text-[16px]"
           >
             Send an email
           </button>
         </div>
-        <div className="flex items-center justify-center gap-5 mt-10 p-6">
+
+        {/* Mobile View Slider */}
+        <div className="sm:hidden">
+          <Slider {...settings}>
+            {contactData.map((box, index) => (
+              <div
+                key={index}
+                className="w-[301.48px] h-[340.93px] bg-gray-100 shadow-lg rounded-[17.55px] 
+                flex flex-col items-center justify-center p-5 text-center 
+                transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <img
+                  src={box.imgUrl}
+                  alt={box.title}
+                  className="w-20 h-20 mb-4"
+                />
+                <h2 className="text-[24px] font-semibold mb-2 sm:text-[18px]">
+                  {box.title}
+                </h2>
+                <p className="text-[18px] font-semibold sm:text-[14px]">
+                  {box.description}
+                </p>
+              </div>
+            ))}
+          </Slider>
+        </div>
+
+        {/* Desktop View Grid */}
+        <div className="hidden sm:flex items-center justify-center gap-5 mt-10 p-6">
           {contactData.map((box, index) => (
             <div
               key={index}
               className="w-[301.48px] h-[340.93px] bg-gray-100 shadow-lg rounded-[17.55px] 
-                           flex flex-col items-center justify-center p-5 text-center"
+              flex flex-col items-center justify-center p-5 text-center 
+              transition-transform duration-300 hover:scale-105 hover:shadow-xl"
             >
               <img
                 src={box.imgUrl}
@@ -68,10 +115,13 @@ const ContactUfone = () => {
             </div>
           ))}
         </div>
-        {/* Render ContactQuestion component below the contact section */}
+
+        {/* Render ContactQuestion component */}
         <div className="mt-16">
           <ContactQuestion />
         </div>
+
+        {/* Render Footer */}
         <div className="mt-16">
           <Footer />
         </div>

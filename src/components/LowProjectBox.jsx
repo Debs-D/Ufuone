@@ -93,7 +93,7 @@ const LowProjectBox = () => {
       {/* Back Button */}
       <button
         onClick={() => navigate(-1)} // This will take the user to the previous page
-        className="p-4 bg-gray-800 text-white rounded-full ml-5 mt-3  left-4 flex items-center justify-center"
+        className="p-4 bg-orange-700 hover:bg-orange-500 text-white rounded-lg ml-5 mt-3  left-4 flex items-center justify-center"
       >
         <span className="text-xl">&larr;</span> {/* Left Arrow */}
       </button>

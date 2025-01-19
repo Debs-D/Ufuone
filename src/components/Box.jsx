@@ -56,7 +56,7 @@ const Box = ({
         <img
           src={image || imgUrl}
           alt={title}
-          className="object-cover rounded-lg"
+          className="object-cover rounded-[18px]"
           style={defaultStyles.image}
         />
       </div>

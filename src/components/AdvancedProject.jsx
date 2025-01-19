@@ -3,6 +3,7 @@ import { PaystackButton } from "react-paystack";
 import PropTypes from "prop-types";
 import img from "../assets/images/Group 48.svg";
 import ButtonNavbar from "../components/ButtonNavbar";
+import { useNavigate } from "react-router-dom";
 
 // Reusable FormInput component
 const FormInput = ({ id, label, type, value, onChange, required }) => (
@@ -32,6 +33,8 @@ FormInput.propTypes = {
 };
 
 const AdvancedProject = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     projectType: "",
@@ -71,6 +74,12 @@ const AdvancedProject = () => {
   return (
     <>
       <ButtonNavbar />
+      <button
+        onClick={() => navigate(-1)} // This will take the user to the previous page
+        className="p-4 bg-orange-700 hover:bg-orange-500 text-white rounded-lg ml-5 mt-3  left-4 flex items-center justify-center"
+      >
+        <span className="text-xl">&larr;</span> {/* Left Arrow */}
+      </button>
 
       <div className="min-h-screen flex flex-col justify-center items-center bg-white px-8 ">
         <div className="max-w-6xl w-full flex flex-col lg:flex-row items-center bg-gray-100 rounded-lg shadow-lg overflow-hidden">
