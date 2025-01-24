@@ -8,13 +8,11 @@ const Header = () => {
 
   // Update menu items to include paths
   const menuItems = [
-    { label: "Home", path: "/x" },
-    { label: "News", path: "/UfuonFun" },
-    { label: "Work", path: "/workplace" },
+    { label: "Home", path: "/" },
     { label: "School", path: "/branch" },
     { label: "Study", path: "CourseDetails " },
-    { label: "Discover", path: "/build" },
-    { label: "Contact Sales", path: "/contactUfone" },
+    { label: "Build", path: "/build" },
+    { label: "Contact us", path: "/contactUfone" },
   ];
   const menuBars = ["Login"];
 

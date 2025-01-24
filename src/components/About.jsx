@@ -9,23 +9,23 @@ const About = () => {
   const boxData = [
     {
       image: img1,
-      title: "Ufuon at School",
+      title: "Ufuon Build",
       description:
-        "Engage with clients and team members seamlessly in group learning and distance learning.",
+        "Get full aid, expert guidance or mentorship to build low-level or high-level electronics and robotics projects.",
       bgColor: "bg-red-100",
     },
     {
       image: img2,
-      title: "Ufuon at Home",
+      title: "Ufuon Store ",
       description:
-        "Learning apps for book reading, games, and fun for family at home.",
+        "Shop on our extensive collection of electronic products to use for your project",
       bgColor: "bg-blue-100",
     },
     {
       image: img3,
-      title: "Ufuon Store",
+      title: "Ufuon for school",
       description:
-        "Access curated STEM content. Shop our extensive collection of STEM products.",
+        " Explore STEM education covering electronics and robotics with a school-advanced management system",
       bgColor: "bg-yellow-100",
     },
   ];

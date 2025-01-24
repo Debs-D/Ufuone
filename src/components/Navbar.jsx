@@ -7,11 +7,13 @@ import navImg1 from "../assets/images/image_fx_ (14) 1.svg";
 import navImg2 from "../assets/images/Mask group (2).svg";
 
 const settings = {
-  dots: false,
+  dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: 4, // Display 4 boxes
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 1024,
@@ -23,6 +25,7 @@ const settings = {
       breakpoint: 640,
       settings: {
         slidesToShow: 1,
+        dots: false, // Hide dots for mobile for a cleaner view
       },
     },
   ],
@@ -33,53 +36,66 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 640); // Set breakpoint for mobile
+      setIsMobileView(window.innerWidth <= 640);
     };
-    handleResize(); // Check on initial render
-    window.addEventListener("resize", handleResize); // Add event listener
-    return () => window.removeEventListener("resize", handleResize); // Clean up
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const data = [
-    {
-      image: navImg,
-      title: "Capacitive Circuit",
-    },
-    {
-      image: navImg1,
-      title: "Microcontroller Project",
-    },
-    {
-      image: navImg2,
-      title: "Robotics Project",
-    },
+    { image: navImg, title: "Capacitive Circuit" },
+    { image: navImg1, title: "Microcontroller Project" },
+    { image: navImg2, title: "Robotics Project" },
+    { image: navImg, title: "PCB Design" },
   ];
 
   return (
-    <nav className="bg-custom-gradient flex items-center w-full overflow-hidden justify-between p-6">
-      {/* Logo Section */}
-      <Link to="/UfuonFun">
-        <h3 className="text-white text-[49.04px] sm:text-[24px] font-bold leading-[46.71px] text-left font-visby">
-          Ufuon <br /> school
+    <nav className="bg-custom-gradient flex flex-col sm:flex-row items-center justify-between p-4 w-full">
+      {/* Logo */}
+      <Link to="/UfuonFun" className="mb-4 sm:mb-0 sm:mr-6">
+        <h3 className="text-white text-[32px] font-bold leading-tight">
+          Build with Ufuon
         </h3>
       </Link>
 
       {/* Slider Section */}
-      <div className="w-full h-28 [&_.slick-slider]:h-28 max-w-6xl">
-        {!isMobileView && (
+      <div className="w-full sm:w-auto flex-1 max-w-4xl">
+        {isMobileView ? (
+          <div className="flex items-center justify-center gap-4">
+            <div className="relative w-[200px] h-[120px] rounded-lg overflow-hidden">
+              <img
+                src={data[0].image}
+                alt=""
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+            {/* Mobile "Build" Button */}
+            <Link
+              to="/build"
+              className="flex items-center gap-2 bg-[#fe0804] hover:bg-[#e00703] text-white text-[16px] font-medium py-2 px-4 rounded-md transition-transform duration-200 hover:scale-105"
+            >
+              <img src={click} alt="icon" className="w-5 h-5" />
+              <span>Build</span>
+            </Link>
+          </div>
+        ) : (
           <Slider {...settings}>
             {data.map((ele, index) => (
-              <div
-                key={index}
-                className="relative w-full h-28 flex-shrink-0 rounded-md shadow-md"
-              >
-                <img
-                  src={ele.image}
-                  alt={ele.title}
-                  className="w-full h-full object-cover rounded-md hover:scale-105 transition-transform"
-                />
-                <div className="absolute bottom-2 left-2 text-white bg-black/60 px-2 py-1 rounded-md text-sm font-semibold">
-                  {ele.title}
+              <div key={index} className="p-2 flex items-center justify-center">
+                <div className="relative w-[200px] h-[120px] rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src={ele.image}
+                    alt={ele.title}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                  {!isMobileView && (
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                      <p className="text-white text-center text-sm font-semibold">
+                        {ele.title}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -87,22 +103,18 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Button Section */}
-      <div>
-        <Link
-          to="/build"
-          className="text-lg sm:text-sm md:text-lg font-medium whitespace-nowrap  flex items-center justify-center gap-3 bg-[#fe0804] text-white rounded-lg text-[18px] font-semibold 
-          hover:bg-[#e00703] hover:scale-105 transition-transform duration-300 
-          w-auto py-2 px-4 sm:py-1 sm:px-3 md:py-2 md:px-4"
-        >
-          <img
-            src={click}
-            alt="icon"
-            className="w-6 h-6 object-contain sm:w-5 sm:h-5 md:w-6 md:h-6"
-          />
-          Build
-        </Link>
-      </div>
+      {/* Desktop "Build" Button */}
+      {!isMobileView && (
+        <div className="sm:ml-6">
+          <Link
+            to="/build"
+            className="flex items-center gap-2 bg-[#fe0804] hover:bg-[#e00703] text-white text-[18px] font-medium py-2 px-4 rounded-md transition-transform duration-200 hover:scale-105"
+          >
+            <img src={click} alt="icon" className="w-5 h-5" />
+            <span>Build</span>
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };

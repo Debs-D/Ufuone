@@ -7,8 +7,8 @@ const BookLayout = () => {
       <div className="flex flex-wrap items-center justify-evenly w-full py-10 px-5 gap-10">
         {/* Text Section */}
         <div className="flex flex-col items-start gap-6 max-w-[600px]">
-          <h1 className="text-[64px] font-medium leading-tight text-left md:text-[64px] md:text-left md:leading-tight md:max-w-full">
-            Educative Books For Your Kid
+          <h1 className="text-[58px] font-normal leading-tight text-left md:text-[64px] md:text-left md:leading-tight md:max-w-full">
+            Transforming Africa through Innovation:{" "}
           </h1>
           <ul className="flex flex-col gap-5 p-0 list-none text-left md:text-left">
             <li className="flex items-center text-[30px] font-medium gap-4 md:text-[30px]">

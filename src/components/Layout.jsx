@@ -16,8 +16,8 @@ const Layout = () => {
 
         {/* Text Section */}
         <div className="flex flex-col items-center gap-5 max-w-[600px] w-full text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-[50px] sm:leading-[60px] text-red-600">
-            Get a qualified teacher for your Child
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-normal leading-[50px] sm:leading-[60px] text-red-600">
+            Get a qualified instructor to assist with Electronics
           </h1>
 
           <ul className="flex flex-col gap-4 p-0 list-none">
@@ -27,7 +27,7 @@ const Layout = () => {
                 alt="icon"
                 className="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 saturate-100 mr-2.5"
               />
-              Teaching and learning made easy.
+              Request for a doubt clearance session{" "}
             </li>
             <li className="flex items-center text-xl sm:text-2xl md:text-3xl font-medium text-left">
               <img
@@ -35,7 +35,7 @@ const Layout = () => {
                 alt="icon"
                 className="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 saturate-100 mr-2.5"
               />
-              Socialize your study
+              Create a class for electronics learning{" "}
             </li>
             <li className="flex items-center text-xl sm:text-2xl md:text-3xl font-medium text-left">
               <img
@@ -43,7 +43,7 @@ const Layout = () => {
                 alt="icon"
                 className="w-8 h-8 sm:w-10 sm:h-10 filter brightness-0 saturate-100 mr-2.5"
               />
-              Quiz Presentation
+              Share all learning resources and materials in a single code{" "}
             </li>
           </ul>
         </div>

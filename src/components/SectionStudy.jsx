@@ -3,9 +3,8 @@ import navIcon from "../assets/images/Vector (1).svg";
 const SectionStudy = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-auto bg-[#005cb3] text-white py-16 px-10 text-center">
-      <h2 className="text-7xl mb-6 font-500">
-        Revolutionize Your Learning Experience: Study Smarter, Faster, Funner,
-        NOT HARDER.
+      <h2 className="text-5xl mb-6 font-500">
+        Revolutionise your learning experience :
       </h2>
 
       <p className="text-2xl mb-12 w-[820px] max-w-[90%] leading-relaxed">
