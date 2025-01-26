@@ -32,26 +32,30 @@ const About = () => {
 
   return (
     <section className="w-full h-auto min-h-screen flex flex-col items-center justify-center p-6 md:p-10 pb-16">
-      <div className="bg-blue-100 flex items-center justify-around text-center shadow-md w-full md:w-[95%] lg:w-[1213px] h-[308px] rounded-[29px] px-6 md:px-8">
-        <div className="flex-1 text-left mx-9">
-          <h2 className="text-4xl md:text-4xl lg:text-6xl font-medium leading-[36px] md:leading-[42px] lg:leading-[71px] text-gray-800">
-            Explore Ufuon <br /> Services
+      {/* Hero Section */}
+      <div className="bg-blue-100 flex flex-col md:flex-row items-center justify-between text-center md:text-left shadow-md w-full md:w-[95%] lg:w-[1213px] h-auto md:h-[308px] rounded-[29px] px-6 md:px-8 py-6">
+        <div className="flex-1 mx-4 md:mx-6">
+          <h2 className="text-xl md:text-2xl lg:text-4xl font-medium leading-relaxed text-gray-800">
+            Explore <span className="text-blue-600 font-bold">Ufuon’s</span>{" "}
+            comprehensive support, resources, and{" "}
+            <span className="text-red-600 font-bold">edu-tech expertise</span>{" "}
+            to help you bring your innovative edu-tech ideas to life.
           </h2>
-          <button className="mt-4 py-2 px-4 bg-[#fe0804] text-white rounded-lg text-base font-medium hover:bg-[#e00703] transition-transform duration-300">
+          <button className="mt-4 py-2 px-4 md:py-2 md:px-6 bg-[#fe0804] text-white rounded-lg text-sm md:text-base font-medium hover:bg-[#e00703] transition-transform duration-300">
             Learn More
           </button>
         </div>
-        <div className="flex-shrink-0 ml-4 md:ml-6 mx-5">
+        <div className="flex-shrink-0 mt-4 md:mt-0 ml-0 md:ml-6">
           <img
             src={img4}
             alt="Ufuon Services"
-            className="w-[150px] md:w-[200px] lg:w-[350px] h-auto rounded-lg"
+            className="w-[130px] md:w-[200px] lg:w-[350px] h-auto rounded-lg"
           />
         </div>
       </div>
 
-      {/* Grid of boxes */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      {/* Grid of Boxes */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
         {boxData.map((box, index) => (
           <Box
             key={index}

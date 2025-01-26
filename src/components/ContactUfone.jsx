@@ -1,4 +1,4 @@
-import ButtonNavbar from "../components/ButtonNavbar";
+import Header from "../components/Header";
 import img1 from "../assets/images/Frame 115 (1).svg";
 import img2 from "../assets/images/Frame 115.svg";
 import img3 from "../assets/images/Frame 116.svg";
@@ -45,7 +45,7 @@ const ContactUfone = () => {
   return (
     <>
       {/* Render ButtonNavbar */}
-      <ButtonNavbar />
+      <Header />
 
       <div>
         {/* Heading */}

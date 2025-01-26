@@ -10,7 +10,7 @@ const Header = () => {
   const menuItems = [
     { label: "Home", path: "/" },
     { label: "School", path: "/branch" },
-    { label: "Study", path: "CourseDetails " },
+    { label: "Store", path: "CourseDetails " },
     { label: "Build", path: "/build" },
     { label: "Contact us", path: "/contactUfone" },
   ];

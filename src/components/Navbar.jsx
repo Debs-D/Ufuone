@@ -5,12 +5,14 @@ import click from "../assets/images/Vector (2).svg";
 import navImg from "../assets/images/image_fx_ (11) 1.svg";
 import navImg1 from "../assets/images/image_fx_ (14) 1.svg";
 import navImg2 from "../assets/images/Mask group (2).svg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 4, // Display 4 boxes
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -25,7 +27,6 @@ const settings = {
       breakpoint: 640,
       settings: {
         slidesToShow: 1,
-        dots: false, // Hide dots for mobile for a cleaner view
       },
     },
   ],
@@ -52,69 +53,45 @@ const Navbar = () => {
 
   return (
     <nav className="bg-custom-gradient flex flex-col sm:flex-row items-center justify-between p-4 w-full">
-      {/* Logo */}
-      <Link to="/UfuonFun" className="mb-4 sm:mb-0 sm:mr-6">
-        <h3 className="text-white text-[32px] font-bold leading-tight">
-          Build with Ufuon
-        </h3>
+      <Link to="/UfuonFun" className="mb-4 ml-6 sm:mb-0 sm:mr-6">
+        {!isMobileView && (
+          <h3 className="text-white text-[32px] font-bold leading-tight">
+            Build with
+            <br />
+            Ufuon
+          </h3>
+        )}
       </Link>
-
-      {/* Slider Section */}
-      <div className="w-full sm:w-auto flex-1 max-w-4xl">
-        {isMobileView ? (
-          <div className="flex items-center justify-center gap-4">
-            <div className="relative w-[200px] h-[120px] rounded-lg overflow-hidden">
-              <img
-                src={data[0].image}
-                alt=""
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            {/* Mobile "Build" Button */}
-            <Link
-              to="/build"
-              className="flex items-center gap-2 bg-[#fe0804] hover:bg-[#e00703] text-white text-[16px] font-medium py-2 px-4 rounded-md transition-transform duration-200 hover:scale-105"
-            >
-              <img src={click} alt="icon" className="w-5 h-5" />
-              <span>Build</span>
-            </Link>
-          </div>
-        ) : (
-          <Slider {...settings}>
-            {data.map((ele, index) => (
-              <div key={index} className="p-2 flex items-center justify-center">
-                <div className="relative w-[200px] h-[120px] rounded-lg overflow-hidden shadow-md">
-                  <img
-                    src={ele.image}
-                    alt={ele.title}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                  {!isMobileView && (
-                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                      <p className="text-white text-center text-sm font-semibold">
-                        {ele.title}
-                      </p>
-                    </div>
-                  )}
+      <div className="w-full sm:w-auto flex-1 max-w-6xl">
+        <Slider {...settings}>
+          {data.map((ele, index) => (
+            <div key={index} className="p-2 flex items-center justify-center">
+              <div className="relative w-[220px] h-[130px] rounded-lg overflow-hidden shadow-md">
+                <img
+                  src={ele.image}
+                  alt={ele.title}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                  <p className="text-white text-center text-sm font-semibold">
+                    {ele.title}
+                  </p>
                 </div>
               </div>
-            ))}
-          </Slider>
-        )}
+            </div>
+          ))}
+        </Slider>
       </div>
 
-      {/* Desktop "Build" Button */}
-      {!isMobileView && (
-        <div className="sm:ml-6">
-          <Link
-            to="/build"
-            className="flex items-center gap-2 bg-[#fe0804] hover:bg-[#e00703] text-white text-[18px] font-medium py-2 px-4 rounded-md transition-transform duration-200 hover:scale-105"
-          >
-            <img src={click} alt="icon" className="w-5 h-5" />
-            <span>Build</span>
-          </Link>
-        </div>
-      )}
+      <div className="sm:ml-6 mr-14">
+        <Link
+          to="/build"
+          className="flex items-center justify-center gap-2 bg-[#fe0804] hover:bg-[#e00703] text-white text-[18px] font-medium py-3 px-6 rounded-md transition-transform duration-200 hover:scale-105"
+        >
+          <img src={click} alt="icon" className="w-5 h-5" />
+          <span>Build</span>
+        </Link>
+      </div>
     </nav>
   );
 };

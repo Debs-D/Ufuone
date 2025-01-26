@@ -1,112 +1,79 @@
 import { useState, useEffect } from "react";
-import Slider from "react-slick";
-import { Link } from "react-router-dom";
-import click from "../assets/images/Vector (2).svg";
-import navImg from "../assets/images/image_fx_ (11) 1.svg";
-import navImg1 from "../assets/images/image_fx_ (14) 1.svg";
-import navImg2 from "../assets/images/Mask group (2).svg";
+import img1 from "../assets/images/Frame 41.svg";
+import img2 from "../assets/images/Frame 54.svg";
+import img3 from "../assets/images/Frame 58.svg";
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
+const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
     {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-      },
+      title: "Learn, Explore, Unlock Potentials: Impact Your World",
+      description: "Your community for connecting and personalised learning.",
+      image: img1,
     },
     {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 1,
-      },
+      title:
+        "From theory to reality, Start your project to finish. From  High school to University",
+      description:
+        "Join our community in impacting Engineering and electronics in Africa with mentorship",
+      image: img2,
     },
-  ],
-};
-
-const Navbar = () => {
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 640);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const data = [
-    { image: navImg, title: "Capacitive Circuit" },
-    { image: navImg1, title: "Microcontroller Project" },
-    { image: navImg2, title: "Robotics Project" },
+    {
+      title: "Get all you need for your ELECTRONICS PROJECT in one Spot.",
+      description: "Request a quote or Shop from Ufuon Store.",
+      image: img3,
+    },
   ];
 
-  return (
-    <nav className="bg-custom-gradient flex flex-col sm:flex-row items-center justify-between p-4 w-full">
-      {/* Logo */}
-      <Link to="/UfuonFun" className="mb-4 sm:mb-0 sm:mr-6">
-        <h3 className="text-white text-[32px] font-bold leading-tight">
-          Build with Ufuon
-        </h3>
-      </Link>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 10000);
 
-      {/* Slider Section */}
-      <div className="w-full sm:w-auto flex-1 max-w-4xl h-auto">
-        {isMobileView ? (
-          <div className="flex items-center justify-center gap-4">
-            <div className="relative w-[200px] h-[150px] rounded-lg overflow-hidden">
-              <img
-                src={data[0].image}
-                alt={data[0].title}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            {/* Mobile "Build" Button */}
-            <Link
-              to="/build"
-              className="flex items-center gap-2 bg-[#fe0804] hover:bg-[#e00703] text-white text-[16px] font-medium py-2 px-4 rounded-md transition-transform duration-200 hover:scale-105"
-            >
-              <img src={click} alt="icon" className="w-5 h-5" />
-              <span>Build</span>
-            </Link>
-          </div>
-        ) : (
-          <Slider {...settings}>
-            {data.map((ele, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center rounded-lg overflow-hidden transition-transform duration-200 hover:scale-105"
-              >
-                <img
-                  src={ele.image}
-                  alt={ele.title}
-                  className="w-full h-[150px] object-cover rounded-lg"
-                />
-              </div>
-            ))}
-          </Slider>
-        )}
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  return (
+    <div className="relative w-full h-screen flex flex-col items-center justify-center bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(0,_92,_179,_0.15)_0%,_rgba(0,_40,_77,_0)_100%)]">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center w-full max-w-[1440px] px-6 space-y-6 md:space-y-0">
+        <div className="flex flex-col items-center md:items-start w-full md:w-[594px] space-y-4">
+          <h3 className="font-sans text-[24px] md:text-[48px] text-black leading-[1.2] text-center md:text-left">
+            {slides[currentSlide].title}
+          </h3>
+          <p className="font-sans text-[14px] md:text-[20px] font-normal text-black leading-[1.5] text-center md:text-left">
+            {slides[currentSlide].description}
+          </p>
+        </div>
+
+        {/* Image Section */}
+        <div className="w-full md:w-[662.5px] h-[50vh] md:h-[594px] flex justify-center">
+          <img
+            src={slides[currentSlide].image}
+            alt="Illustration"
+            className="w-full h-full object-contain"
+          />
+        </div>
       </div>
 
-      {/* Desktop "Build" Button */}
-      {!isMobileView && (
-        <div className="sm:ml-6">
-          <Link
-            to="/build"
-            className="flex items-center gap-2 bg-[#fe0804] hover:bg-[#e00703] text-white text-[18px] font-medium py-2 px-4 rounded-md transition-transform duration-200 hover:scale-105"
-          >
-            <img src={click} alt="icon" className="w-5 h-5" />
-            <span>Build</span>
-          </Link>
+      {/* Navigation Dots */}
+      <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center space-y-4">
+        <div className="flex justify-center space-x-2">
+          {slides.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-4 h-4 rounded-full cursor-pointer ${
+                index === currentSlide ? "bg-orange-500" : "bg-gray-400"
+              }`}
+            />
+          ))}
         </div>
-      )}
-    </nav>
+
+        {/* Button to go to next image */}
+      </div>
+    </div>
   );
 };
 
-export default Navbar;
+export default Hero;

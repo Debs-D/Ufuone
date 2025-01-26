@@ -28,6 +28,8 @@ import UfoneAbout from "./components/UfoneAbout";
 import AdvancedProject from "./components/AdvancedProject";
 import ContactUfone from "./components/ContactUfone";
 import ContactQuestion from "../src/components/ContactQuestion";
+import UnfoneAboutSch from "./components/UnfoneAboutSch";
+import AboutSkills from "./components/AboutSkills";
 
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
@@ -116,6 +118,20 @@ const App = () => {
               <>
                 <ButtonNavbar />
                 <Build />
+              </>
+            }
+          />
+
+          {/* About Page Route */}
+          <Route
+            path="/ufoneAbout"
+            element={
+              <>
+                <UfoneAbout />
+                <UnfoneAboutSch />
+                <AboutSkills />
+                <ContactQuestion />
+                <Footer />
               </>
             }
           />
