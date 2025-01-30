@@ -12,7 +12,7 @@ const settings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -65,7 +65,7 @@ const Navbar = () => {
       <div className="w-full sm:w-auto flex-1 max-w-6xl">
         <Slider {...settings}>
           {data.map((ele, index) => (
-            <div key={index} className="p-2 flex items-center justify-center">
+            <div key={index} className="slick-item">
               <div className="relative w-[220px] h-[130px] rounded-lg overflow-hidden shadow-md">
                 <img
                   src={ele.image}

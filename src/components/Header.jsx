@@ -4,39 +4,36 @@ import logo from "../assets/images/Logo (1).svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSchoolDropdownOpen, setIsSchoolDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
-  // Update menu items to include paths
   const menuItems = [
     { label: "Home", path: "/" },
-    { label: "School", path: "/branch" },
-    { label: "Store", path: "CourseDetails " },
+    {
+      label: "School",
+      path: "/branch",
+      dropdown: [
+        { label: "School", path: "/branch" },
+        { label: "STEM", path: "/stem" },
+      ],
+    },
+    { label: "Store", path: "/CourseDetails" },
     { label: "Build", path: "/build" },
     { label: "Contact us", path: "/contactUfone" },
   ];
+
   const menuBars = ["Login"];
 
   const handleButtonClick = () => {
-    const currentPath = window.location.pathname;
-
-    if (currentPath === "/") {
-      navigate("/branch");
-    } else {
-      navigate("/");
-    }
+    navigate(window.location.pathname === "/" ? "/branch" : "/");
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -47,7 +44,7 @@ const Header = () => {
       className="flex items-center justify-between px-4 py-4 h-[78px]"
       style={{ backgroundColor: "rgba(243, 243, 243, 1)" }}
     >
-      {/* Logo - Wrapped with Link */}
+      {/* Logo */}
       <div className="flex items-center">
         <Link to="/workplace">
           <img
@@ -58,7 +55,7 @@ const Header = () => {
         </Link>
       </div>
 
-      {/* Mobile Buttons and Hamburger */}
+      {/* Mobile Menu */}
       <div className="flex items-center md:hidden space-x-4">
         <button
           onClick={() => navigate("/login")}
@@ -96,17 +93,48 @@ const Header = () => {
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-8">
         <ul className="list-none flex space-x-7">
-          {menuItems.map((item, index) => (
-            <li
-              key={index}
-              className="py-2 text-gray-800 font-semibold hover:text-blue-600"
-            >
-              <Link to={item.path} className="cursor-pointer">
-                {item.label}
-              </Link>
-            </li>
-          ))}
+          {menuItems.map((item, index) =>
+            item.dropdown ? (
+              <li
+                key={index}
+                className="relative py-2 text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
+              >
+                <button
+                  onClick={() => setIsSchoolDropdownOpen(!isSchoolDropdownOpen)}
+                  className="focus:outline-none"
+                >
+                  {item.label}
+                </button>
+
+                {isSchoolDropdownOpen && (
+                  <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg p-2 max-h-48 overflow-y-auto">
+                    {item.dropdown.map((subItem, subIndex) => (
+                      <li
+                        key={subIndex}
+                        className="py-2 px-4 hover:bg-gray-100"
+                      >
+                        <Link to={subItem.path} className="block w-full">
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ) : (
+              <li
+                key={index}
+                className="py-2 text-gray-800 font-semibold hover:text-blue-600"
+              >
+                <Link to={item.path} className="cursor-pointer">
+                  {item.label}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
+
+        {/* Login and Sign-up */}
         <ul className="list-none flex space-x-7">
           {menuBars.map((item, index) => (
             <li
@@ -125,30 +153,43 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu Items */}
       {isMenuOpen && (
         <div className="absolute top-[78px] right-0 bg-white shadow-lg p-4 w-3/4 rounded-lg md:hidden z-50">
           <ul className="list-none flex flex-col space-y-4">
-            {menuItems.map((item, index) => (
-              <li
-                key={index}
-                className="py-2 text-gray-800 font-semibold hover:text-blue-600"
-              >
-                <Link to={item.path} className="cursor-pointer">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <ul className="list-none flex flex-col space-y-4 mt-4">
-            {menuBars.map((item, index) => (
-              <li
-                key={index}
-                className="text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
-              >
-                {item}
-              </li>
-            ))}
+            {menuItems.map((item, index) =>
+              item.dropdown ? (
+                <li key={index} className="relative">
+                  <button
+                    onClick={() =>
+                      setIsSchoolDropdownOpen(!isSchoolDropdownOpen)
+                    }
+                    className="block py-2 text-gray-800 font-semibold hover:text-blue-600 cursor-pointer w-full text-left"
+                  >
+                    {item.label}
+                  </button>
+                  {isSchoolDropdownOpen && (
+                    <ul className="ml-4 max-h-48 overflow-y-auto bg-gray-100 rounded-lg p-2">
+                      {item.dropdown.map((subItem, subIndex) => (
+                        <li
+                          key={subIndex}
+                          className="py-2 text-gray-800 hover:text-blue-600"
+                        >
+                          <Link to={subItem.path}>{subItem.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ) : (
+                <li
+                  key={index}
+                  className="py-2 text-gray-800 font-semibold hover:text-blue-600"
+                >
+                  <Link to={item.path}>{item.label}</Link>
+                </li>
+              )
+            )}
           </ul>
         </div>
       )}
