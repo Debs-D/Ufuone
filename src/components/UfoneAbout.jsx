@@ -1,11 +1,14 @@
-import ButtonNavbar from "../components/ButtonNavbar";
+import Header from "../components/Header";
+import { useEffect } from "react";
 
 const UfoneAbout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when the component loads
+  }, []);
   return (
     <>
       {/* Render ButtonNavbar */}
-      <ButtonNavbar />
-
+      <Header />
       <div className="px-6 py-10 md:px-12 lg:px-20 space-y-10">
         <h1 className="text-3xl font-bold text-gray-800 md:text-3xl lg:text-4xl text-center">
           Ufone: an education ecosystem

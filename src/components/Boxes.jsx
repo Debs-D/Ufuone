@@ -11,16 +11,16 @@ const Box = ({ title, description, bgColor, style }) => {
       className={`flex flex-col items-center justify-between ${bgColor} text-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105`}
       style={{
         ...style,
-        maxWidth: "100%", // Ensure responsiveness
-        margin: "0 10px", // Add spacing between boxes
+        maxWidth: "100%",
+        margin: "0 10px",
       }}
     >
       <h3
         className="text-left font-outfit font-semibold text-2xl leading-tight mb-4"
         style={{
           wordWrap: "break-word",
-          overflow: "hidden", // Ensure no overflow
-          textOverflow: "ellipsis", // Prevent text from spilling out
+          overflow: "hidden",
+          textOverflow: "ellipsis",
           display: "block",
         }}
       >
@@ -32,8 +32,8 @@ const Box = ({ title, description, bgColor, style }) => {
         className="text-left font-outfit text-lg font-light"
         style={{
           wordWrap: "break-word",
-          overflow: "hidden", // Ensure no overflow
-          textOverflow: "ellipsis", // Prevent text from spilling out
+          overflow: "hidden",
+          textOverflow: "ellipsis",
           display: "block",
         }}
       >

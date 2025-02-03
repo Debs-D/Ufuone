@@ -55,7 +55,7 @@ const Navbar = () => {
     <nav className="bg-custom-gradient flex flex-col sm:flex-row items-center justify-between p-4 w-full">
       <Link to="/UfuonFun" className="mb-4 ml-6 sm:mb-0 sm:mr-6">
         {!isMobileView && (
-          <h3 className="text-white text-[32px] font-bold leading-tight">
+          <h3 className="text-white text-[24px] font-bold leading-tight">
             Build with
             <br />
             Ufuon

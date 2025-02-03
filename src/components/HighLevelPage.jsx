@@ -11,7 +11,7 @@ const HighLevelPage = () => {
 
       <button
         onClick={() => navigate(-1)} // This will take the user to the previous page
-        className="p-2 bg-orange-700 hover:bg-orange-500 text-white rounded-full ml-5 mt-3 left-4 flex items-center justify-center"
+        className="p-2 bg-orange-700 hover:bg-orange-500 text-white ml-5 mt-3 left-4 flex items-center justify-center"
       >
         <span className="text-lg">&larr;</span> {/* Left Arrow */}
       </button>

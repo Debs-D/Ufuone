@@ -215,9 +215,9 @@ const CourseDetails = () => {
       {/* Back Button */}
       <button
         onClick={() => navigate(-1)} // This will take the user to the previous page
-        className="p-4 bg-orange-700 hover:bg-orange-500 text-white rounded-lg ml-5 mt-3  left-4 flex items-center justify-center"
+        className="p-2 bg-orange-700 hover:bg-orange-500 text-white ml-5 mt-3 left-4 flex items-center justify-center"
       >
-        <span className="text-xl">&larr;</span> {/* Left Arrow */}
+        <span className="text-lg">&larr;</span> {/* Left Arrow */}
       </button>
 
       <div className="min-h-screen w-full bg-gray-100 p-4">

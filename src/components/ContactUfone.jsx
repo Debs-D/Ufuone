@@ -6,8 +6,13 @@ import img4 from "../assets/images/Frame 117.svg";
 import ContactQuestion from "../components/ContactQuestion";
 import Footer from "../components/Footer";
 import Slider from "react-slick"; // Import Slider from react-slick
+import { useEffect } from "react";
 
 const ContactUfone = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when the component loads
+  }, []);
+
   const contactData = [
     {
       imgUrl: img4,

@@ -32,6 +32,8 @@ import UnfoneAboutSch from "./components/UnfoneAboutSch";
 import AboutSkills from "./components/AboutSkills";
 import UfoneManagement from "./components/UfoneManagement";
 import AboutStem from "./components/AboutStem";
+import StemCommunity from "./components/StemCommunity";
+import ImageGallery from "./components/ImageGallery";
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -73,6 +75,8 @@ const App = () => {
                 <Management />
                 <ManagementHero />
                 <AboutStem />
+                <ImageGallery />
+                <StemCommunity />
                 <About />
                 <Key />
                 <Gain />
