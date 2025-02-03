@@ -5,10 +5,10 @@ const Skills = () => {
   return (
     <div className="flex flex-col items-center justify-between w-full h-auto py-10 px-8 box-border overflow-y-auto">
       {/* First section */}
-      <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1000px] h-auto px-5 box-border gap-10 mb-10">
+      <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1000px] h-auto px-5 box-border gap-12 mb-12">
         {/* Text on left */}
         <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left">
-          <h1 className="text-[32px] md:text-[40px] font-medium m-0">
+          <h1 className="text-[32px] md:text-[40px] font-medium m-0 mb-4">
             Who are we?
           </h1>
           <p className="text-[16px] md:text-[18px] my-2 leading-relaxed">
@@ -30,7 +30,7 @@ const Skills = () => {
       </div>
 
       {/* Second section */}
-      <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1000px] h-auto px-5 box-border gap-10 mb-10">
+      <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1000px] h-auto px-5 box-border gap-12 mb-12">
         {/* Image on left */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
           <img
@@ -41,7 +41,7 @@ const Skills = () => {
         </div>
         {/* Text on right */}
         <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left">
-          <h1 className="text-[32px] md:text-[40px] font-medium m-0">
+          <h1 className="text-[32px] md:text-[40px] font-medium m-0 mb-4">
             What do we do?
           </h1>
           <p className="text-[16px] md:text-[18px] my-2 leading-relaxed">

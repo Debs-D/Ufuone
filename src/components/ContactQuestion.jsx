@@ -31,10 +31,10 @@ const ContactQuestion = () => {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-semibold text-center mb-6">
+      <h1 className="text-3xl font-semibold text-center p-8 mb-10">
         Frequently Asked Questions
       </h1>
-      <div className="space-y-4">
+      <div className="space-y-4 mb-32">
         {faqData.map((item, index) => (
           <div
             key={index}

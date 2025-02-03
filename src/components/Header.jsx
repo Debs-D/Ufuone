@@ -13,8 +13,8 @@ const Header = () => {
       label: "School",
       path: "/branch",
       dropdown: [
-        { label: "School", path: "/branch" },
-        { label: "STEM", path: "/stem" },
+        { label: "Management", path: "/UfoneManagement" },
+        { label: "STEM", path: "/branch" },
       ],
     },
     { label: "Store", path: "/CourseDetails" },
@@ -30,6 +30,11 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleDropdownItemClick = (path) => {
+    navigate(path);
+    setIsSchoolDropdownOpen(false); // Close the dropdown when an item is clicked
   };
 
   useEffect(() => {
@@ -98,6 +103,8 @@ const Header = () => {
               <li
                 key={index}
                 className="relative py-2 text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
+                onMouseEnter={() => setIsSchoolDropdownOpen(true)}
+                onMouseLeave={() => setIsSchoolDropdownOpen(false)}
               >
                 <button
                   onClick={() => setIsSchoolDropdownOpen(!isSchoolDropdownOpen)}
@@ -107,15 +114,18 @@ const Header = () => {
                 </button>
 
                 {isSchoolDropdownOpen && (
-                  <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg p-2 max-h-48 overflow-y-auto">
+                  <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg p-2 max-h-48 overflow-y-auto z-50">
                     {item.dropdown.map((subItem, subIndex) => (
                       <li
                         key={subIndex}
                         className="py-2 px-4 hover:bg-gray-100"
                       >
-                        <Link to={subItem.path} className="block w-full">
+                        <button
+                          onClick={() => handleDropdownItemClick(subItem.path)}
+                          className="w-full text-left"
+                        >
                           {subItem.label}
-                        </Link>
+                        </button>
                       </li>
                     ))}
                   </ul>
@@ -175,7 +185,14 @@ const Header = () => {
                           key={subIndex}
                           className="py-2 text-gray-800 hover:text-blue-600"
                         >
-                          <Link to={subItem.path}>{subItem.label}</Link>
+                          <button
+                            onClick={() =>
+                              handleDropdownItemClick(subItem.path)
+                            }
+                            className="w-full text-left"
+                          >
+                            {subItem.label}
+                          </button>
                         </li>
                       ))}
                     </ul>

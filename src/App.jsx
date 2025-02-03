@@ -30,7 +30,8 @@ import ContactUfone from "./components/ContactUfone";
 import ContactQuestion from "../src/components/ContactQuestion";
 import UnfoneAboutSch from "./components/UnfoneAboutSch";
 import AboutSkills from "./components/AboutSkills";
-
+import UfoneManagement from "./components/UfoneManagement";
+import AboutStem from "./components/AboutStem";
 // Importing CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -71,6 +72,7 @@ const App = () => {
               <>
                 <Management />
                 <ManagementHero />
+                <AboutStem />
                 <About />
                 <Key />
                 <Gain />
@@ -147,6 +149,7 @@ const App = () => {
           <Route path="/advanced-project" element={<AdvancedProject />} />
           <Route path="/contactUfone" element={<ContactUfone />} />
           <Route path="/contactQuestion" element={<ContactQuestion />} />
+          <Route path="/ufonemanagement" element={<UfoneManagement />} />
         </Routes>
       </div>
     </Router>

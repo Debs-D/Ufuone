@@ -7,18 +7,19 @@ const UfoneAbout = () => {
       <ButtonNavbar />
 
       <div className="px-6 py-10 md:px-12 lg:px-20 space-y-10">
-        <h1 className="text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl text-center">
+        <h1 className="text-3xl font-bold text-gray-800 md:text-3xl lg:text-4xl text-center">
           Ufone: an education ecosystem
           <br />
-          designed to bring out the best in you.
+          design to bring out the best in you.
         </h1>
 
         <p className="text-gray-600 text-center text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
           In a world where learning only comes from our formative years in
-          school and college, Unschool is the new, easy, and definitive path for
-          keeping up with the 21st century. It is the platform where you can
-          finally stop trying to fit in a system crafted for the masses and
-          learn in a unique way that brings out the best version of you.
+          school and college, <br /> Unschool is the new, easy, and definitive
+          path for keeping up with the 21st century. <br /> It is the platform
+          where you can finally stop trying to fit in a system crafted for the
+          masses <br />
+          and learn in a unique way that brings out the best version of you.
         </p>
 
         <div className="flex flex-col p-24 md:flex-row items-center justify-center gap-6 md:gap-10">
@@ -26,9 +27,9 @@ const UfoneAbout = () => {
             <img
               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODEiIHZpZXdCb3g9IjAgMCA4MCA4MSIgZmlsbD0ibm9uZSIKICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cGF0aCBkPSJNNjIuMzMzMyA0N0M2My4yNjY3IDQ3IDY0IDQ3LjczMzMgNjQgNDguNjY2N0M2NCA0OS42IDYzLjI2NjcgNTAuMzMzMyA2Mi4zMzMzIDUwLjMzMzNINTUuNjY2N0M1NC43MzMzIDUwLjMzMzMgNTQgNDkuNiA1NCA0OC42NjY3QzU0IDQ3LjczMzMgNTQuNzMzMyA0NyA1NS42NjY3IDQ3SDYyLjMzMzNaIiBmaWxsPSIjRkJDOTNCIi8+CiAgICA8cGF0aCBkPSJNNjIuMzMzMyA1N0M2My4yNjY3IDU3IDY0IDU3LjczMzMgNjQgNTguNjY2N0M2NCA1OS42IDYzLjI2NjcgNjAuMzMzMyA2Mi4zMzMzIDYwLjMzMzNINTUuNjY2N0M1NC43MzMzIDYwLjMzMzMgNTQgNTkuNiA1NCA1OC42NjY3QzU0IDU3LjczMzMgNTQuNzMzMyA1NyA1NS42NjY3IDU3SDYyLjMzMzNaIiBmaWxsPSIjRkJDOTNCIi8+CiAgICA8cGF0aCBkPSJNNjIuMzMzMyA2N0M2My4yNjY3IDY3IDY0IDY3LjczMzMgNjQgNjguNjY2N0M2NCA2OS42IDYzLjI2NjcgNzAuMzMzMyA2Mi4zMzMzIDcwLjMzMzNINTUuNjY2N0M1NC43MzMzIDcwLjMzMzMgNTQgNjkuNiA1NCA2OC42NjY3QzU0IDY3LjczMzMgNTQuNzMzMyA2NyA1NS42NjY3IDY3SDYyLjMzMzNaIiBmaWxsPSIjRkJDOTNCIi8+CiAgICA8cGF0aCBkPSJNMzUgMzBDMzUuOTMzNCAzMCAzNi42NjY3IDMwLjczMzMgMzYuNjY2NyAzMS42NjY3QzM2LjY2NjcgMzIuNiAzNS45MzM0IDMzLjMzMzMgMzUgMzMuMzMzM0gyOC4zMzM0QzI3LjQgMzMuMzMzMyAyNi42NjY3IDMyLjYgMjYuNjY2NyAzMS42NjY3QzI2LjY2NjcgMzAuNzMzMyAyNy40IDMwIDI4LjMzMzQgMzBIMzVaIiBmaWxsPSIjRkJDOTNCIi8+CiAgICA8cGF0aCBkPSJNMzYuNjY2NyA0MS42NjY3QzM2LjY2NjcgNDIuNiAzNS45MzM0IDQzLjMzMzQgMzUgNDMuMzMzNEgyOC4zMzM0QzI3LjQgNDMuMzMzNCAyNi42NjY3IDQyLjYgMjYuNjY2NyA0MS42NjY3QzI2LjY2NjcgNDAuNzMzNCAyNy40IDQwIDI4LjMzMzQgNDBIMzVDMzUuOTMzNCA0MCAzNi42NjY3IDQwLjczMzQgMzYuNjY2NyA0MS42NjY3WiIgZmlsbD0iI0ZCQzkzQiIvPgogICAgPHBhdGggZD0iTTM1IDUwQzM1LjkzMzQgNTAgMzYuNjY2NyA1MC43MzMzIDM2LjY2NjcgNTEuNjY2N0MzNi42NjY3IDUyLjYgMzUuOTMzNCA1My4zMzMzIDM1IDUzLjMzMzNIMjguMzMzNEMyNy40IDUzLjMzMzMgMjYuNjY2NyA1Mi42IDI2LjY2NjcgNTEuNjY2N0MyNi42NjY3IDUwLjczMzMgMjcuNCA1MCAyOC4zMzM0IDUwSDM1WiIgZmlsbD0iI0ZCQzkzQiIvPgogICAgPHBhdGggZD0iTTM1IDYwQzM1LjkzMzQgNjAgMzYuNjY2NyA2MC43MzM0IDM2LjY2NjcgNjEuNjY2N0MzNi42NjY3IDYyLjYgMzUuOTMzNCA2My4zMzM0IDM1IDYzLjMzMzRIMjguMzMzNEMyNy40IDYzLjMzMzQgMjYuNjY2NyA2Mi42IDI2LjY2NjcgNjEuNjY2N0MyNi42NjY3IDYwLjczMzQgMjcuNCA2MCAyOC4zMzM0IDYwSDM1WiIgZmlsbD0iI0ZCQzkzQiIvPgogICAgPHBhdGggZD0iTTIwIDYxLjY2NjdDMjAgNjIuNiAxOS4yNjY3IDYzLjMzMzQgMTguMzMzMyA2My4zMzM0SDExLjY2NjdDMTAuNzMzMyA2My4zMzM0IDEwIDYyLjYgMTAgNjEuNjY2N0MxMCA2MC43MzM0IDEwLjczMzMgNjAgMTEuNjY2NyA2MEgxOC4zMzMzQzE5LjI2NjcgNjAgMjAgNjAuNzMzNCAyMCA2MS42NjY3WiIgZmlsbD0iI0ZCQzkzQiIvPgogICAgPHBhdGggZD0iTTE4LjMzMzMgMzBDMTkuMjY2NyAzMCAyMCAzMC43MzMzIDIwIDMxLjY2NjdDMjAgMzIuNiAxOS4yNjY3IDMzLjMzMzMgMTguMzMzMyAzMy4zMzMzSDExLjY2NjdDMTAuNzMzMyAzMy4zMzMzIDEwIDMyLjYgMTAgMzEuNjY2N0MxMCAzMC43MzMzIDEwLjczMzMgMzAgMTEuNjY2NyAzMEgxOC4zMzMzWiIgZmlsbD0iI0ZCQzkzQiIvPgogICAgPHBhdGggZD0iTTE4LjMzMzMgNDBDMTkuMjY2NyA0MCAyMCA0MC43MzM0IDIwIDQxLjY2NjdDMjAgNDIuNiAxOS4yNjY3IDQzLjMzMzQgMTguMzMzMyA0My4zMzM0SDExLjY2NjdDMTAuNzMzMyA0My4zMzM0IDEwIDQyLjYgMTAgNDEuNjY2N0MxMCA0MC43MzM0IDEwLjczMzMgNDAgMTEuNjY2NyA0MEgxOC4zMzMzWiIgZmlsbD0iI0ZCQzkzQiIvPgogICAgPHBhdGggZD0iTTE4LjMzMzMgNTBDMTkuMjY2NyA1MCAyMCA1MC43MzMzIDIwIDUxLjY2NjdDMjAgNTIuNiAxOS4yNjY3IDUzLjMzMzMgMTguMzMzMyA1My4zMzMzSDExLjY2NjdDMTAuNzMzMyA1My4zMzMzIDEwIDUyLjYgMTAgNTEuNjY2N0MxMCA1MC43MzMzIDEwLjczMzMgNTAgMTEuNjY2NyA1MEgxOC4zMzMzWiIgZmlsbD0iI0ZCQzkzQiIvPgogICAgPHBhdGggZD0iTTcyLjUgNzcuMTY2N0g0NC4xNjY3VjM0LjJMNzIuODY2NyAzOS44NjY3QzczLjYzMzMgNDAuMDMzMyA3NC4xNjY3IDQwLjczMzMgNzQuMTY2NyA0MS41Vjc1LjVDNzQuMTY2NyA3Ni40MzMzIDczLjQgNzcuMTY2NyA3Mi41IDc3LjE2NjdaIiBzdHJva2U9IiNGNUY1RjUiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8cGF0aCBkPSJNNDMuMzMzMyAzMi4xNjY2Vjc3LjE2NjdMMzMuMzMzMyA3Ny4xNjY3SDEzLjMzMzRMNC45OTk5OCA3Ny4xNjY2QzQuMDk5OTggNzcuMTY2NiAzLjMzMzMxIDc2LjQzMzMgMy4zMzMzMSA3NS41VjYuMDk5OTlDMy4zMzMzMSA1LjU5OTk5IDMuNTMzMzEgNS4xNjY2NSAzLjkzMzMxIDQuODMzMzJDNC4yMzMzMSA0LjU2NjY1IDQuNTk5OTggNC40MzMzMiA0Ljk5OTk4IDQuNDMzMzJDNS4wOTk5OCA0LjQzMzMyIDUuMTk5OTggNC40MzMzMiA1LjI5OTk4IDQuNDY2NjVMNDEuOTMzMyA5Ljk5OTk5QzQyLjczMzMgMTAuMTMzMyA0My4zMzMzIDEwLjgzMzMgNDMuMzMzMyAxMS42NjY3TDQzLjMzMzMgMzIuMTY2NloiIHN0cm9rZT0iI0Y1RjVGNSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPC9zdmc+Cg=="
               alt="img"
-              className="w-20 h-20 mr-32 md:w-32 md:h-32"
+              className="w-30 h-30 mr-32 md:w-32 md:h-32"
             />
-            <p className="mt-2 text-xl font-medium text-gray-800">
+            <p className="mt-2 text-2xl font-medium text-gray-800">
               500+ <br />
               Internship Partners
             </p>
@@ -39,7 +40,7 @@ const UfoneAbout = () => {
               alt="img"
               className="w-20 h-20 md:w-32 md:h-32"
             />
-            <p className="mt-2 text-xl font-medium text-gray-800">
+            <p className="mt-2 text-2xl font-medium text-gray-800">
               {" "}
               100,000+ <br />
               Active Learners
@@ -51,7 +52,7 @@ const UfoneAbout = () => {
               alt="img"
               className="w-20 h-20 ml-32 md:w-32 md:h-32"
             />
-            <p className="mt-2 text-xl ml-32 font-medium text-gray-800">
+            <p className="mt-2 text-2xl ml-32 font-medium text-gray-800">
               100+ <br />
               Industry Experts
             </p>

@@ -112,15 +112,3 @@ html {
   font-size: 20px;
   cursor: pointer;
 }
-
-.slick-slide {
-  margin: 0 !important; /* Remove default margin from slick-slide */
-}
-
-.slick-list {
-  margin: 0 -5px; /* Adjust overall spacing to align slides */
-}
-
-.slick-item {
-  padding: 0 px; /* Add a small gap between boxes */
-}
