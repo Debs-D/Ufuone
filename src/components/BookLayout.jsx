@@ -11,17 +11,19 @@ const BookLayout = () => {
             Transforming Africa through Innovation:{" "}
           </h1>
           <ul className="flex flex-col gap-5 p-0 list-none text-left md:text-left">
-            <li className="flex items-center text-[30px] font-medium gap-4 md:text-[30px]">
-              <img src={navIcon} alt="Icon" className="w-10 h-10" />
-              Access books and comics
+            <li className="flex items-center text-[20px] font-medium gap-4 md:text-[30px]">
+              <img src={navIcon} alt="Icon" className="w-8 mb-8 h-8" />
+              Ufuon is educating and empowering young minds in electronics, AI,
+              and tech.
             </li>
-            <li className="flex items-center text-[30px] font-medium gap-4 md:text-[30px]">
-              <img src={navIcon} alt="Icon" className="w-10 h-10" />
-              Fun quizzes and material by teachers
+            <li className="flex items-center text-[20px] font-medium gap-4 md:text-[30px]">
+              <img src={navIcon} alt="Icon" className="w-8 mb-8 h-8" />
+              Collaborate with us as we build the Africa of our tomorrow.{" "}
             </li>
-            <li className="flex items-center text-[30px] font-medium gap-4 md:text-[30px]">
-              <img src={navIcon} alt="Icon" className="w-10 h-10" />
-              School Assessment made easy.
+            <li className="flex items-center text-[20px] font-medium gap-4 md:text-[30px]">
+              <img src={navIcon} alt="Icon" className="w-8 mb-12 h-8" />
+              Organize our workshops in your college/ school: replace the start
+              demo with Book a slot{" "}
             </li>
           </ul>
         </div>

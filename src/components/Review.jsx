@@ -27,9 +27,16 @@ const Review = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
     },
+    {
+      imgUrl: img2,
+      title: "Sarah Adams",
+      subtitle: "Student",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
+    },
   ];
 
-  // Settings for the responsive slider
+  // Slider settings for all screens including desktop
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -39,13 +46,13 @@ const Review = () => {
     arrows: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // Tablets
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 768, // Mobile
         settings: {
           slidesToShow: 1,
         },
@@ -66,20 +73,8 @@ const Review = () => {
           </p>
         </div>
 
-        {/* Desktop Grid View */}
-        <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8 mt-10 sm:mt-16 sm:pt-16">
-          {boxData.map((box, index) => (
-            <Box
-              key={index}
-              imgUrl={box.imgUrl}
-              title={box.title}
-              subtitle={box.subtitle}
-              description={box.description}
-            />
-          ))}
-        </div>
-
-        <div className="lg:hidden mx-auto mt-10 max-w-2xl">
+        {/* Slider for Desktop and Mobile */}
+        <div className="mx-auto mt-10 max-w-5xl">
           <Slider {...sliderSettings}>
             {boxData.map((box, index) => (
               <Box
