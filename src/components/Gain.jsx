@@ -1,6 +1,6 @@
 const Gain = () => {
   return (
-    <div className="flex justify-center items-center py-[95px] px-[261px]">
+    <div className="flex justify-center items-center py-[95px] px-[261px] max-sm:px-[20px]">
       {/* Box Container */}
       <div className="flex flex-col items-center justify-center text-black text-center bg-[rgba(217,217,217,0.26)] w-[1023px] py-12 px-16 gap-5 rounded-[20px]">
         <h2 className="text-6xl font-semibold mb-4">Gain Access</h2>

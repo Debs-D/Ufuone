@@ -43,7 +43,7 @@ const Build = () => {
                 style={{ background: "rgba(244, 244, 244, 1)" }}
               >
                 <p className="text-lg font-medium leading-8 text-left ">
-                  Ready to LEARN and create your project?
+                  Are you a beginner? Learn and build your first project
                 </p>
                 <button
                   onClick={() => setView("low")}

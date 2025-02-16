@@ -52,10 +52,30 @@ const AdvancedProject = () => {
     });
   };
 
-  const handleEnroll = (e) => {
+  const handleEnroll = async (e) => {
     e.preventDefault();
-    // Enrollment logic here
+  
+    try {
+      const response = await fetch("https://api.com/data", {
+        method: "POST", // Define the request method
+        headers: {
+          "Content-Type": "application/json", // Set the content type
+        },
+        body: JSON.stringify(formData), // Convert formData to a JSON string
+      });
+  
+      if (!response.ok) {
+        throw new Error("Failed to submit data");
+      }
+  
+      const result = await response.json();
+      console.log("Success:", result);
+      navigate("/success"); // Redirect after success
+    } catch (error) {
+      console.error("Error submitting data:", error);
+    }
   };
+  
 
   const handlePaymentSuccess = () => {
     // Payment success logic
@@ -64,6 +84,7 @@ const AdvancedProject = () => {
   const handlePaymentClose = () => {
     // Payment close logic
   };
+
 
   const paystackConfig = {
     email: formData.email,

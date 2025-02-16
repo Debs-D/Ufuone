@@ -76,7 +76,7 @@ const ContactUfone = () => {
         </div>
 
         {/* Mobile View Slider */}
-        <div className="sm:hidden">
+        <div className="sm:hidden mt-20">
           <Slider {...settings}>
             {contactData.map((box, index) => (
               <div

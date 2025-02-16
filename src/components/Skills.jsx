@@ -4,7 +4,7 @@ import image3 from "../assets/images/Frame 86.svg";
 
 const Skills = () => {
   return (
-    <div className="flex flex-col items-center flex-wrap justify-between w-full h-[1652px] py-10 px-8 box-border overflow-y-auto">
+    <div className="flex flex-col items-center flex-wrap justify-between w-full h-[1652px] py-10 px-8 box-border overflow-y-auto max-md:mt-20">
       {/* First section */}
       <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1000px] h-[400px] px-5 box-border gap-10 mb-10">
         {/* Image on top for mobile, text underneath */}

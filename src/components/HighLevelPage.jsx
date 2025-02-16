@@ -41,7 +41,7 @@ const HighLevelPage = () => {
                 independently.
               </p>
               <button
-                onClick={() => navigate("/register")} // Navigate to /register
+                onClick={() => navigate("/register?source=offer1")} // Navigate to /register
                 className="py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-blue-700"
               >
                 Register
@@ -64,7 +64,7 @@ const HighLevelPage = () => {
                 to finish, tailored to your needs.
               </p>
               <button
-                onClick={() => navigate("/register")} // Navigate to /register
+                onClick={() => navigate("/register?source=offer2")} // Navigate to /register
                 className="py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-blue-700"
               >
                 Register
@@ -88,7 +88,7 @@ const HighLevelPage = () => {
               while gaining hands-on experience.
             </p>
             <button
-              onClick={() => navigate("/register")} // Navigate to /register
+              onClick={() => navigate("/register?source=offer1")} // Navigate to /register
               className="py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-blue-700"
             >
               Register

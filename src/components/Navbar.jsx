@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import click from "../assets/images/Vector (2).svg";
-import navImg from "../assets/images/image_fx_ (11) 1.svg";
-import navImg1 from "../assets/images/image_fx_ (14) 1.svg";
-import navImg2 from "../assets/images/Mask group (2).svg";
+// import navImg from "../assets/images/image_fx_ (11) 1.svg";
+// import navImg1 from "../assets/images/image_fx_ (14) 1.svg";
+// import navImg2 from "../assets/images/Mask group (2).svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { DataContext } from "./DataContext";
 
 const settings = {
   dots: false,
@@ -33,7 +34,10 @@ const settings = {
 };
 
 const Navbar = () => {
+
+    const {data } = useContext(DataContext)
   const [isMobileView, setIsMobileView] = useState(false);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -44,12 +48,14 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const data = [
-    { image: navImg, title: "Capacitive Circuit" },
-    { image: navImg1, title: "Microcontroller Project" },
-    { image: navImg2, title: "Robotics Project" },
-    { image: navImg, title: "PCB Design" },
-  ];
+
+
+  // const displayData = [
+  //   { image: navImg, title: "Capacitive Circuit" },
+  //   { image: navImg1, title: "Micro controller Project" },
+  //   { image: navImg2, title: "Robotics Project" },
+  //   { image: navImg, title: "PCB Design" },
+  // ];
 
   return (
     <nav className="bg-custom-gradient flex flex-col sm:flex-row items-center justify-between p-4 w-full">
@@ -68,13 +74,16 @@ const Navbar = () => {
             <div key={index} className="slick-item">
               <div className="relative w-[220px] h-[130px] rounded-lg overflow-hidden shadow-md">
                 <img
-                  src={ele.image}
-                  alt={ele.title}
+
+                  src={ele.url}
+                  alt={ele.name}
                   className="w-full h-full object-cover rounded-lg"
                 />
+                {console.log(ele)
+                }
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                   <p className="text-white text-center text-sm font-semibold">
-                    {ele.title}
+                    {ele.name}
                   </p>
                 </div>
               </div>

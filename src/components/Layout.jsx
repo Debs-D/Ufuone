@@ -20,8 +20,8 @@ const Layout = () => {
             Get a qualified instructor to assist with Electronics
           </h1>
 
-          <ul className="flex flex-col gap-4 p-0 list-none">
-            <li className="flex items-center text-xl sm:text-2xl md:text-3xl font-medium text-left">
+          <ul className="flex flex-col gap-4 p-0 list-none max-md:px-10">
+            <li className="flex items-center text-xl sm:text-2xl md:text-3xl font-medium text-left ">
               <img
                 src={navIcon}
                 alt="icon"
