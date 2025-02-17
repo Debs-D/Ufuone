@@ -8,7 +8,7 @@ const Box = ({ title, description, bgColor, style }) => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-between ${bgColor} text-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105`}
+      className={`flex flex-col items-center justify-between ${bgColor} text-white p-6 rounded-xl shadow-lg transition-transform transform hover:scale-105 h-[200px]`}
       style={{
         ...style,
         maxWidth: "100%",

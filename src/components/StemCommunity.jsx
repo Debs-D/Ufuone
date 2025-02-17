@@ -11,8 +11,8 @@ const StemCommunity = () => {
       </div>
 
       {/* Text Box */}
-      <div className="w-[550px] p-8">
-        <h1 className="text-3xl font-extrabold mb-5 text-gray-900">
+      <div className="w-[550px] max-sm:p-28 p-5">
+        <h1 className="text-3xl font-extrabold mb-5 text-gray-900 ">
           STEM Community
         </h1>
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">

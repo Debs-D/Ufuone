@@ -61,13 +61,13 @@ const Navbar = () => {
       )}
 
       {/* Slider & Button Container */}
-      <div className="flex items-center w-full gap-2 sm:gap-4">
+      <div className="nav ">
         {/* Slider */}
-        <div className="flex-1 w-full max-w-6xl">
+        <div className="flex flex-col w-full max-w-7xl max-sm:max-w-[300px]">
           <Slider {...settings}>
             {data.map((ele, index) => (
               <div key={index} className="slick-item">
-                <div className="relative w-[220px] h-[130px] rounded-lg overflow-hidden shadow-md">
+                <div className="relative w-[220px] h-[130px] rounded-lg overflow-hidden shadow-md max-sm:w-[140px] max-sm:h-[100px]"> 
                   <img
                     src={ele.url}
                     alt={ele.name}
@@ -85,10 +85,10 @@ const Navbar = () => {
         </div>
 
         {/* Build Button Beside Slider */}
-        <div className="sm:ml-6 flex-shrink-0 mr-4">
+        <div className="sm:ml-6  mr-4 max-sm:pl-2">
           <Link
             to="/build"
-            className="flex items-center justify-center bg-[#fe0804] hover:bg-[#e00703] text-white p-2 sm:py-3 sm:px-6 rounded-md transition-transform duration-200 hover:scale-105"
+            className="flex items-center justify-center bg-[#fe0804] hover:bg-[#e00703] text-white p-2 sm:py-3 sm:px-6 rounded-md transition-transform duration-200 hover:scale-105 max-sm:h-[100px]"
             style={{ width: isMobileView ? "40px" : "auto" }}
           >
             <img src={click} alt="icon" className="w-5 h-5 sm:w-6 sm:h-6" />

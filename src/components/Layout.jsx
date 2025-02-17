@@ -15,8 +15,8 @@ const Layout = () => {
         />
 
         {/* Text Section */}
-        <div className="flex flex-col items-center gap-5 max-w-[600px] w-full text-center">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-normal leading-[50px] sm:leading-[60px] text-red-600">
+        <div className="flex flex-col items-center gap-5 max-w-[650px] w-full text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-[55px] font-normal leading-[50px] sm:leading-[60px] text-red-600">
             Get a qualified instructor to assist with Electronics
           </h1>
 

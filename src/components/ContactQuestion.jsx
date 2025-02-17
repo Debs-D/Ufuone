@@ -26,7 +26,7 @@ const ContactQuestion = () => {
       question: "What age groups can learn with Ufuon?",
       answer:
         "Our programs are designed for all age groups, ensuring that learning is inclusive and effective for everyone.",
-    },
+    }, 
   ];
 
   return (

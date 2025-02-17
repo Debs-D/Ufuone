@@ -22,3 +22,11 @@
 .font-visby {
   font-family: "Visby Round CF", sans-serif;
 }
+
+.nav{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+  gap: 5px;
+}

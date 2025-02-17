@@ -33,27 +33,27 @@ const settings = {
 const Feature = () => {
   const boxData = [
     {
-      title: "Create Lessons and Quiz",
+      title: "CTrack learning progress",
       description:
-        "Manage assignments, create lessons, and quizzes for kids easily and efficiently.",
+        "Monitor and adapt lessons to your needs efficiently.",
       bgColor: "bg-blue-900",
     },
     {
-      title: "Schedule Lessons or Class",
+      title: "Create lessons and quizzes",
       description:
-        "Scheduling lessons for both kids and tutors is very easy with just a few clicks.",
+        "Manage assignments, create lessons and quizzes easily. ",
       bgColor: "bg-blue-900",
     },
     {
-      title: "Get Tutor for Lessons",
+      title: "Schedule lessons or Classes",
       description:
-        "You can easily find a suitable tutor for your kids in the shortest possible time.",
+        "Scheduling lessons is Straightforward with just a few clicks.",
       bgColor: "bg-blue-900",
     },
     {
-      title: "Track Learning Progress",
+      title: "Get a tutor for lessons",
       description:
-        "Monitor your kids' learning progress and adapt lessons to their needs efficiently.",
+        "You can easily find a suitable tutor for yourself and others in the shortest possible time.",
       bgColor: "bg-blue-900",
     },
   ];
@@ -71,7 +71,7 @@ const Feature = () => {
       </div>
 
       {/* Slider Section */}
-      <div className="w-full max-w-6xl h-28">
+      <div className="w-full max-w-6xl">
         <Slider {...settings}>
           {boxData.map((box, index) => (
             <Boxes
@@ -79,7 +79,7 @@ const Feature = () => {
               title={box.title}
               description={box.description}
               bgColor={box.bgColor}
-              className="flex flex-col items-center justify-center"
+              className="flex flex-col items-center justify-center "
             />
           ))}
         </Slider>
