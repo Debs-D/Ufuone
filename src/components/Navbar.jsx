@@ -51,8 +51,8 @@ const Navbar = () => {
     <nav className="bg-custom-gradient flex items-center justify-between p-4 w-full">
       {/* Remove text on mobile */}
       {!isMobileView && (
-        <Link to="/UfuonFun" className="ml-6">
-          <h3 className="text-white text-[24px] font-bold leading-tight">
+        <Link to="/UfuonFun" className="ml-3 pr-5">
+          <h3 className="text-white text-[24px] font-bold leading-tight ">
             Build with
             <br />
             Ufuon
@@ -61,13 +61,13 @@ const Navbar = () => {
       )}
 
       {/* Slider & Button Container */}
-      <div className="nav ">
+      <div className="nav flex items-center">
         {/* Slider */}
-        <div className="flex flex-col w-full max-w-7xl max-sm:max-w-[300px]">
+        <div className="flex flex-col w-full max-w-[1010px] max-sm:max-w-[295px]">
           <Slider {...settings}>
             {data.map((ele, index) => (
               <div key={index} className="slick-item">
-                <div className="relative w-[220px] h-[130px] rounded-lg overflow-hidden shadow-md max-sm:w-[140px] max-sm:h-[100px]"> 
+                <div className="relative w-[220px] h-[120px] rounded-lg overflow-hidden shadow-md max-sm:w-[140px] max-sm:h-[100px]"> 
                   <img
                     src={ele.url}
                     alt={ele.name}

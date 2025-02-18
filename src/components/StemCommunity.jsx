@@ -1,8 +1,8 @@
 const StemCommunity = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-10 overflow-hidden">
       {/* Image Box */}
-      <div className="w-[550px]">
+      <div className="w-[550px] max-sm:w-[100%]">
         <img
           src="https://images.ctfassets.net/pc40tpn1u6ef/32GkXpUpsiKkwghY4CABn3/3c6d87219217058b82f291c323d75f18/STEMCommunity-2024-2.png?w=640&q=75"
           alt="STEM Community"
@@ -11,7 +11,7 @@ const StemCommunity = () => {
       </div>
 
       {/* Text Box */}
-      <div className="w-[550px] max-sm:p-28 p-5">
+      <div className="w-[550px] max-sm:p-28 p-5 ">
         <h1 className="text-3xl font-extrabold mb-5 text-gray-900 ">
           STEM Community
         </h1>

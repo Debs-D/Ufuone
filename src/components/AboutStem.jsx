@@ -1,8 +1,8 @@
 const AboutStem = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 mt-10 mb-32">
+    <div className="flex flex-col items-center justify-center gap-16 mt-10 mb-32 ">
       {/* Top Row - Two Boxes */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-20">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-20 max-sm:w-full overflow-hidden">
         {/* First Box */}
         <div className="w-[550px] p-8 border rounded-xl shadow-xl bg-gray-100 max-sm:w-[350px]">
           <p className="text-2xl text-gray-800 leading-relaxed max-sm:text-sm">

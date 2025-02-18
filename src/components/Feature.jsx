@@ -59,7 +59,7 @@ const Feature = () => {
   ];
 
   return (
-    <section className="p-6 flex flex-col items-center justify-center mt-32">
+    <section className="p-6 flex flex-col items-center justify-center mt-10">
       <div className="text-center mb-10">
         <h3 className="text-4xl font-semibold text-black mb-2">
           Included Features

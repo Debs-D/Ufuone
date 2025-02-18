@@ -1,8 +1,8 @@
 import Box from "./Box";
 import "../App.css";
-import img1 from "../assets/images/pexels-vanessa-loring-7869049 1.svg";
-import img2 from "../assets/images/pexels-pavel-danilyuk-8294681 2.svg";
-import img3 from "../assets/images/pexels-thisisengineering-19895722 1.svg";
+import img1 from "../assets/images/pexels-thisisengineering-19895722 1.svg";
+import img2 from "../assets/images/store.png";
+import img3 from "../assets/images/school.png";
 import img4 from "../assets/images/pngwing.com (45) 1.svg";
 
 const About = () => {

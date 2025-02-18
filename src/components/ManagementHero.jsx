@@ -25,9 +25,9 @@ const Hero = () => {
   return (
     <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(0,_92,_179,_0.15)_0%,_rgba(0,_40,_77,_0)_100%)]">
       {/* Content Wrapper */}
-      <div className="flex flex-col gap-10 md:flex-row-reverse items-center justify-center w-full max-w-[1440px] mx-auto px-6 md:px-10">
+      <div className="flex flex-col gap-10 md:flex-row-reverse items-center justify-center w-full  max-w-[1440px] mx-auto px-6 md:px-10">
         {/* Image Section */}
-        <div className="w-full h-[200px] md:w-[562.5px] md:h-[794px] flex justify-center max-sm:w-[300px] max-sm:h-[500px] overflow-hidden ">
+        <div className="w-full h-[200px] md:w-[562.5px] md:h-[404px] flex justify-center max-sm:w-[300px] max-sm:h-[200px] overflow-hidden ">
           <img
             src={schImg}
             alt="Illustration"
@@ -57,7 +57,7 @@ const Hero = () => {
         </h2>
 
         {/* Slider */}
-        <div className="w-full md:w-[95%]">
+        <div className="w-full md:w-[80%]">
           <Slider {...settings}>
             {[...Array(10)].map((_, index) => (
               <div key={index} className="flex justify-center">
