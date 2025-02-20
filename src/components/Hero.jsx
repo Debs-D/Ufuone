@@ -6,6 +6,7 @@ import img3 from "../assets/images/store.png";
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+
   const slides = [
     {
       title: "Learn, Explore, Unlock Potentials: Impact Your World",
@@ -36,7 +37,7 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-screen max-sm:h-[500px] max-sm:gap-[100px]0%_50%_at_50%_50%,_rgba(0,_92,_179,_0.15)_0%,_rgba(0,_40,_77,_0)_100%)]">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-center w-full max-w-[1440px] px-6 space-y-6 md:space-y-0 max-sm:mb-[20px]">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center w-full  px-6 space-y-6 md:space-y-0 max-sm:mb-[20px]">
         <div className="flex flex-col items-center md:items-start w-full md:w-[594px] space-y-4">
           <h3 className="font-sans text-[24px] md:text-[48px] text-black leading-[1.2] text-center md:text-left">
             {slides[currentSlide].title}
@@ -47,7 +48,7 @@ const Hero = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full md:w-[662.5px] h-[50vh] md:h-[594px] flex justify-center max-sm:h-[250px]">
+        <div className="w-full md:w-[662.5px] h-[50vh] md:h-[594px] flex justify-center max-sm:h-[250px] ">
           <img
             src={slides[currentSlide].image}
             alt="Illustration"

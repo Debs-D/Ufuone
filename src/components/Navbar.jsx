@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import click from "../assets/images/Vector (2).svg";
+import buffer from '../assets/images/buffer.gif'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { DataContext } from "./DataContext";
@@ -50,7 +51,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-custom-gradient flex items-center justify-between p-4 w-full">
+    <nav className="bg-custom-gradient flex items-center justify-between p-4 w-full overflow-hidden ">
       {/* Remove text on mobile */}
       {!isMobileView && (
         <Link to="/UfuonFun" className="ml-3 pr-5">
@@ -63,31 +64,35 @@ const Navbar = () => {
       )}
 
       {/* Slider & Button Container */}
-      <div className="nav flex items-center">
+      <div className="nav flex items-center w-full max-w-[100%] max-sm:justify-center ">
         {/* Slider */}
-        <div className="flex flex-col w-full max-w-[1010px] max-sm:max-w-[295px]">
-          <Slider {...settings}>
+        <div className="flex flex-col w-full max-w-[1040px] max-sm:max-w-[300px]">
+        { data.length < 1 ? 
+        <img src={buffer} alt="buffer" className="w-10 h-10" /> :
+
+            <Slider {...settings}>
             {data.map((ele, index) => (
               <div key={index} className="slick-item">
-                <div className="relative w-[220px] h-[120px] rounded-lg overflow-hidden shadow-md max-sm:w-[140px] max-sm:h-[100px]"> 
+                <div className="relative w-[210px] h-[110px] rounded-lg shadow-md max-sm:w-[140px] max-sm:h-[100px] overflow-hidden"> 
                   <img
                     src={ele.url}
                     alt={ele.name}
                     className="w-full h-full object-cover rounded-lg"
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <p className="text-white text-center text-sm font-semibold">
+                    <p className="text-white text-center text-sm font-semibold px-2">
                       {ele.name}
                     </p>
                   </div>
                 </div>
               </div>
             ))}
-          </Slider>
+            </Slider>
+}
         </div>
 
         {/* Build Button Beside Slider */}
-        <div className="sm:ml-6  mr-4 max-sm:pl-2">
+        <div className="sm:ml-6 max-sm:pl-2 relative right-4 max-sm:left-2">
           <Link
             to="/build"
             className="flex items-center justify-center bg-[#fe0804] hover:bg-[#e00703] text-white p-2 sm:py-3 sm:px-6 rounded-md transition-transform duration-200 hover:scale-105 max-sm:h-[100px]"
@@ -98,6 +103,8 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
+
+
     </nav>
   );
 };
