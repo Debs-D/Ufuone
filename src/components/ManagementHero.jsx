@@ -50,7 +50,7 @@ const Hero = () => {
       </div>
 
       {/* Sliding Logo Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center w-full mb-20 mt-10 max-w-7xl px-6 md:px-10">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full mb-20 mt-10 max-w-7xl px-6 md:px-10 max-sm:mb-0">
         {/* "Schools We Worked With" Text */}
         <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-500 to-red-500 text-transparent bg-clip-text animate-pulse">
           Schools We Worked With

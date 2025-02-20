@@ -37,9 +37,9 @@ const ImageGallery = () => {
     : images;
 
   return (
-    <div className="w-full max-w-6xl mx-auto py-12 px-6">
-      <h2 className="text-center text-3xl font-bold mb-10">Image Gallery</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="w-full max-w-6xl mx-auto py-12 px-6 max-sm:py-6 max-sm:px-3">
+      <h2 className="text-center text-3xl font-bold mb-10 max-sm:text-2xl">Image Gallery</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-md:grid-cols-2">
         {currentImages.map((image, index) => (
           <div key={index} className="flex justify-center">
             <img
@@ -52,7 +52,7 @@ const ImageGallery = () => {
       </div>
 
       {/* Show pagination only on mobile/tablet */}
-      {isPaginated && (
+      {/* {isPaginated && (
         <div className="flex justify-center mt-6 space-x-4">
           <button
             className={`px-4 py-2 bg-blue-500 text-white rounded-lg ${
@@ -76,7 +76,7 @@ const ImageGallery = () => {
             Next
           </button>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

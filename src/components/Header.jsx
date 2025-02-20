@@ -13,8 +13,9 @@ const Header = () => {
       label: "School",
       path: "/branch",
       dropdown: [
-        { label: "Management", path: "/UfoneManagement" },
         { label: "STEM", path: "/branch" },
+        { label: "Management", path: "/UfoneManagement" },
+       
       ],
     },
     { label: "Store", path: "/CourseDetails" },

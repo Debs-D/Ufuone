@@ -6,7 +6,7 @@ const Management = () => {
     <>
       <Header />
 
-      <div className="p-6">
+      <div className="p-6 max-sm:p-0">
         <Link to="/"></Link>
       </div>
     </>

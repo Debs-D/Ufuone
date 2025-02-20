@@ -18,7 +18,7 @@ const AboutStem = () => {
         </div>
 
         {/* Second Box */}
-        <div className="w-[550px] max-sm:px-28 mt-10">
+        <div className="w-[550px] max-sm:px-28 mt-10 max-sm:mt-0">
           <h1 className="text-3xl font-extrabold mb-5 text-gray-900 max-sm:text-md max-sm:text-2xl">
             Our Vision is to Improve Lives Through STEM Education
           </h1>

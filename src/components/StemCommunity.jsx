@@ -1,6 +1,6 @@
 const StemCommunity = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-10 overflow-hidden">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-10 overflow-hidden max-sm:gap-0">
       {/* Image Box */}
       <div className="w-[550px] max-sm:w-[100%]">
         <img

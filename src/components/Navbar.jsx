@@ -35,8 +35,13 @@ const settings = {
   ],
 };
 
+
+
+//to={`/project/detail/${ToSeoUrl(prod.name)}/${prod._id}`}
+
 const Navbar = () => {
   const { data } = useContext(DataContext);
+
   console.log(data);
   
   const [isMobileView, setIsMobileView] = useState(false);
@@ -50,7 +55,25 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
+  function ToSeoUrl(url) {
+  // make the url lowercase
+  var encodedUrl = url.toString().toLowerCase();
+  // replace & with and
+  encodedUrl = encodedUrl.split(/\&+/).join("-and-")
+  // remove invalid characters
+  encodedUrl = encodedUrl.split(/[^a-z0-9]/).join("-");
+  // remove duplicates
+  encodedUrl = encodedUrl.split(/-+/).join("-");
+  // trim leading & trailing characters
+  encodedUrl = encodedUrl.trim('-');
+  return encodedUrl;
+}
+
+
   return (
+
+
     <nav className="bg-custom-gradient flex items-center justify-between p-4 w-full overflow-hidden ">
       {/* Remove text on mobile */}
       {!isMobileView && (
@@ -66,17 +89,19 @@ const Navbar = () => {
       {/* Slider & Button Container */}
       <div className="nav flex items-center w-full max-w-[100%] max-sm:justify-center ">
         {/* Slider */}
-        <div className="flex flex-col w-full max-w-[1040px] max-sm:max-w-[300px]">
+        <div className={`flex flex-col w-full  max-w-[1040px]  max-sm:max-w-[300px]  ${data.length < 1 ? 'items-center': ''}`}>
+          {/*  max-[1444px]:max-w-[1200px] */}
         { data.length < 1 ? 
         <img src={buffer} alt="buffer" className="w-10 h-10" /> :
 
             <Slider {...settings}>
             {data.map((ele, index) => (
-              <div key={index} className="slick-item">
+              <div key={index} className="slick-item " >
+                <a href={`www.store.ufuon.com/project/detail/${ToSeoUrl(ele.name)}/${ele._id}`}  >
                 <div className="relative w-[210px] h-[110px] rounded-lg shadow-md max-sm:w-[140px] max-sm:h-[100px] overflow-hidden"> 
                   <img
                     src={ele.url}
-                    alt={ele.name}
+                    alt={ele.name.toUpperCase()}
                     className="w-full h-full object-cover rounded-lg"
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -85,6 +110,8 @@ const Navbar = () => {
                     </p>
                   </div>
                 </div>
+                </a>
+            
               </div>
             ))}
             </Slider>

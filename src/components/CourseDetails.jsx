@@ -161,6 +161,10 @@ const courses = [
 ];
 
 const CourseDetails = () => {
+
+  const [buttonText, setButtonText ] = useState('Proceed');
+
+
   const navigate = useNavigate();
 
   const { id } = useParams(); // Get course ID from URL params
@@ -184,13 +188,17 @@ const CourseDetails = () => {
   const [formData, setFormData] = useState({
     name: "",
     age: "",
-    projectDescription: "",
+    projectDescription:'',
     phone: "",
     email: "",
     address: "",
     country: "",
     state: "",
     city: "",
+    projectType: "",
+    requestType: 'Class',
+    amount: course.data[0].amount
+ 
   });
 
   const handleInputChange = (e) => {
@@ -198,9 +206,44 @@ const CourseDetails = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleEnroll = (e) => {
+  const handleEnroll = async(e) => {
+
     e.preventDefault();
-    alert("Enrollment successful! Proceeding to payment...");
+
+    try {
+      const response = await fetch("https://exam-end.herokuapp.com/request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Failed to submit data");
+      }
+
+  
+      const result = await response.json();
+      console.log("Success:", result);
+
+      setButtonText('Enrollment successful!!')
+
+       setTimeout(() => {
+        setButtonText('Proceed');
+      }, 2000);
+
+
+
+      alert("Enrollment successful!!");
+      
+    } catch (error) {
+      console.error("Error submitting data:", error);
+      navigate('/high-level');
+    }
+
+
+
   };
 
   if (!course) {
@@ -422,7 +465,7 @@ const CourseDetails = () => {
               {/* Paystack Button */}
               <PaystackButton
                 {...paystackConfig}
-                text="Proceed to Payment"
+                text={buttonText}
                 className="w-full py-3 bg-red-600 text-white rounded-lg"
                 onSuccess={handlePaymentSuccess}
                 onClose={handlePaymentClose}

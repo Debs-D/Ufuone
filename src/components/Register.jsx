@@ -35,10 +35,11 @@ const Register = () => {
     name: "",
     email: "",
     phone: "",
-    projectType: "",
     category: "",
     description: "",
     additionalInfo: "",
+    projectType: "",
+    requestType: "project",
     amount: "",
     payment: "",
     details: message.body,
@@ -72,6 +73,7 @@ const Register = () => {
   
       const result = await response.json();
       console.log("Success:", result);
+
       navigate("/success");
     } catch (error) {
       console.error("Error submitting data:", error);
