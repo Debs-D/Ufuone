@@ -20,7 +20,7 @@ const ImageGallery = () => {
 
   const [isPaginated, setIsPaginated] = useState(window.innerWidth < 1024);
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 8;
+  const imagesPerPage = 2;
   const totalPages = Math.ceil(images.length / imagesPerPage);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const ImageGallery = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto py-12 px-6">
-      <h2 className="text-center text-3xl font-bold mb-6">Image Gallery</h2>
+      <h2 className="text-center text-3xl font-bold mb-10">Image Gallery</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {currentImages.map((image, index) => (
           <div key={index} className="flex justify-center">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import imgFront from "../assets/images/Mask group.svg";
 import lowImg from "../assets/images/Mask group (1).svg";
@@ -6,6 +6,28 @@ import lowImg from "../assets/images/Mask group (1).svg";
 const Build = () => {
   const navigate = useNavigate();
   const [view, setView] = useState("build");
+  const [headSize, setHeadSize] = useState("");
+  const [subHeadSize, setSubHeadSize ] = useState("");
+
+
+      const handleTextSize =()=>{
+        if (window.innerWidth < 400 ){
+        setHeadSize('30px')
+        setSubHeadSize('19px')
+      }else{
+        setHeadSize('75px')
+        setSubHeadSize('25px')
+      }
+    }
+
+    useEffect(() => {
+      window.addEventListener('resize', handleTextSize)
+      handleTextSize()
+      return () => {
+        window.removeEventListener('resize', handleTextSize)
+      }
+    },[])
+
 
   return (
     <div className="min-h-screen w-full p-6">
@@ -77,19 +99,19 @@ const Build = () => {
       {/* Low Level View */}
       {view === "low" && (
         <>
-          <div className="w-full max-w-5xl flex justify-center ml-56 lg:flex-row items-center gap-8">
+          <div className="w-full max-w-5xl flex justify-center ml-20 max-sm:ml-0 lg:flex-row max-sm:flex-col  items-center gap-8">
             {/* Text Section */}
-            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-6">
+            <div className="w-full lg:w-1/2  flex flex-col items-center lg:items-start gap-6">
               <h1
-                className="text-gray-800 text-center lg:text-left font-normal leading-[80px]"
-                style={{ fontSize: "75px" }}
+                className="text-gray-800 text-center lg:text-left font-normal leading-[80px]  max-sm:leading-[40px]"
+                style={{ fontSize: headSize }}
               >
                 Welcome to Low Level{" "}
               </h1>
 
               <p
                 className="text-xl text-black-600 text-center font-normal lg:text-left"
-                style={{ fontSize: "28px" }}
+                style={{ fontSize: subHeadSize }}
               >
                 We are excited to help you bring your project ideas to life!{" "}
               </p>
@@ -103,7 +125,7 @@ const Build = () => {
               <img
                 src={lowImg}
                 alt="Build Project"
-                className="w-full max-w-sm h-auto object-cover rounded-lg transition-transform hover:scale-105"
+                className="w-full max-w-sm h-auto object-cover max-sm:w-0 max-sm:hidden rounded-lg transition-transform hover:scale-105"
               />
             </div>
           </div>
@@ -149,19 +171,19 @@ const Build = () => {
       {/* High Level View */}
       {view === "high" && (
         <>
-          <div className="w-full max-w-5xl flex justify-center ml-56 lg:flex-row items-center gap-8">
+          <div className="w-full max-w-5xl flex justify-center ml-56 lg:flex-row max-sm:flex-col max-sm:m-auto items-center gap-8">
             {/* Text Section */}
             <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-6">
               <h1
                 className="text-gray-800 text-center lg:text-left font-normal leading-[85px]"
-                style={{ fontSize: "75px" }}
+                style={{ fontSize: headSize }}
               >
                 Welcome to High-level{" "}
               </h1>
 
               <p
                 className="text-xl text-black-600 text-center font-semibold lg:text-left"
-                style={{ fontSize: "25px" }}
+                style={{ fontSize: subHeadSize }}
               >
                 We are excited to help you bring your project ideas to life!
               </p>
@@ -172,7 +194,7 @@ const Build = () => {
               <img
                 src={imgFront}
                 alt="Build Project"
-                className="w-full max-w-sm h-auto object-cover rounded-lg transition-transform hover:scale-105"
+                className="w-full max-w-sm max-sm:w-0 h-auto object-cover rounded-lg transition-transform hover:scale-105"
               />
             </div>
           </div>

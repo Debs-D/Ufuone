@@ -16,7 +16,7 @@ const settings = {
   responsive: [
     { breakpoint: 1024, settings: { slidesToShow: 3 } },
     { breakpoint: 768, settings: { slidesToShow: 2 } },
-    { breakpoint: 480, settings: { slidesToShow: 1 } },
+    { breakpoint: 480, settings: { slidesToShow: 2 } },
   ],
 };
 
@@ -64,7 +64,7 @@ const Hero = () => {
                 <img
                   src={logo}
                   alt="Logo"
-                  className="w-[700px] md:w-[200px] max-sm:w-[200px] h-auto object-contain mt-5"
+                  className="w-[700px] md:w-[200px] max-sm:w-[100px] h-auto object-contain mt-5"
                 />
               </div>
             ))}
