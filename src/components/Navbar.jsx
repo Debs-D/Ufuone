@@ -36,6 +36,8 @@ const settings = {
 
 const Navbar = () => {
   const { data } = useContext(DataContext);
+  console.log(data);
+  
   const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {
