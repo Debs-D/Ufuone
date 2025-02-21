@@ -97,7 +97,7 @@ const Navbar = () => {
             <Slider {...settings}>
             {data.map((ele, index) => (
               <div key={index} className="slick-item " >
-                <a href={`www.store.ufuon.com/project/detail/${ToSeoUrl(ele.name)}/${ele._id}`}  >
+                <a target={'_blank'} href={`https://www.store.ufuon.com/project/detail/${ToSeoUrl(ele.name)}/${ele._id}`}  >
                 <div className="relative w-[210px] h-[110px] rounded-lg shadow-md max-sm:w-[140px] max-sm:h-[100px] overflow-hidden"> 
                   <img
                     src={ele.url}
