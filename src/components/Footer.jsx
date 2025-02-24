@@ -16,7 +16,62 @@ const Footer = () => {
           <h1 className="font-[Visby Round CF] text-[32px] md:text-[59.03px] font-bold leading-[1.2] text-[rgba(252,186,4,1)]">
             Ufuon
           </h1>
+
+
+            {/* Contact Info Section */}
+        <div className="md:w-full">
+          <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-2">
+            Email
+          </h3>
+          <p className="text-white text-[14px] md:text-[16px] mb-4">
+            hello.ufuon.com@gmail.com
+          </p>
+          <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-2">
+            Phone
+          </h3>
+          <p className="text-white text-[14px] md:text-[16px] mb-4">
+            +234 8139 582 152
+          </p>
+          <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-2">
+            Address
+          </h3>
+          <p className="text-white text-[14px] md:text-[16px]">
+          11 Barba Street, before Green care hospital, Ohakwe Junction (close to location, Ada George)
+
+
+            <br />Rumuigbo, Port Harcourt, Rivers State, Nigeria.
+          </p>
         </div>
+        </div>
+
+
+        <div className="md:w-1/4">
+          <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-4">
+           Services
+          </h3>
+          <ul className="space-y-3 text-white">
+            <li>
+              <Link to="/store" className="hover:underline">
+                Ufuon Store
+              </Link>
+            </li>
+            <li>
+              <Link to="/store" className="hover:underline">
+                Store
+              </Link>
+            </li>
+            <li>
+              <Link to="//ufoneAbout" className="hover:underline">
+               School
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+
 
         {/* Quick Links Section */}
         <div className="md:w-1/4">
@@ -27,11 +82,6 @@ const Footer = () => {
             <li>
               <Link to="/" className="hover:underline">
                 Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/store" className="hover:underline">
-                Ufuon Store
               </Link>
             </li>
             <li>
@@ -73,28 +123,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info Section */}
-        <div className="md:w-1/4">
-          <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-2">
-            Email
-          </h3>
-          <p className="text-white text-[14px] md:text-[16px] mb-4">
-            hello.ufuon.com@gmail.com
-          </p>
-          <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-2">
-            Phone
-          </h3>
-          <p className="text-white text-[14px] md:text-[16px] mb-4">
-            +234 8139 582 152
-          </p>
-          <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-2">
-            Address
-          </h3>
-          <p className="text-white text-[14px] md:text-[16px]">
-            59C Old Aba Road, Rumuobiakani,
-            <br /> Port Harcourt, Rivers State, Nigeria.
-          </p>
-        </div>
+      
+      
+
+
+
       </div>
 
       <hr className="border-t border-white opacity-30 my-5" />

@@ -41,6 +41,7 @@ import "./App.css";
 import "flowbite";
 
 import ProjectLevel from "./components/ProjectLevel";
+import Enroll from "./components/Enroll";
 const App = () => {
   return (
     <Router>
@@ -82,7 +83,7 @@ const App = () => {
                 <Gain />
                 <Footer />
               </>
-            }
+            }h
           />
 
           {/* Workplace Route */}
@@ -154,6 +155,7 @@ const App = () => {
           <Route path="/contactUfone" element={<ContactUfone />} />
           <Route path="/contactQuestion" element={<ContactQuestion />} />
           <Route path="/ufonemanagement" element={<UfoneManagement />} />
+          <Route path="/Enroll" element={<Enroll />}/>
         </Routes>
       </div>
     </Router>

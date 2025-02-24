@@ -18,16 +18,16 @@ const Header = () => {
        
       ],
     },
-    { label: "Store", path: "/CourseDetails" },
+    { label: "Store", path: "https://www.store.ufuon.com/login"  },
     { label: "Build", path: "/build" },
     { label: "Contact us", path: "/contactUfone" },
   ];
 
   const menuBars = ["Login"];
 
-  const handleButtonClick = () => {
-    navigate(window.location.pathname === "/" ? "/branch" : "/");
-  };
+  // const handleButtonClick = () => {
+  //   navigate(window.location.pathname === "/" ? "/branch" : "/");
+  // };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -70,10 +70,10 @@ const Header = () => {
           Login
         </button>
         <button
-          onClick={handleButtonClick}
+          onClick={()=> navigate('/low-project')}
           className="py-2 px-4 bg-[#fe0804] text-white rounded-lg text-sm font-medium hover:bg-[#e00703] transition-transform duration-300"
         >
-          Sign up FREE
+          Enroll
         </button>
         <button
           onClick={toggleMenu}
@@ -157,10 +157,10 @@ const Header = () => {
           ))}
         </ul>
         <button
-          onClick={handleButtonClick}
+          onClick={()=> navigate('/low-project')}
           className="py-3 px-8 bg-[#fe0804] text-white rounded-lg text-xl font-medium hover:bg-[#e00703] hover:scale-105 transition-transform duration-300"
         >
-          Sign up FREE
+          Enroll 
         </button>
       </div>
 

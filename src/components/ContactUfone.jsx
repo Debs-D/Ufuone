@@ -54,7 +54,7 @@ const ContactUfone = () => {
 
       <div>
         {/* Heading */}
-        <h1 className="p-10 text-[75px] font-semibold leading-[79.32px] text-center sm:text-[40px] sm:leading-[48px]">
+        <h1 className="p-10 text-[75px] font-semibold leading-[79.32px] text-center sm:text-[40px] sm:leading-[40px] max-sm:text-[30px]">
           Contact our friendly team
         </h1>
 
@@ -64,24 +64,24 @@ const ContactUfone = () => {
         </p>
 
         {/* Button */}
-        <div className="flex items-center justify-center mt-5">
-          <button
+        <div className="flex items-center justify-center ">
+          {/* <button
             className="py-2 px-4 bg-[#fe0804] w-[220.52px] h-[46px] text-white 
                          rounded-lg text-[20px] font-medium 
                          hover:bg-[#e00703] transition-transform duration-300
                          sm:w-[200px] sm:h-[40px] sm:text-[16px]"
           >
             Send an email
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile View Slider */}
-        <div className="sm:hidden mt-20">
+        <div className="sm:hidden mt-20 ">
           <Slider {...settings}>
             {contactData.map((box, index) => (
               <div
                 key={index}
-                className="w-[301.48px] h-[340.93px] bg-gray-100 shadow-lg rounded-[17.55px] 
+                className="w-[2201.48px] h-[340.93px] bg-gray-100 shadow-lg rounded-[17.55px] 
                 flex flex-col items-center justify-center p-5 text-center 
                 transition-transform duration-300 hover:scale-105 hover:shadow-xl"
               >

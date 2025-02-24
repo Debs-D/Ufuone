@@ -18,14 +18,14 @@ const Skills = () => {
           />
         </div>
         <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left">
-          <h1 className="text-[36px] md:text-[54px] font-medium m-0">
+          <h1 className="text-[36px] md:text-[44px] font-medium m-0">
             Develop skills from anywhere
           </h1>
           <p className="text-[18px] md:text-[24px] my-2">
             Get kits to your doorstep. Build using online tutorials/ live
             classes.
           </p>
-          <button className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] md:text-[24px]" onClick={()=> navigate('/register')}>
+          <button className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] md:text-[24px]" onClick={()=> navigate('/low-project')}>
             Start free demo
           </button>
         </div>
@@ -42,18 +42,23 @@ const Skills = () => {
           />
         </div>
         <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left">
-          <h1 className="text-[36px] md:text-[54px] font-medium m-0">
+          <h1 className="text-[36px] md:text-[44px] font-medium m-0">
             Earn by sharing your skills through Ufuon
           </h1>
           <p className="text-[18px] md:text-[24px] my-2">
             Join us, share your knowledge and help students learn innovative
             technologies.
           </p>
-          <button className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] md:text-[24px]">
+         <a href="https://www.store.ufuon.com/login" target="_blank">
+         <button className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] md:text-[24px]"   >
             Start free demo
           </button>
+         </a>
         </div>
       </div>
+
+
+     
 
       {/* Third section */}
       <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1000px] h-[400px] px-5 box-border gap-10 mb-10">
@@ -66,14 +71,14 @@ const Skills = () => {
           />
         </div>
         <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left">
-          <h1 className="text-[36px] md:text-[54px] font-medium m-0">
+          <h1 className="text-[36px] md:text-[44px] font-medium m-0">
             Organize our workshops in your college/ school
           </h1>
           <p className="text-[18px] md:text-[24px] my-2">
             Our experts will visit your campus and provide hands-on training.
           </p>
-          <button className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] md:text-[24px]">
-            Start free demo
+          <button onClick={()=> navigate('/Enroll')} className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] ">
+            Enroll
           </button>
         </div>
       </div>
