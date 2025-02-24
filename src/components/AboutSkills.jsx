@@ -7,7 +7,7 @@ const Skills = () => {
       {/* First section */}
       <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-[1000px] h-auto px-5 box-border gap-12 mb-12">
         {/* Text on left */}
-        <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left">
+        <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left max-sm:pr-0">
           <h1 className="text-[32px] md:text-[40px] font-medium m-0 mb-4">
             Who are we?
           </h1>
@@ -40,7 +40,7 @@ const Skills = () => {
           />
         </div>
         {/* Text on right */}
-        <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left">
+        <div className="flex flex-col justify-between w-full md:w-1/2 pr-5 text-left max-sm:pr-0">
           <h1 className="text-[32px] md:text-[40px] font-medium m-0 mb-4">
             What do we do?
           </h1>

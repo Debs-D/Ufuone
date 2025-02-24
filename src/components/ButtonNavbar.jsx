@@ -18,7 +18,7 @@ const ButtonNavbar = () => {
   const levels = [
     { name: "Low Level", path: "/low-project" },
     { name: "High Level", path: "/high-level" },
-    { name: "Advanced", path: "/advanced" },
+    { name: "Advanced", path: "/advanced-project" },
   ];
 
   // Toggle dropdown on click (for mobile view)

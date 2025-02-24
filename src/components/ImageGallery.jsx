@@ -20,7 +20,8 @@ const ImageGallery = () => {
 
   const [isPaginated, setIsPaginated] = useState(window.innerWidth < 1024);
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 2;
+  const imagesPerPage = 4;
+  // eslint-disable-next-line no-unused-vars
   const totalPages = Math.ceil(images.length / imagesPerPage);
 
   useEffect(() => {

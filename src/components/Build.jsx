@@ -226,7 +226,7 @@ const Build = () => {
                 Will you like to build your first project and do not know how?
               </p>
               <button
-                onClick={() => navigate("/advanced-project")}
+                onClick={() => navigate("/advanced-project")} 
                 className="py-2 px-4 bg-red-600 text-white rounded-lg font-medium text-sm hover:bg-green-700 transition-transform hover:scale-105 "
               >
                 Advanced Project

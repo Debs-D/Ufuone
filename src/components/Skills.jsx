@@ -1,8 +1,10 @@
 import image1 from "../assets/images/Frame 85 (1).svg";
 import image2 from "../assets/images/Frame 82.svg";
 import image3 from "../assets/images/Frame 86.svg";
+import { useNavigate } from "react-router-dom";
 
 const Skills = () => {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center flex-wrap justify-between w-full h-[1652px] py-10 px-8 box-border overflow-y-auto max-md:mt-20">
       {/* First section */}
@@ -23,7 +25,7 @@ const Skills = () => {
             Get kits to your doorstep. Build using online tutorials/ live
             classes.
           </p>
-          <button className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] md:text-[24px]">
+          <button className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] md:text-[24px]" onClick={()=> navigate('/register')}>
             Start free demo
           </button>
         </div>
