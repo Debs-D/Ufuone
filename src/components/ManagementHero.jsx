@@ -38,17 +38,18 @@ const Hero = () => {
       {/* Content Wrapper */}
       <div className=" relative bottom-10 flex flex-col gap-10 md:flex-row-reverse items-center justify-center w-full  max-w-[1440px] mx-auto px-6 md:px-10 ">
         {/* Image Section */}
-        <div className="w-full h-[200px] md:w-[562.5px] md:h-[404px] flex justify-center max-sm:w-[300px] max-sm:h-[200px] overflow-hidden ">
+        <div className=" relative w-full h-[200px] md:w-[562.5px] md:h-[404px] flex justify-center max-sm:w-[300px] max-sm:h-[200px] overflow-hidden ">
           <img
             src={schImg}
             alt="Illustration"
-            className="w-full h-full object-contain "
+            className="w-full h-full object-contain relative z-20"
           />
+          {/* <div className="h-[400px] w-[400px] rounded-full absolute z-10 bg-red-600 right-96 rotate-180"></div> */}
         </div>
 
         {/* Text Section */}
         <div className="flex flex-col items-center md:items-start w-full md:w-[603px] space-y-4 gap-10">
-          <h3 className="font-outfit text-[32px] md:text-[45px] font-medium text-[rgba(254,0,0,1)] leading-[79.9px] text-center md:text-left max-sm:text-2xl ">
+          <h3 className="font-outfit text-[32px] md:text-[45px] font-medium text-[rgba(254,0,0,1)] leading-[10.9px] text-center md:text-left max-sm:text-2xl ">
             {" "}
             Ufuon School STEM System
           </h3>

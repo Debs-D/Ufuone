@@ -8,31 +8,31 @@ const Review = () => {
   const boxData = [
     {
       imgUrl: img1,
-      title: "Patience Amem",
-      subtitle: "Parent",
+      title: " Emmanuel O.",
+      subtitle: "Excellent Service",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
+        "I recently purchased electronics components from Ufuon and I'm impressed with their excellent service! The team was responsive, knowledgeable, and helped me find exactly what I needed. The components arrived promptly and were of high quality. I highly recommend Ufuon for all your electronics needs",
     },
     {
       imgUrl: img2,
-      title: "Mark James",
-      subtitle: "Teacher",
+      title: " Mrs. Ifeoma Benjamin",
+      subtitle: "Empowering Education",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
+        "Ufuon's STEM education program has been a game-changer for our school! Their experienced trainers and hands-on approach have inspired our students to explore the world of electronics and robotics. We've seen significant improvement in their problem-solving skills and confidence. Thank you, Ufuon, for empowering the next generation of innovators",
     },
     {
       imgUrl: img3,
-      title: "John Igwe",
-      subtitle: "Worker",
+      title: "David Koko",
+      subtitle: "Quality Products",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
+        "I've been shopping at Ufuon for my electronics projects and I'm consistently impressed with the quality of their products! Their components are genuine, durable, and affordable. The website is user-friendly, and the customer support team is a user-friendly, and the customer support team is always available to assist. Ufuon has become my go-to destination for all my electronics needs.",
     },
     {
       imgUrl: img2,
-      title: "Sarah Adams",
-      subtitle: "Student",
+      title: " Nneoma U.",
+      subtitle: "Community support",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni.",
+        "Ufuon's community is amazing! As a beginner in electronics, I was struggling to find resources and support. But Ufuon's online forums, tutorials, and workshops have been incredibly helpful. The team is always willing to lend a hand, offer advice, or simply provide encouragement. Thank you, Ufuon, for creating such a supportive and inclusive community!",
     },
   ];
 
@@ -78,11 +78,15 @@ const Review = () => {
           <Slider {...sliderSettings}>
             {boxData.map((box, index) => (
               <Box
+              customHeight={"420px"}
                 key={index}
                 imgUrl={box.imgUrl}
                 title={box.title}
                 subtitle={box.subtitle}
                 description={box.description}
+              
+        
+               
               />
             ))}
           </Slider>

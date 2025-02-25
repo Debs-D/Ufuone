@@ -95,9 +95,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="https://blog.ufuon.com/" className="hover:underline">
-                Blog Page
-              </Link>
+               <a href="https://blog.ufuon.com/" target="_blank">Blog Page</a>
             </li>
           </ul>
         </div>

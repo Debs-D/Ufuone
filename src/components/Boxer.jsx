@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import "../App.css";
 
-const Box = ({ image, imgUrl, title, subtitle, description, style }) => {
+const Box = ({ image, imgUrl, title, subtitle, description, style, customHeight }) => {
   const defaultStyles = {
     container: {
       width: style?.width || "350px",
-      height: "auto",
+      height: customHeight || "auto",
       background: "rgba(0, 92, 179, 1)", // Background color
       borderRadius: "18px",
       padding: "24px",

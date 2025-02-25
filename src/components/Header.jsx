@@ -14,7 +14,7 @@ const Header = () => {
       path: "/branch",
       dropdown: [
         { label: "STEM EDU", path: "/branch" },
-        { label: "Management", path: "/UfoneManagement" },
+        { label: "MANAGEMENT", path: "/UfoneManagement" },
        
       ],
     },
@@ -152,13 +152,14 @@ const Header = () => {
         <ul className="list-none flex space-x-7">
           {menuBars.map((item, index) => (
             <li
-              key={index}
-              className="text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
-            >
-              {item}
-            </li>
+            key={index}
+            className="text-gray-800 font-semibold hover:text-blue-600 cursor-pointer"
+          >
+           <a href="https://www.store.ufuon.com/register" target="_blank"> {item} </a>
+          </li>
           ))}
         </ul>
+        
         <button
           onClick={()=> navigate('/low-project')}
           className="py-3 px-8 bg-[#fe0804] text-white rounded-lg text-xl font-medium hover:bg-[#e00703] hover:scale-105 transition-transform duration-300"
