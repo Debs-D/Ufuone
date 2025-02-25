@@ -11,7 +11,7 @@ const Layout = () => {
         <img
           src={img}
           alt="image"
-          className="w-[90%] sm:w-[60%] md:w-[50%] lg:h-[501px] object-contain"
+          className="w-[100%] sm:w-[60%] md:w-[50%] lg:h-[601px] object-contain max-sm:p-10"
         />
 
         {/* Text Section */}

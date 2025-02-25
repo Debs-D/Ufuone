@@ -30,9 +30,9 @@ const SectionStudy = () => {
         </li>
       </ul>
 
-      <button className="mt-12 py-3 px-8 bg-[#fe0804] text-white rounded-lg text-[24px] font-semibold hover:bg-[#e00703] hover:scale-105 transition-transform duration-300">
+      {/* <button className="mt-12 py-3 px-8 bg-[#fe0804] text-white rounded-lg text-[24px] font-semibold hover:bg-[#e00703] hover:scale-105 transition-transform duration-300">
         Download
-      </button>
+      </button> */}
     </div>
   );
 };

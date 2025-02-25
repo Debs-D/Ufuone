@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
-    { name: "Instagram", url: "https://instagram.com" },
+    { name: "Instagram", url: "https://www.instagram.com/ufuon_edu/?hl=en" },
     { name: "LinkedIn", url: "https://linkedin.com" },
-    { name: "Facebook", url: "https://facebook.com" },
-    { name: "Twitter", url: "https://twitter.com" },
+    { name: "Facebook", url: "https://www.facebook.com/Ufuon" },
+    { name: "Twitter", url: "https://x.com/ufuon_edu" },
   ];
 
   return (
     <div className="w-full bg-[#005cb3]">
       <div className="flex flex-col md:flex-row items-start justify-between p-10 md:p-20 gap-10 md:gap-5">
         {/* Logo Section */}
-        <div className="md:w-1/4">
+        <div className="md:w-2/3 mr-20">
           <h1 className="font-[Visby Round CF] text-[32px] md:text-[59.03px] font-bold leading-[1.2] text-[rgba(252,186,4,1)]">
             Ufuon
           </h1>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
 
-        <div className="md:w-1/4">
+        <div className="md:w-1/3">
           <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-4">
            Services
           </h3>
@@ -74,7 +74,7 @@ const Footer = () => {
 
 
         {/* Quick Links Section */}
-        <div className="md:w-1/4">
+        <div className="md:w-1/3">
           <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-4">
             Quick Links
           </h3>
@@ -95,7 +95,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="hover:underline">
+              <Link to="https://blog.ufuon.com/" className="hover:underline">
                 Blog Page
               </Link>
             </li>
@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
 
         {/* Follow Us Section */}
-        <div className="md:w-1/4">
+        <div className="md:w-1/3">
           <h3 className="text-[rgba(252,186,4,1)] font-bold text-[16px] md:text-[18px] mb-4">
             Follow Us
           </h3>

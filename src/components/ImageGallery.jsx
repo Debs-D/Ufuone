@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
-import image1 from "../assets/images/african-business-lady-smiling-working-laptop-white-wall 2.svg";
-import image2 from "../assets/images/pexels-pavel-danilyuk-8294681 2.svg";
-import image3 from "../assets/images/pexels-thisisengineering-19895722 1.svg";
-import image4 from "../assets/images/pexels-katerina-holmes-5905957 1.svg";
-import image5 from "../assets/images/pexels-vanessa-loring-7869049 1.svg";
-import image6 from "../assets/images/Ellipse 6.svg";
-import image7 from "../assets/images/pngwing.com (45) 1.svg";
-import image8 from "../assets/images/pexels-vanessa-loring-7869049 1.svg";
-import image9 from "../assets/images/pexels-vanessa-loring-7869049 1.svg";
-import image10 from "../assets/images/pexels-vanessa-loring-7869049 1.svg";
-import image11 from "../assets/images/pexels-vanessa-loring-7869049 1.svg";
-import image12 from "../assets/images/pexels-vanessa-loring-7869049 1.svg";
+import image1 from "../assets/Gallery/image1.jpg";
+import image2 from "../assets/Gallery/image2.jpg";
+import image3 from "../assets/Gallery/image3.jpg";
+import image4 from "../assets/Gallery/image4.jpg";
+import image5 from "../assets/Gallery/image5.jpg";
+import image6 from "../assets/Gallery/image6.jpg";
+import image7 from "../assets/Gallery/image7.jpg";
+import image8 from "../assets/Gallery/image8.jpg";
+import image9 from "../assets/Gallery/image9.jpg";
+import image10 from "../assets/Gallery/image10.jpg";
+import image11 from "../assets/Gallery/image15.jpg";
+import image12 from "../assets/Gallery/image17.jpg";
+
+
 
 const ImageGallery = () => {
   const images = [

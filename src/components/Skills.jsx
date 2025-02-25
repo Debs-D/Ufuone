@@ -49,7 +49,7 @@ const Skills = () => {
             Join us, share your knowledge and help students learn innovative
             technologies.
           </p>
-         <a href="https://www.store.ufuon.com/login" target="_blank">
+         <a href="https://www.store.ufuon.com/register" target="_blank">
          <button className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] md:text-[24px]"   >
             Start free demo
           </button>
@@ -77,8 +77,8 @@ const Skills = () => {
           <p className="text-[18px] md:text-[24px] my-2">
             Our experts will visit your campus and provide hands-on training.
           </p>
-          <button onClick={()=> navigate('/Enroll')} className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] ">
-            Enroll
+          <button onClick={()=> navigate('/Register-workshop')} className="py-3 px-6 bg-[#fe0804] text-white max-w-[300px] w-full rounded-lg cursor-pointer border-none text-[18px] ">
+            Register Workshop
           </button>
         </div>
       </div>

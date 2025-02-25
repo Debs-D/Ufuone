@@ -13,12 +13,12 @@ const Header = () => {
       label: "School",
       path: "/branch",
       dropdown: [
-        { label: "STEM", path: "/branch" },
+        { label: "STEM EDU", path: "/branch" },
         { label: "Management", path: "/UfoneManagement" },
        
       ],
     },
-    { label: "Store", path: "https://www.store.ufuon.com/login"  },
+    { label: "Store", path: "https://www.store.ufuon.com", target: '_blank'  },
     { label: "Build", path: "/build" },
     { label: "Contact us", path: "/contactUfone" },
   ];
@@ -52,7 +52,7 @@ const Header = () => {
     >
       {/* Logo */}
       <div className="flex items-center">
-        <Link to="/workplace">
+        <Link to="/">
           <img
             src={logo}
             alt="Logo"
@@ -111,7 +111,7 @@ const Header = () => {
                   onClick={() => setIsSchoolDropdownOpen(!isSchoolDropdownOpen)}
                   className="focus:outline-none"
                 >
-                  {item.label}
+                {item.label}
                 </button>
 
                 {isSchoolDropdownOpen && (
@@ -137,7 +137,10 @@ const Header = () => {
                 key={index}
                 className="py-2 text-gray-800 font-semibold hover:text-blue-600"
               >
-                <Link to={item.path} className="cursor-pointer">
+                <Link to={item.path} className="cursor-pointer"   onClick={(e) => {
+                  if (item.target) {
+                    // Prevent the default navigation
+                   e.preventDefault();  window.open(item.path, item.target);  }}}>
                   {item.label}
                 </Link>
               </li>
