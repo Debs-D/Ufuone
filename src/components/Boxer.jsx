@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import "../App.css";
 
+// eslint-disable-next-line react/prop-types
 const Box = ({ image, imgUrl, title, subtitle, description, style, customHeight }) => {
   const defaultStyles = {
     container: {
