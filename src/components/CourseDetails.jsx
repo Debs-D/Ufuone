@@ -161,9 +161,7 @@ const courses = [
 ];
 
 const CourseDetails = () => {
-
-  const [buttonText, setButtonText ] = useState('Proceed');
-
+  const [buttonText, setButtonText] = useState("Proceed");
 
   const navigate = useNavigate();
 
@@ -188,7 +186,7 @@ const CourseDetails = () => {
   const [formData, setFormData] = useState({
     name: "",
     age: "",
-    projectDescription:'',
+    projectDescription: "",
     phone: "",
     email: "",
     address: "",
@@ -196,9 +194,8 @@ const CourseDetails = () => {
     state: "",
     city: "",
     projectType: "",
-    requestType: 'Class',
-    amount: course.data[0].amount
- 
+    requestType: "Class",
+    amount: course.data[0].amount,
   });
 
   const handleInputChange = (e) => {
@@ -206,8 +203,7 @@ const CourseDetails = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleEnroll = async(e) => {
-
+  const handleEnroll = async (e) => {
     e.preventDefault();
 
     try {
@@ -218,32 +214,25 @@ const CourseDetails = () => {
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (!response.ok) {
         throw new Error("Failed to submit data");
       }
 
-  
       const result = await response.json();
       console.log("Success:", result);
 
-      setButtonText('Enrollment successful!!')
+      setButtonText("Enrollment successful!!");
 
-       setTimeout(() => {
-        setButtonText('Proceed');
+      setTimeout(() => {
+        setButtonText("Proceed");
       }, 2000);
 
-
-
       alert("Enrollment successful!!");
-      
     } catch (error) {
       console.error("Error submitting data:", error);
-      navigate('/high-level');
+      navigate("/high-level");
     }
-
-
-
   };
 
   if (!course) {
@@ -257,10 +246,10 @@ const CourseDetails = () => {
 
       {/* Back Button */}
       <button
-        onClick={() => navigate(-1)} // This will take the user to the previous page
-        className="p-2 bg-orange-700 hover:bg-orange-500 text-white ml-5 mt-3 left-4 flex items-center justify-center"
+        onClick={() => navigate(-1)}
+        className="p-2 bg-orange-700 hover:bg-orange-500 text-white rounded-full ml-5 mt-3 flex items-center justify-center w-10 h-10"
       >
-        <span className="text-lg">&larr;</span> {/* Left Arrow */}
+        <span className="text-lg">&larr;</span>
       </button>
 
       <div className="min-h-screen w-full bg-gray-100 p-4">

@@ -7,30 +7,35 @@ const Build = () => {
   const navigate = useNavigate();
   const [view, setView] = useState("build");
   const [headSize, setHeadSize] = useState("");
-  const [subHeadSize, setSubHeadSize ] = useState("");
+  const [subHeadSize, setSubHeadSize] = useState("");
 
-
-      const handleTextSize =()=>{
-        if (window.innerWidth < 400 ){
-        setHeadSize('30px')
-        setSubHeadSize('19px')
-      }else{
-        setHeadSize('75px')
-        setSubHeadSize('25px')
-      }
+  const handleTextSize = () => {
+    if (window.innerWidth < 400) {
+      setHeadSize("30px");
+      setSubHeadSize("19px");
+    } else {
+      setHeadSize("75px");
+      setSubHeadSize("25px");
     }
+  };
 
-    useEffect(() => {
-      window.addEventListener('resize', handleTextSize)
-      handleTextSize()
-      return () => {
-        window.removeEventListener('resize', handleTextSize)
-      }
-    },[])
-
+  useEffect(() => {
+    window.addEventListener("resize", handleTextSize);
+    handleTextSize();
+    return () => {
+      window.removeEventListener("resize", handleTextSize);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen w-full p-6">
+      {/* Back Button */}
+      <button
+        onClick={() => navigate(-1)}
+        className="p-2 bg-orange-700 hover:bg-orange-500 text-white rounded-full ml-5 mt-3 flex items-center justify-center w-10 h-10"
+      >
+        <span className="text-lg">&larr;</span>
+      </button>
       {/* Build View */}
       {view === "build" && (
         <>
@@ -99,7 +104,7 @@ const Build = () => {
       {/* Low Level View */}
       {view === "low" && (
         <>
-          <div className="w-full max-w-5xl flex justify-center ml-20 max-sm:ml-0 lg:flex-row max-sm:flex-col  items-center gap-8">
+          <div className="w-full max-w-5xl mx-auto flex justify-center max-sm:ml-0 lg:flex-row max-sm:flex-col  items-center gap-8">
             {/* Text Section */}
             <div className="w-full lg:w-1/2  flex flex-col items-center lg:items-start gap-6">
               <h1
@@ -226,7 +231,7 @@ const Build = () => {
                 Will you like to build your first project and do not know how?
               </p>
               <button
-                onClick={() => navigate("/advanced-project")} 
+                onClick={() => navigate("/advanced-project")}
                 className="py-2 px-4 bg-red-600 text-white rounded-lg font-medium text-sm hover:bg-green-700 transition-transform hover:scale-105 "
               >
                 Advanced Project

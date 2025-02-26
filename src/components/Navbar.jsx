@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import click from "../assets/images/Vector (2).svg";
-import buffer from '../assets/images/buffer.gif'
+import buffer from "../assets/images/buffer.gif";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { DataContext } from "./DataContext";
@@ -35,15 +35,13 @@ const settings = {
   ],
 };
 
-
-
 //to={`/project/detail/${ToSeoUrl(prod.name)}/${prod._id}`}
 
 const Navbar = () => {
   const { data } = useContext(DataContext);
 
   console.log(data);
-  
+
   const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {
@@ -55,84 +53,84 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   function ToSeoUrl(url) {
-  // make the url lowercase
-  var encodedUrl = url.toString().toLowerCase();
-  // replace & with and
-  encodedUrl = encodedUrl.split(/\&+/).join("-and-")
-  // remove invalid characters
-  encodedUrl = encodedUrl.split(/[^a-z0-9]/).join("-");
-  // remove duplicates
-  encodedUrl = encodedUrl.split(/-+/).join("-");
-  // trim leading & trailing characters
-  encodedUrl = encodedUrl.trim('-');
-  return encodedUrl;
-}
-
+    // make the url lowercase
+    var encodedUrl = url.toString().toLowerCase();
+    // replace & with and
+    encodedUrl = encodedUrl.split(/&+/).join("-and-");
+    // remove invalid characters
+    encodedUrl = encodedUrl.split(/[^a-z0-9]/).join("-");
+    // remove duplicates
+    encodedUrl = encodedUrl.split(/-+/).join("-");
+    // trim leading & trailing characters
+    encodedUrl = encodedUrl.trim("-");
+    return encodedUrl;
+  }
 
   return (
-
-
-    <nav className="bg-custom-gradient flex items-center justify-between p-4 w-full overflow-hidden ">
+    <nav className="bg-custom-gradient flex items-center justify-between p-4  overflow-hidden ">
       {/* Remove text on mobile */}
       {!isMobileView && (
         <Link to="/UfuonFun" className="ml-3 pr-5">
-          <h3 className="text-white text-[24px] font-bold leading-tight ">
-            Build with
+          <h3 className="text-white text-[30px] font-bold leading-tight">
+            <span className="font-extrabold">Build</span> with
             <br />
-            Ufuon
+            <span className="font-extrabold">Ufuon</span>
           </h3>
         </Link>
       )}
 
       {/* Slider & Button Container */}
-      <div className="nav flex items-center w-full max-w-[100%] max-sm:justify-center ">
+      <div className="nav flex items-center  max-w-[100%] max-sm:justify-center ">
         {/* Slider */}
-        <div className={`flex flex-col w-full  max-w-[1040px]  max-sm:max-w-[300px]  ${data.length < 1 ? 'items-center': ''}`}>
+        <div
+          className={`flex flex-col w-full  max-w-[1040px]  max-sm:max-w-[300px]  ${
+            data.length < 1 ? "items-center" : ""
+          }`}
+        >
           {/*  max-[1444px]:max-w-[1200px] */}
-        { data.length < 1 ? 
-        <img src={buffer} alt="buffer" className="w-10 h-10" /> :
-
+          {data.length < 1 ? (
+            <img src={buffer} alt="buffer" className="w-10 h-10" />
+          ) : (
             <Slider {...settings}>
-            {data.map((ele, index) => (
-              <div key={index} className="slick-item " >
-                <a target={'_blank'} href={`https://www.store.ufuon.com/project/detail/${ToSeoUrl(ele.name)}/${ele._id}`}  >
-                <div className="relative w-[210px] h-[110px] rounded-lg shadow-md max-sm:w-[140px] max-sm:h-[100px] overflow-hidden"> 
-                 
-                  <img
-                    src={ele.url}
-                    alt={ele.name}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <p className="text-white text-center text-sm font-semibold px-2">
-                      {ele.name.toUpperCase()}
-                    </p>
-                  </div>
+              {data.map((ele, index) => (
+                <div key={index} className="slick-item ">
+                  <a
+                    target={"_blank"}
+                    href={`https://www.store.ufuon.com/project/detail/${ToSeoUrl(
+                      ele.name
+                    )}/${ele._id}`}
+                  >
+                    <div className="relative w-[210px] h-[110px] rounded-lg shadow-md max-sm:w-[140px] max-sm:h-[100px] overflow-hidden">
+                      <img
+                        src={ele.url}
+                        alt={ele.name}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <p className="text-white text-center text-sm font-semibold px-2">
+                          {ele.name.toUpperCase()}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
                 </div>
-                </a>
-            
-              </div>
-            ))}
+              ))}
             </Slider>
-}
-        </div>
-
-        {/* Build Button Beside Slider */}
-        <div className="sm:ml-6 max-sm:pl-2 relative right-4 max-sm:left-2">
-          <Link
-            to="/build"
-            className="flex items-center justify-center bg-[#fe0804] hover:bg-[#e00703] text-white p-2 sm:py-3 sm:px-6 rounded-md transition-transform duration-200 hover:scale-105 max-sm:h-[100px]"
-            style={{ width: isMobileView ? "40px" : "auto" }}
-          >
-            <img src={click} alt="icon" className="w-5 h-5 sm:w-6 sm:h-6" />
-            {!isMobileView && <span className="ml-2">Build</span>}
-          </Link>
+          )}
         </div>
       </div>
-
-
+      {/* Build Button Beside Slider */}
+      <div className="sm:ml-6 max-sm:pl-2 relative right-4 max-sm:left-2">
+        <Link
+          to="/build"
+          className="flex items-center justify-center bg-[#fe0804] hover:bg-[#e00703] text-white p-2 sm:py-3 sm:px-6 rounded-md transition-transform duration-200 hover:scale-105 max-sm:h-[100px]"
+          style={{ width: isMobileView ? "40px" : "auto" }}
+        >
+          <img src={click} alt="icon" className="w-5 h-5 sm:w-6 sm:h-6" />
+          {!isMobileView && <span className="ml-2">Build</span>}
+        </Link>
+      </div>
     </nav>
   );
 };
