@@ -68,7 +68,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-custom-gradient flex items-center justify-between p-4  overflow-hidden ">
+    <nav className="bg-custom-gradient flex items-center justify-between p-4 w-full overflow-hidden ">
       {/* Remove text on mobile */}
       {!isMobileView && (
         <Link to="/UfuonFun" className="ml-3 pr-5">
@@ -81,7 +81,7 @@ const Navbar = () => {
       )}
 
       {/* Slider & Button Container */}
-      <div className="nav flex items-center  max-w-[100%] max-sm:justify-center ">
+      <div className="nav flex items-center max-w-[100%] max-sm:justify-center ">
         {/* Slider */}
         <div
           className={`flex flex-col w-full  max-w-[1040px]  max-sm:max-w-[300px]  ${
@@ -101,14 +101,14 @@ const Navbar = () => {
                       ele.name
                     )}/${ele._id}`}
                   >
-                    <div className="relative w-[210px] h-[110px] rounded-lg shadow-md max-sm:w-[140px] max-sm:h-[100px] overflow-hidden">
+                    <div className="relative w-[210px] h-[110px] rounded-lg shadow-md max-sm:w-[130px] max-sm:h-[110px] overflow-hidden">
                       <img
                         src={ele.url}
                         alt={ele.name}
                         className="w-full h-full object-cover rounded-lg"
                       />
                       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <p className="text-white text-center text-sm font-semibold px-2">
+                        <p className="text-white text-center text-sm sm:text-base md:text-lg font-semibold px-2">
                           {ele.name.toUpperCase()}
                         </p>
                       </div>
@@ -120,8 +120,9 @@ const Navbar = () => {
           )}
         </div>
       </div>
+
       {/* Build Button Beside Slider */}
-      <div className="sm:ml-6 max-sm:pl-2 relative right-4 max-sm:left-2">
+      <div className="sm:ml-6 max-sm:pl-2 relative right-4 ">
         <Link
           to="/build"
           className="flex items-center justify-center bg-[#fe0804] hover:bg-[#e00703] text-white p-2 sm:py-3 sm:px-6 rounded-md transition-transform duration-200 hover:scale-105 max-sm:h-[100px]"
